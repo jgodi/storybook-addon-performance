@@ -21,8 +21,8 @@
   },
   "files": [
     "/dist",
-    "/src",
-    "register.js"
+    "register.js",
+    "register.mjs"
   ],
   "dependencies": {
     "@storybook/addons": "^6.2.9",
