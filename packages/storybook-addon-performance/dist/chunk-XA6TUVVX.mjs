@@ -1,29 +1,8 @@
-"use strict";
-var __defProp = Object.defineProperty;
-var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
-var __getOwnPropNames = Object.getOwnPropertyNames;
-var __hasOwnProp = Object.prototype.hasOwnProperty;
-var __export = (target, all) => {
-  for (var name in all)
-    __defProp(target, name, { get: all[name], enumerable: true });
-};
-var __copyProps = (to, from, except, desc) => {
-  if (from && typeof from === "object" || typeof from === "function") {
-    for (let key of __getOwnPropNames(from))
-      if (!__hasOwnProp.call(to, key) && key !== except)
-        __defProp(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc(from, key)) || desc.enumerable });
-  }
-  return to;
-};
-var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
-
 // src/panel/machine.ts
-var machine_exports = {};
-__export(machine_exports, {
-  default: () => machine_default
-});
-module.exports = __toCommonJS(machine_exports);
-var import_xstate = require("xstate");
+import {
+  Machine,
+  assign
+} from "xstate";
 var initial = {
   message: null,
   sizes: [1, 10, 100],
@@ -35,18 +14,18 @@ var initial = {
   },
   pinned: null
 };
-var machine = (0, import_xstate.Machine)(
+var machine = Machine(
   {
     id: "panel",
     initial: "waiting",
     context: initial,
     states: {
       waiting: {
-        entry: (0, import_xstate.assign)(() => initial),
+        entry: assign(() => initial),
         on: {
           LOADED: {
             target: "active",
-            actions: (0, import_xstate.assign)((context, event) => {
+            actions: assign((context, event) => {
               const message = event.pinned ? `Loaded pinned result for story: ${event.storyName}` : null;
               return {
                 ...context,
@@ -79,7 +58,7 @@ var machine = (0, import_xstate.Machine)(
                 },
                 actions: [
                   "clearMessage",
-                  (0, import_xstate.assign)({
+                  assign({
                     current: (context, event) => {
                       return {
                         results: null,
@@ -97,7 +76,7 @@ var machine = (0, import_xstate.Machine)(
                 cond: (context) => {
                   return context.current.results != null;
                 },
-                actions: (0, import_xstate.assign)((context) => {
+                actions: assign((context) => {
                   return {
                     ...context,
                     pinned: context.current,
@@ -111,7 +90,7 @@ var machine = (0, import_xstate.Machine)(
                 cond: (context) => {
                   return context.current.results != null;
                 },
-                actions: (0, import_xstate.assign)((context) => {
+                actions: assign((context) => {
                   return {
                     ...context,
                     message: "Result saved"
@@ -121,7 +100,7 @@ var machine = (0, import_xstate.Machine)(
               LOAD_FROM_FILE: {
                 internal: true,
                 target: "idle",
-                actions: (0, import_xstate.assign)((context, event) => {
+                actions: assign((context, event) => {
                   const message = event.pinned ? `Loaded pinned result: ${event.storyName}` : null;
                   return {
                     ...context,
@@ -138,7 +117,7 @@ var machine = (0, import_xstate.Machine)(
                 cond: (context) => {
                   return context.pinned != null;
                 },
-                actions: (0, import_xstate.assign)((context) => {
+                actions: assign((context) => {
                   return {
                     ...context,
                     pinned: null,
@@ -152,7 +131,7 @@ var machine = (0, import_xstate.Machine)(
             on: {
               FINISH: {
                 target: "idle",
-                actions: (0, import_xstate.assign)({
+                actions: assign({
                   current: (context, event) => {
                     const current = {
                       ...context.current,
@@ -170,7 +149,7 @@ var machine = (0, import_xstate.Machine)(
   },
   {
     actions: {
-      clearMessage: (0, import_xstate.assign)((context) => {
+      clearMessage: assign((context) => {
         return {
           ...context,
           message: null
@@ -180,3 +159,7 @@ var machine = (0, import_xstate.Machine)(
   }
 );
 var machine_default = machine;
+
+export {
+  machine_default
+};
