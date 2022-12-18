@@ -6,7 +6,7 @@ import {
 } from "./chunk-GVYWDKN7.mjs";
 import {
   require_window
-} from "./chunk-J4LQTMV4.mjs";
+} from "./chunk-4GT76QJI.mjs";
 import {
   decoratorKey,
   paramKey

@@ -4,7 +4,7 @@ import {
 import {
   Button,
   Icons
-} from "./chunk-LJMZBB6P.mjs";
+} from "./chunk-4EQSHNDX.mjs";
 import {
   pluraliseCopies,
   pluraliseSamples
@@ -68,6 +68,8 @@ var IconContainer = styled.span`
   margin-left: 0;
   width: var(--grid);
   height: var(--grid);
+  display: flex;
+  align-items: center;
 `;
 function ExpandIcon({ isExpanded }) {
   return /* @__PURE__ */ React.createElement(IconContainer, null, /* @__PURE__ */ React.createElement(Icons, { icon: isExpanded ? "arrowdown" : "arrowright" }));

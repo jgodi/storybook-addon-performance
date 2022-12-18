@@ -9,9 +9,9 @@ import {
   __toESM
 } from "./chunk-22M6QDW2.mjs";
 
-// ../../node_modules/@storybook/components/dist/formatter-PK6264PW.mjs
+// ../../node_modules/@storybook/components/dist/formatter-WKNF2L7W.mjs
 var import_memoizerific = __toESM(require_memoizerific(), 1);
-var require_parser_html = __commonJS({ "../../node_modules/prettier/parser-html.js"(exports, module) {
+var require_parser_html = __commonJS({ "node_modules/prettier/parser-html.js"(exports, module) {
   (function(e) {
     if (typeof exports == "object" && typeof module == "object")
       module.exports = e();
@@ -1356,7 +1356,7 @@ var require_parser_html = __commonJS({ "../../node_modules/prettier/parser-html.
           return Object.assign({ [s]: n }, i);
         });
       } }), ll = I({ "package.json"(e, r) {
-        r.exports = { version: "2.8.0" };
+        r.exports = { version: "2.8.1" };
       } }), cl = I({ "node_modules/outdent/lib/index.js"(e, r) {
         "use strict";
         q(), Object.defineProperty(e, "__esModule", { value: true }), e.outdent = void 0;
@@ -1934,8 +1934,7 @@ var require_parser_html = __commonJS({ "../../node_modules/prettier/parser-html.
             try {
               return [true, g(C, m).children];
             } catch {
-              let N = { type: "text", value: C, sourceSpan: new u(m, T) };
-              return [false, [N]];
+              return [false, [{ type: "text", value: C, sourceSpan: new u(m, T) }]];
             }
           })();
           return { type: "ieConditionalComment", complete: B, children: A, condition: h.trim().replace(/\s+/g, " "), sourceSpan: l.sourceSpan, startSourceSpan: new u(l.sourceSpan.start, m), endSourceSpan: new u(T, l.sourceSpan.end) };
@@ -3090,7 +3089,7 @@ var require_parser_html = __commonJS({ "../../node_modules/prettier/parser-html.
     return ec();
   });
 } });
-var require_standalone = __commonJS({ "../../node_modules/prettier/standalone.js"(exports, module) {
+var require_standalone = __commonJS({ "node_modules/prettier/standalone.js"(exports, module) {
   (function(e) {
     if (typeof exports == "object" && typeof module == "object")
       module.exports = e();
@@ -3767,7 +3766,7 @@ var require_standalone = __commonJS({ "../../node_modules/prettier/standalone.js
       }, eD = (e, n, t) => (t = e != null ? Kf(Qf(e)) : {}, pa(n || !e || !e.__esModule ? wr(t, "default", { value: e, enumerable: true }) : t, e)), ft = (e) => pa(wr({}, "__esModule", { value: true }), e), ia, aa, Nt, re = gt({ "<define:process>"() {
         ia = {}, aa = [], Nt = { env: ia, argv: aa };
       } }), fa = ee({ "package.json"(e, n) {
-        n.exports = { version: "2.8.0" };
+        n.exports = { version: "2.8.1" };
       } }), tD = ee({ "node_modules/diff/lib/diff/base.js"(e) {
         "use strict";
         re(), Object.defineProperty(e, "__esModule", { value: true }), e.default = n;
@@ -3788,14 +3787,14 @@ var require_standalone = __commonJS({ "../../node_modules/prettier/standalone.js
             return y([{ value: this.join(u), count: u.length }]);
           function T() {
             for (var A = -1 * p; A <= p; A += 2) {
-              var B = void 0, I = v[A - 1], P = v[A + 1], R = (P ? P.newPos : 0) - A;
+              var B = void 0, I = v[A - 1], P = v[A + 1], $ = (P ? P.newPos : 0) - A;
               I && (v[A - 1] = void 0);
-              var f = I && I.newPos + 1 < h, x = P && 0 <= R && R < g;
+              var f = I && I.newPos + 1 < h, x = P && 0 <= $ && $ < g;
               if (!f && !x) {
                 v[A] = void 0;
                 continue;
               }
-              if (!f || x && I.newPos < P.newPos ? (B = s(P), c.pushComponent(B.components, void 0, true)) : (B = I, B.newPos++, c.pushComponent(B.components, true, void 0)), R = c.extractCommon(B, u, r, A), B.newPos + 1 >= h && R + 1 >= g)
+              if (!f || x && I.newPos < P.newPos ? (B = s(P), c.pushComponent(B.components, void 0, true)) : (B = I, B.newPos++, c.pushComponent(B.components, true, void 0)), $ = c.extractCommon(B, u, r, A), B.newPos + 1 >= h && $ + 1 >= g)
                 return y(t(c, B.components, u, r, c.useLongestToken));
               v[A] = B;
             }
@@ -3918,7 +3917,7 @@ var require_standalone = __commonJS({ "../../node_modules/prettier/standalone.js
         function p(E) {
           return { type: "line-suffix", contents: E };
         }
-        var D = { type: "line-suffix-boundary" }, v = { type: "break-parent" }, w = { type: "trim" }, T = { type: "line", hard: true }, F = { type: "line", hard: true, literal: true }, A = { type: "line" }, B = { type: "line", soft: true }, I = t([T, v]), P = t([F, v]), R = { type: "cursor", placeholder: Symbol("cursor") };
+        var D = { type: "line-suffix-boundary" }, v = { type: "break-parent" }, w = { type: "trim" }, T = { type: "line", hard: true }, F = { type: "line", hard: true, literal: true }, A = { type: "line" }, B = { type: "line", soft: true }, I = t([T, v]), P = t([F, v]), $ = { type: "cursor", placeholder: Symbol("cursor") };
         function f(E, o) {
           let d = [];
           for (let C = 0; C < o.length; C++)
@@ -3937,7 +3936,7 @@ var require_standalone = __commonJS({ "../../node_modules/prettier/standalone.js
         function m(E, o) {
           return { type: "label", label: E, contents: o };
         }
-        n.exports = { concat: t, join: f, line: A, softline: B, hardline: I, literalline: P, group: r, conditionalGroup: c, fill: y, lineSuffix: p, lineSuffixBoundary: D, cursor: R, breakParent: v, ifBreak: h, trim: w, indent: s, indentIfBreak: g, align: a, addAlignmentToDoc: x, markAsRoot: i, dedentToRoot: u, dedent: l, hardlineWithoutBreakParent: T, literallineWithoutBreakParent: F, label: m };
+        n.exports = { concat: t, join: f, line: A, softline: B, hardline: I, literalline: P, group: r, conditionalGroup: c, fill: y, lineSuffix: p, lineSuffixBoundary: D, cursor: $, breakParent: v, ifBreak: h, trim: w, indent: s, indentIfBreak: g, align: a, addAlignmentToDoc: x, markAsRoot: i, dedentToRoot: u, dedent: l, hardlineWithoutBreakParent: T, literallineWithoutBreakParent: F, label: m };
       } }), qn = ee({ "src/common/end-of-line.js"(e, n) {
         "use strict";
         re();
@@ -4058,14 +4057,14 @@ var require_standalone = __commonJS({ "../../node_modules/prettier/standalone.js
             if (C && b.push(N, i), !d || d(N) !== false)
               if (r(N) || N.type === "fill") {
                 let k = u(N);
-                for (let $ = k.length, M = $ - 1; M >= 0; --M)
+                for (let R = k.length, M = R - 1; M >= 0; --M)
                   b.push(k[M]);
               } else if (N.type === "if-break")
                 N.flatContents && b.push(N.flatContents), N.breakContents && b.push(N.breakContents);
               else if (N.type === "group" && N.expandedStates)
                 if (_)
-                  for (let k = N.expandedStates.length, $ = k - 1; $ >= 0; --$)
-                    b.push(N.expandedStates[$]);
+                  for (let k = N.expandedStates.length, R = k - 1; R >= 0; --R)
+                    b.push(N.expandedStates[R]);
                 else
                   b.push(N.contents);
               else
@@ -4089,12 +4088,12 @@ var require_standalone = __commonJS({ "../../node_modules/prettier/standalone.js
               return d(Object.assign(Object.assign({}, N), {}, { parts: k }));
             }
             if (N.type === "if-break") {
-              let k = N.breakContents && _(N.breakContents), $ = N.flatContents && _(N.flatContents);
-              return d(Object.assign(Object.assign({}, N), {}, { breakContents: k, flatContents: $ }));
+              let k = N.breakContents && _(N.breakContents), R = N.flatContents && _(N.flatContents);
+              return d(Object.assign(Object.assign({}, N), {}, { breakContents: k, flatContents: R }));
             }
             if (N.type === "group" && N.expandedStates) {
-              let k = N.expandedStates.map(_), $ = k[0];
-              return d(Object.assign(Object.assign({}, N), {}, { contents: $, expandedStates: k }));
+              let k = N.expandedStates.map(_), R = k[0];
+              return d(Object.assign(Object.assign({}, N), {}, { contents: R, expandedStates: k }));
             }
             if (N.contents) {
               let k = _(N.contents);
@@ -4106,8 +4105,8 @@ var require_standalone = __commonJS({ "../../node_modules/prettier/standalone.js
         function y(o, d, C) {
           let _ = C, b = false;
           function N(k) {
-            let $ = d(k);
-            if ($ !== void 0 && (b = true, _ = $), b)
+            let R = d(k);
+            if (R !== void 0 && (b = true, _ = R), b)
               return false;
           }
           return l(o, N), _;
@@ -4236,7 +4235,7 @@ var require_standalone = __commonJS({ "../../node_modules/prettier/standalone.js
           }
           return d;
         }
-        function R(o) {
+        function $(o) {
           return c(o, (d) => Array.isArray(d) ? P(d) : d.parts ? Object.assign(Object.assign({}, d), {}, { parts: P(d.parts) }) : d);
         }
         function f(o) {
@@ -4255,7 +4254,7 @@ var require_standalone = __commonJS({ "../../node_modules/prettier/standalone.js
         function E(o) {
           return y(o, m, false);
         }
-        n.exports = { isConcat: r, getDocParts: u, willBreak: g, traverseDoc: l, findInDoc: y, mapDoc: c, propagateBreaks: D, removeLines: w, stripTrailingHardline: A, normalizeParts: P, normalizeDoc: R, cleanDoc: I, replaceTextEndOfLine: x, replaceEndOfLine: f, canBreak: E };
+        n.exports = { isConcat: r, getDocParts: u, willBreak: g, traverseDoc: l, findInDoc: y, mapDoc: c, propagateBreaks: D, removeLines: w, stripTrailingHardline: A, normalizeParts: P, normalizeDoc: $, cleanDoc: I, replaceTextEndOfLine: x, replaceEndOfLine: f, canBreak: E };
       } }), fD = ee({ "src/document/doc-printer.js"(e, n) {
         "use strict";
         re();
@@ -4270,8 +4269,8 @@ var require_standalone = __commonJS({ "../../node_modules/prettier/standalone.js
           return I === Number.NEGATIVE_INFINITY ? B.root || p() : I < 0 ? w(B, { type: "dedent" }, P) : I ? I.type === "root" ? Object.assign(Object.assign({}, B), {}, { root: B }) : w(B, { type: typeof I == "string" ? "stringAlign" : "numberAlign", n: I }, P) : B;
         }
         function w(B, I, P) {
-          let R = I.type === "dedent" ? B.queue.slice(0, -1) : [...B.queue, I], f = "", x = 0, m = 0, E = 0;
-          for (let k of R)
+          let $ = I.type === "dedent" ? B.queue.slice(0, -1) : [...B.queue, I], f = "", x = 0, m = 0, E = 0;
+          for (let k of $)
             switch (k.type) {
               case "indent":
                 C(), P.useTabs ? o(1) : d(P.tabWidth);
@@ -4285,7 +4284,7 @@ var require_standalone = __commonJS({ "../../node_modules/prettier/standalone.js
               default:
                 throw new Error(`Unexpected type '${k.type}'`);
             }
-          return b(), Object.assign(Object.assign({}, B), {}, { value: f, length: x, queue: R });
+          return b(), Object.assign(Object.assign({}, B), {}, { value: f, length: x, queue: $ });
           function o(k) {
             f += "	".repeat(k), x += P.tabWidth * k;
           }
@@ -4317,7 +4316,7 @@ var require_standalone = __commonJS({ "../../node_modules/prettier/standalone.js
           }
           return I;
         }
-        function F(B, I, P, R, f) {
+        function F(B, I, P, $, f) {
           let x = I.length, m = [B], E = [];
           for (; P >= 0; ) {
             if (m.length === 0) {
@@ -4362,10 +4361,10 @@ var require_standalone = __commonJS({ "../../node_modules/prettier/standalone.js
                   d.soft || (E.push(" "), P--);
                   break;
                 case "line-suffix":
-                  R = true;
+                  $ = true;
                   break;
                 case "line-suffix-boundary":
-                  if (R)
+                  if ($)
                     return false;
                   break;
               }
@@ -4374,12 +4373,12 @@ var require_standalone = __commonJS({ "../../node_modules/prettier/standalone.js
         }
         function A(B, I) {
           y = {};
-          let P = I.printWidth, R = t(I.endOfLine), f = 0, x = [{ ind: p(), mode: h, doc: B }], m = [], E = false, o = [];
+          let P = I.printWidth, $ = t(I.endOfLine), f = 0, x = [{ ind: p(), mode: h, doc: B }], m = [], E = false, o = [];
           for (; x.length > 0; ) {
             let { ind: C, mode: _, doc: b } = x.pop();
             if (typeof b == "string") {
-              let N = R !== `
-` ? b.replace(/\n/g, R) : b;
+              let N = $ !== `
+` ? b.replace(/\n/g, $) : b;
               m.push(N), f += a(N);
             } else if (l(b)) {
               let N = c(b);
@@ -4408,8 +4407,8 @@ var require_standalone = __commonJS({ "../../node_modules/prettier/standalone.js
                       }
                     case h: {
                       E = false;
-                      let N = { ind: C, mode: g, doc: b.contents }, k = P - f, $ = o.length > 0;
-                      if (!b.break && F(N, x, k, $))
+                      let N = { ind: C, mode: g, doc: b.contents }, k = P - f, R = o.length > 0;
+                      if (!b.break && F(N, x, k, R))
                         x.push(N);
                       else if (b.expandedStates) {
                         let M = s(b.expandedStates);
@@ -4423,7 +4422,7 @@ var require_standalone = __commonJS({ "../../node_modules/prettier/standalone.js
                               break;
                             } else {
                               let J = b.expandedStates[q], L = { ind: C, mode: g, doc: J };
-                              if (F(L, x, k, $)) {
+                              if (F(L, x, k, R)) {
                                 x.push(L);
                                 break;
                               }
@@ -4439,7 +4438,7 @@ var require_standalone = __commonJS({ "../../node_modules/prettier/standalone.js
                   let N = P - f, { parts: k } = b;
                   if (k.length === 0)
                     break;
-                  let [$, M] = k, q = { ind: C, mode: g, doc: $ }, J = { ind: C, mode: h, doc: $ }, L = F(q, [], N, o.length > 0, true);
+                  let [R, M] = k, q = { ind: C, mode: g, doc: R }, J = { ind: C, mode: h, doc: R }, L = F(q, [], N, o.length > 0, true);
                   if (k.length === 1) {
                     L ? x.push(q) : x.push(J);
                     break;
@@ -4451,7 +4450,7 @@ var require_standalone = __commonJS({ "../../node_modules/prettier/standalone.js
                   }
                   k.splice(0, 2);
                   let O = { ind: C, mode: _, doc: r(k) }, K = k[0];
-                  F({ ind: C, mode: g, doc: [$, M, K] }, [], N, o.length > 0, true) ? x.push(O, Y, q) : L ? x.push(O, V, q) : x.push(O, V, J);
+                  F({ ind: C, mode: g, doc: [R, M, K] }, [], N, o.length > 0, true) ? x.push(O, Y, q) : L ? x.push(O, V, q) : x.push(O, V, J);
                   break;
                 }
                 case "if-break":
@@ -4487,7 +4486,7 @@ var require_standalone = __commonJS({ "../../node_modules/prettier/standalone.js
                         x.push({ ind: C, mode: _, doc: b }, ...o.reverse()), o.length = 0;
                         break;
                       }
-                      b.literal ? C.root ? (m.push(R, C.root.value), f = C.root.length) : (m.push(R), f = 0) : (f -= T(m), m.push(R + C.value), f = C.length);
+                      b.literal ? C.root ? (m.push($, C.root.value), f = C.root.length) : (m.push($), f = 0) : (f -= T(m), m.push($ + C.value), f = C.length);
                       break;
                   }
                   break;
@@ -4800,7 +4799,7 @@ var require_standalone = __commonJS({ "../../node_modules/prettier/standalone.js
         function p(F, A, B) {
           var I = 0, P = F[0].match(h);
           P && (I = P[1].length);
-          var R = "(\\r\\n|\\r|\\n).{0," + I + "}", f = new RegExp(R, "g");
+          var $ = "(\\r\\n|\\r|\\n).{0," + I + "}", f = new RegExp($, "g");
           A && (F = F.slice(1));
           var x = B.newline, m = B.trimLeadingNewline, E = B.trimTrailingNewline, o = typeof x == "string", d = F.length, C = F.map(function(_, b) {
             return _ = _.replace(f, "$1"), b === 0 && m && (_ = _.replace(l, "")), b === d - 1 && E && (_ = _.replace(c, "")), o && (_ = _.replace(/\r\n|\n|\r/g, function(N) {
@@ -4819,20 +4818,20 @@ var require_standalone = __commonJS({ "../../node_modules/prettier/standalone.js
         }
         function w(F) {
           var A = s(), B = s();
-          function I(R) {
+          function I($) {
             for (var f = [], x = 1; x < arguments.length; x++)
               f[x - 1] = arguments[x];
-            if (v(R)) {
-              var m = R, E = (f[0] === I || f[0] === T) && g.test(m[0]) && y.test(m[1]), o = E ? B : A, d = o.get(m);
+            if (v($)) {
+              var m = $, E = (f[0] === I || f[0] === T) && g.test(m[0]) && y.test(m[1]), o = E ? B : A, d = o.get(m);
               if (d || (d = p(m, E, F), o.set(m, d)), f.length === 0)
                 return d[0];
               var C = D(d, E ? f.slice(1) : f);
               return C;
             } else
-              return w(i(i({}, F), R || {}));
+              return w(i(i({}, F), $ || {}));
           }
-          var P = i(I, { string: function(R) {
-            return p([R], false, F)[0];
+          var P = i(I, { string: function($) {
+            return p([$], false, F)[0];
           } });
           return P;
         }
@@ -5048,7 +5047,7 @@ var require_standalone = __commonJS({ "../../node_modules/prettier/standalone.js
         function P(V, O, K) {
           return D(V, K(O));
         }
-        function R(V, O, K) {
+        function $(V, O, K) {
           return V.charAt(P(V, O, K));
         }
         function f(V, O) {
@@ -5109,7 +5108,7 @@ var require_standalone = __commonJS({ "../../node_modules/prettier/standalone.js
         function k(V, O) {
           O.leading = true, O.trailing = false, N(V, O);
         }
-        function $(V, O, K) {
+        function R(V, O, K) {
           O.leading = false, O.trailing = false, K && (O.marker = K), N(V, O);
         }
         function M(V, O) {
@@ -5141,7 +5140,7 @@ var require_standalone = __commonJS({ "../../node_modules/prettier/standalone.js
           let O = V.type || V.kind || "(unknown type)", K = String(V.name || V.id && (typeof V.id == "object" ? V.id.name : V.id) || V.key && (typeof V.key == "object" ? V.key.name : V.key) || V.value && (typeof V.value == "object" ? "" : String(V.value)) || V.operator || "");
           return K.length > 20 && (K = K.slice(0, 19) + "\u2026"), O + (K ? " " + K : "");
         }
-        n.exports = { inferParserByLanguage: q, getStringWidth: u, getMaxContinuousCount: _, getMinNotPresentContinuousCount: b, getPenultimate: v, getLast: s, getNextNonSpaceNonCommentCharacterIndexWithStartIndex: D, getNextNonSpaceNonCommentCharacterIndex: P, getNextNonSpaceNonCommentCharacter: R, skip: w, skipWhitespace: i, skipSpaces: l, skipToLineEnd: c, skipEverythingButNewLine: y, skipInlineComment: h, skipTrailingComment: g, skipNewline: p, isNextLineEmptyAfterIndex: B, isNextLineEmpty: I, isPreviousLineEmpty: A, hasNewline: T, hasNewlineInRange: F, hasSpaces: f, getAlignmentSize: x, getIndentSize: m, getPreferredQuote: E, printString: o, printNumber: C, makeString: d, addLeadingComment: k, addDanglingComment: $, addTrailingComment: M, isFrontMatterNode: J, isNonEmptyArray: r, createGroupIdMapper: L };
+        n.exports = { inferParserByLanguage: q, getStringWidth: u, getMaxContinuousCount: _, getMinNotPresentContinuousCount: b, getPenultimate: v, getLast: s, getNextNonSpaceNonCommentCharacterIndexWithStartIndex: D, getNextNonSpaceNonCommentCharacterIndex: P, getNextNonSpaceNonCommentCharacter: $, skip: w, skipWhitespace: i, skipSpaces: l, skipToLineEnd: c, skipEverythingButNewLine: y, skipInlineComment: h, skipTrailingComment: g, skipNewline: p, isNextLineEmptyAfterIndex: B, isNextLineEmpty: I, isPreviousLineEmpty: A, hasNewline: T, hasNewlineInRange: F, hasSpaces: f, getAlignmentSize: x, getIndentSize: m, getPreferredQuote: E, printString: o, printNumber: C, makeString: d, addLeadingComment: k, addDanglingComment: R, addTrailingComment: M, isFrontMatterNode: J, isNonEmptyArray: r, createGroupIdMapper: L };
       } }), Fa = {};
       zt(Fa, { basename: () => Ta, default: () => Na, delimiter: () => wn, dirname: () => ba, extname: () => Ba, isAbsolute: () => Wn, join: () => Sa, normalize: () => Vn, relative: () => xa, resolve: () => Nr, sep: () => Nn });
       function Aa(e, n) {
@@ -5159,7 +5158,7 @@ var require_standalone = __commonJS({ "../../node_modules/prettier/standalone.js
           var s = t >= 0 ? arguments[t] : "/";
           if (typeof s != "string")
             throw new TypeError("Arguments to path.resolve must be strings");
-          !s || (e = s + "/" + e, n = s.charAt(0) === "/");
+          s && (e = s + "/" + e, n = s.charAt(0) === "/");
         }
         return e = Aa(Hn(e.split("/"), function(a) {
           return !!a;
@@ -5985,8 +5984,8 @@ var require_standalone = __commonJS({ "../../node_modules/prettier/standalone.js
                     for (let { value: I } of B) {
                       let P = { key: c, value: I };
                       if (!this._hasDeprecationWarned(P)) {
-                        let R = typeof A == "string" ? { key: A, value: I } : A;
-                        this._utils.logger.warn(this._deprecatedHandler(P, R, this._utils));
+                        let $ = typeof A == "string" ? { key: A, value: I } : A;
+                        this._utils.logger.warn(this._deprecatedHandler(P, $, this._utils));
                       }
                     }
               };
@@ -6046,10 +6045,10 @@ var require_standalone = __commonJS({ "../../node_modules/prettier/standalone.js
           let { logger: D = false, isCLI: v = false, passThrough: w = false, colorsModule: T = null, levenshteinDistance: F = null } = arguments.length > 2 && arguments[2] !== void 0 ? arguments[2] : {}, A = w ? Array.isArray(w) ? (x, m) => w.includes(x) ? { [x]: m } : void 0 : (x, m) => ({ [x]: m }) : (x, m, E) => {
             let o = E.schemas, { _: d } = o, C = Ln(o, Jf);
             return t.levenUnknownHandler(x, m, Object.assign(Object.assign({}, E), {}, { schemas: C }));
-          }, B = v ? a : t.apiDescriptor, I = l(p, { isCLI: v, colorsModule: T, levenshteinDistance: F }), P = new t.Normalizer(I, { logger: D, unknown: A, descriptor: B }), R = D !== false;
-          R && u && (P._hasDeprecationWarned = u);
+          }, B = v ? a : t.apiDescriptor, I = l(p, { isCLI: v, colorsModule: T, levenshteinDistance: F }), P = new t.Normalizer(I, { logger: D, unknown: A, descriptor: B }), $ = D !== false;
+          $ && u && (P._hasDeprecationWarned = u);
           let f = P.normalize(g);
-          return R && (u = P._hasDeprecationWarned), v && f["plugin-search"] === false && (f["plugin-search-dir"] = false), f;
+          return $ && (u = P._hasDeprecationWarned), v && f["plugin-search"] === false && (f["plugin-search-dir"] = false), f;
         }
         function l(g, p) {
           let { isCLI: D, colorsModule: v, levenshteinDistance: w } = p, T = [];
@@ -6064,7 +6063,7 @@ var require_standalone = __commonJS({ "../../node_modules/prettier/standalone.js
             return t.AnySchema.create({ name: F, preprocess(P) {
               return P === false || (P = Array.isArray(P) ? P : [P]), P;
             }, validate(P) {
-              return P === false ? true : P.every((R) => typeof R == "string");
+              return P === false ? true : P.every(($) => typeof $ == "string");
             }, expected() {
               return "false or paths to plugin search dir";
             } });
@@ -6091,9 +6090,9 @@ var require_standalone = __commonJS({ "../../node_modules/prettier/standalone.js
             default:
               throw new Error(`Unexpected type ${g.type}`);
           }
-          if (g.exception ? A.validate = (P, R, f) => g.exception(P) || R.validate(P, f) : A.validate = (P, R, f) => P === void 0 || R.validate(P, f), g.redirect && (I.redirect = (P) => P ? { to: { key: g.redirect.option, value: g.redirect.value } } : void 0), g.deprecated && (I.deprecated = true), D && !g.array) {
-            let P = A.preprocess || ((R) => R);
-            A.preprocess = (R, f, x) => f.preprocess(P(Array.isArray(R) ? s(R) : R), x);
+          if (g.exception ? A.validate = (P, $, f) => g.exception(P) || $.validate(P, f) : A.validate = (P, $, f) => P === void 0 || $.validate(P, f), g.redirect && (I.redirect = (P) => P ? { to: { key: g.redirect.option, value: g.redirect.value } } : void 0), g.deprecated && (I.deprecated = true), D && !g.array) {
+            let P = A.preprocess || (($) => $);
+            A.preprocess = ($, f, x) => f.preprocess(P(Array.isArray($) ? s($) : $), x);
           }
           return g.array ? t.ArraySchema.create(Object.assign(Object.assign(Object.assign({}, D ? { preprocess: (P) => Array.isArray(P) ? P : [P] } : {}), I), {}, { valueSchema: B.create(A) })) : B.create(Object.assign(Object.assign({}, A), I));
         }
@@ -6149,17 +6148,17 @@ var require_standalone = __commonJS({ "../../node_modules/prettier/standalone.js
           v === -1 && (A = 0), T === -1 && (B = c.length);
           let I = T - v, P = {};
           if (I)
-            for (let R = 0; R <= I; R++) {
-              let f = R + v;
+            for (let $ = 0; $ <= I; $++) {
+              let f = $ + v;
               if (!w)
                 P[f] = true;
-              else if (R === 0) {
+              else if ($ === 0) {
                 let x = c[f - 1].length;
                 P[f] = [w, x - w + 1];
-              } else if (R === I)
+              } else if ($ === I)
                 P[f] = [0, F];
               else {
-                let x = c[f - R].length;
+                let x = c[f - $].length;
                 P[f] = [0, x];
               }
             }
@@ -6168,18 +6167,18 @@ var require_standalone = __commonJS({ "../../node_modules/prettier/standalone.js
           return { start: A, end: B, markerLines: P };
         }
         function u(l, c) {
-          let y = arguments.length > 2 && arguments[2] !== void 0 ? arguments[2] : {}, h = (y.highlightCode || y.forceColor) && (0, n.shouldHighlight)(y), g = (0, n.getChalk)(y), p = s(g), D = (R, f) => h ? R(f) : f, v = l.split(a), { start: w, end: T, markerLines: F } = r(c, v, y), A = c.start && typeof c.start.column == "number", B = String(T).length, P = (h ? (0, n.default)(l, y) : l).split(a, T).slice(w, T).map((R, f) => {
+          let y = arguments.length > 2 && arguments[2] !== void 0 ? arguments[2] : {}, h = (y.highlightCode || y.forceColor) && (0, n.shouldHighlight)(y), g = (0, n.getChalk)(y), p = s(g), D = ($, f) => h ? $(f) : f, v = l.split(a), { start: w, end: T, markerLines: F } = r(c, v, y), A = c.start && typeof c.start.column == "number", B = String(T).length, P = (h ? (0, n.default)(l, y) : l).split(a, T).slice(w, T).map(($, f) => {
             let x = w + 1 + f, E = ` ${` ${x}`.slice(-B)} |`, o = F[x], d = !F[x + 1];
             if (o) {
               let C = "";
               if (Array.isArray(o)) {
-                let _ = R.slice(0, Math.max(o[0] - 1, 0)).replace(/[^\t]/g, " "), b = o[1] || 1;
+                let _ = $.slice(0, Math.max(o[0] - 1, 0)).replace(/[^\t]/g, " "), b = o[1] || 1;
                 C = [`
  `, D(p.gutter, E.replace(/\d/g, " ")), " ", _, D(p.marker, "^").repeat(b)].join(""), d && y.message && (C += " " + D(p.message, y.message));
               }
-              return [D(p.marker, ">"), D(p.gutter, E), R.length > 0 ? ` ${R}` : "", C].join("");
+              return [D(p.marker, ">"), D(p.gutter, E), $.length > 0 ? ` ${$}` : "", C].join("");
             } else
-              return ` ${D(p.gutter, E)}${R.length > 0 ? ` ${R}` : ""}`;
+              return ` ${D(p.gutter, E)}${$.length > 0 ? ` ${$}` : ""}`;
           }).join(`
 `);
           return y.message && !A && (P = `${" ".repeat(B + 1)}${y.message}
@@ -6306,10 +6305,10 @@ ${P}`), h ? g.reset(P) : P;
         "use strict";
         re();
         var t = Yt(), { builders: { line: s, hardline: a, breakParent: r, indent: u, lineSuffix: i, join: l, cursor: c } } = qe(), { hasNewline: y, skipNewline: h, skipSpaces: g, isPreviousLineEmpty: p, addLeadingComment: D, addDanglingComment: v, addTrailingComment: w } = Ge(), T = /* @__PURE__ */ new WeakMap();
-        function F(k, $, M) {
+        function F(k, R, M) {
           if (!k)
             return;
-          let { printer: q, locStart: J, locEnd: L } = $;
+          let { printer: q, locStart: J, locEnd: L } = R;
           if (M) {
             if (q.canAttachComment && q.canAttachComment(k)) {
               let V;
@@ -6320,7 +6319,7 @@ ${P}`), h ? g.reset(P) : P;
             }
           } else if (T.has(k))
             return T.get(k);
-          let Y = q.getCommentChildNodes && q.getCommentChildNodes(k, $) || typeof k == "object" && Object.entries(k).filter((V) => {
+          let Y = q.getCommentChildNodes && q.getCommentChildNodes(k, R) || typeof k == "object" && Object.entries(k).filter((V) => {
             let [O] = V;
             return O !== "enclosingNode" && O !== "precedingNode" && O !== "followingNode" && O !== "tokens" && O !== "comments" && O !== "parent";
           }).map((V) => {
@@ -6330,16 +6329,16 @@ ${P}`), h ? g.reset(P) : P;
           if (Y) {
             M || (M = [], T.set(k, M));
             for (let V of Y)
-              F(V, $, M);
+              F(V, R, M);
             return M;
           }
         }
-        function A(k, $, M, q) {
-          let { locStart: J, locEnd: L } = M, Y = J($), V = L($), O = F(k, M), K, se, Q = 0, le = O.length;
+        function A(k, R, M, q) {
+          let { locStart: J, locEnd: L } = M, Y = J(R), V = L(R), O = F(k, M), K, se, Q = 0, le = O.length;
           for (; Q < le; ) {
             let W = Q + le >> 1, X = O[W], oe = J(X), ae = L(X);
             if (oe <= Y && V <= ae)
-              return A(X, $, M, X);
+              return A(X, R, M, X);
             if (ae <= Y) {
               K = X, Q = W + 1;
               continue;
@@ -6351,16 +6350,16 @@ ${P}`), h ? g.reset(P) : P;
             throw new Error("Comment location overlaps with node location");
           }
           if (q && q.type === "TemplateLiteral") {
-            let { quasis: W } = q, X = E(W, $, M);
+            let { quasis: W } = q, X = E(W, R, M);
             K && E(W, K, M) !== X && (K = null), se && E(W, se, M) !== X && (se = null);
           }
           return { enclosingNode: q, precedingNode: K, followingNode: se };
         }
         var B = () => false;
-        function I(k, $, M, q) {
+        function I(k, R, M, q) {
           if (!Array.isArray(k))
             return;
-          let J = [], { locStart: L, locEnd: Y, printer: { handleComments: V = {} } } = q, { avoidAstMutation: O, ownLine: K = B, endOfLine: se = B, remaining: Q = B } = V, le = k.map((W, X) => Object.assign(Object.assign({}, A($, W, q)), {}, { comment: W, text: M, options: q, ast: $, isLastComment: k.length - 1 === X }));
+          let J = [], { locStart: L, locEnd: Y, printer: { handleComments: V = {} } } = q, { avoidAstMutation: O, ownLine: K = B, endOfLine: se = B, remaining: Q = B } = V, le = k.map((W, X) => Object.assign(Object.assign({}, A(R, W, q)), {}, { comment: W, text: M, options: q, ast: R, isLastComment: k.length - 1 === X }));
           for (let [W, X] of le.entries()) {
             let { comment: oe, precedingNode: ae, enclosingNode: Ae, followingNode: z, text: H, options: Z, ast: ne, isLastComment: fe } = X;
             if (Z.parser === "json" || Z.parser === "json5" || Z.parser === "__js_expression" || Z.parser === "__vue_expression" || Z.parser === "__vue_ts_expression") {
@@ -6374,7 +6373,7 @@ ${P}`), h ? g.reset(P) : P;
               }
             }
             let ge;
-            if (O ? ge = [X] : (oe.enclosingNode = Ae, oe.precedingNode = ae, oe.followingNode = z, ge = [oe, H, Z, ne, fe]), R(H, Z, le, W))
+            if (O ? ge = [X] : (oe.enclosingNode = Ae, oe.precedingNode = ae, oe.followingNode = z, ge = [oe, H, Z, ne, fe]), $(H, Z, le, W))
               oe.placement = "ownLine", K(...ge) || (z ? D(z, oe) : ae ? w(ae, oe) : v(Ae || ne, oe));
             else if (f(H, Z, le, W))
               oe.placement = "endOfLine", se(...ge) || (ae ? w(ae, oe) : z ? D(z, oe) : v(Ae || ne, oe));
@@ -6390,8 +6389,8 @@ ${P}`), h ? g.reset(P) : P;
               delete W.precedingNode, delete W.enclosingNode, delete W.followingNode;
         }
         var P = (k) => !/[\S\n\u2028\u2029]/.test(k);
-        function R(k, $, M, q) {
-          let { comment: J, precedingNode: L } = M[q], { locStart: Y, locEnd: V } = $, O = Y(J);
+        function $(k, R, M, q) {
+          let { comment: J, precedingNode: L } = M[q], { locStart: Y, locEnd: V } = R, O = Y(J);
           if (L)
             for (let K = q - 1; K >= 0; K--) {
               let { comment: se, precedingNode: Q } = M[K];
@@ -6401,8 +6400,8 @@ ${P}`), h ? g.reset(P) : P;
             }
           return y(k, O, { backwards: true });
         }
-        function f(k, $, M, q) {
-          let { comment: J, followingNode: L } = M[q], { locStart: Y, locEnd: V } = $, O = V(J);
+        function f(k, R, M, q) {
+          let { comment: J, followingNode: L } = M[q], { locStart: Y, locEnd: V } = R, O = V(J);
           if (L)
             for (let K = q + 1; K < M.length; K++) {
               let { comment: se, followingNode: Q } = M[K];
@@ -6412,7 +6411,7 @@ ${P}`), h ? g.reset(P) : P;
             }
           return y(k, O);
         }
-        function x(k, $, M) {
+        function x(k, R, M) {
           let q = k.length;
           if (q === 0)
             return;
@@ -6420,7 +6419,7 @@ ${P}`), h ? g.reset(P) : P;
           for (K = q; K > 0; --K) {
             let { comment: se, precedingNode: Q, followingNode: le } = k[K - 1];
             t.strictEqual(Q, J), t.strictEqual(le, L);
-            let W = $.slice(M.locEnd(se), O);
+            let W = R.slice(M.locEnd(se), O);
             if (V.test(W))
               O = M.locStart(se);
             else
@@ -6432,19 +6431,19 @@ ${P}`), h ? g.reset(P) : P;
             se.comments && se.comments.length > 1 && se.comments.sort((Q, le) => M.locStart(Q) - M.locStart(le));
           k.length = 0;
         }
-        function m(k, $) {
+        function m(k, R) {
           let M = k.getValue();
-          return M.printed = true, $.printer.printComment(k, $);
+          return M.printed = true, R.printer.printComment(k, R);
         }
-        function E(k, $, M) {
-          let q = M.locStart($) - 1;
+        function E(k, R, M) {
+          let q = M.locStart(R) - 1;
           for (let J = 1; J < k.length; ++J)
             if (q < M.locStart(k[J]))
               return J - 1;
           return 0;
         }
-        function o(k, $) {
-          let M = k.getValue(), q = [m(k, $)], { printer: J, originalText: L, locStart: Y, locEnd: V } = $;
+        function o(k, R) {
+          let M = k.getValue(), q = [m(k, R)], { printer: J, originalText: L, locStart: Y, locEnd: V } = R;
           if (J.isBlockComment && J.isBlockComment(M)) {
             let se = y(L, V(M)) ? y(L, Y(M), { backwards: true }) ? a : s : " ";
             q.push(se);
@@ -6453,8 +6452,8 @@ ${P}`), h ? g.reset(P) : P;
           let K = h(L, g(L, V(M)));
           return K !== false && y(L, K) && q.push(a), q;
         }
-        function d(k, $) {
-          let M = k.getValue(), q = m(k, $), { printer: J, originalText: L, locStart: Y } = $, V = J.isBlockComment && J.isBlockComment(M);
+        function d(k, R) {
+          let M = k.getValue(), q = m(k, R), { printer: J, originalText: L, locStart: Y } = R, V = J.isBlockComment && J.isBlockComment(M);
           if (y(L, Y(M), { backwards: true })) {
             let K = p(L, M, Y);
             return i([a, K ? a : "", q]);
@@ -6462,20 +6461,20 @@ ${P}`), h ? g.reset(P) : P;
           let O = [" ", q];
           return V || (O = [i(O), r]), O;
         }
-        function C(k, $, M, q) {
+        function C(k, R, M, q) {
           let J = [], L = k.getValue();
           return !L || !L.comments || (k.each(() => {
             let Y = k.getValue();
-            !Y.leading && !Y.trailing && (!q || q(Y)) && J.push(m(k, $));
+            !Y.leading && !Y.trailing && (!q || q(Y)) && J.push(m(k, R));
           }, "comments"), J.length === 0) ? "" : M ? l(a, J) : u([a, l(a, J)]);
         }
-        function _(k, $, M) {
+        function _(k, R, M) {
           let q = k.getValue();
           if (!q)
             return {};
           let J = q.comments || [];
           M && (J = J.filter((O) => !M.has(O)));
-          let L = q === $.cursorNode;
+          let L = q === R.cursorNode;
           if (J.length === 0) {
             let O = L ? c : "";
             return { leading: O, trailing: O };
@@ -6486,19 +6485,19 @@ ${P}`), h ? g.reset(P) : P;
             if (M && M.has(O))
               return;
             let { leading: K, trailing: se } = O;
-            K ? Y.push(o(k, $)) : se && V.push(d(k, $));
+            K ? Y.push(o(k, R)) : se && V.push(d(k, R));
           }, "comments"), L && (Y.unshift(c), V.push(c)), { leading: Y, trailing: V };
         }
-        function b(k, $, M, q) {
+        function b(k, R, M, q) {
           let { leading: J, trailing: L } = _(k, M, q);
-          return !J && !L ? $ : [J, $, L];
+          return !J && !L ? R : [J, R, L];
         }
         function N(k) {
           if (k)
-            for (let $ of k) {
-              if (!$.printed)
-                throw new Error('Comment "' + $.value.trim() + '" was not printed. Please report this error!');
-              delete $.printed;
+            for (let R of k) {
+              if (!R.printed)
+                throw new Error('Comment "' + R.value.trim() + '" was not printed. Please report this error!');
+              delete R.printed;
             }
         }
         n.exports = { attach: I, printComments: b, printCommentsSeparately: _, printDanglingComments: C, getSortedChildNodes: F, ensureAllCommentsPrinted: N };
@@ -6634,8 +6633,8 @@ ${P}`), h ? g.reset(P) : P;
             let I = w.getValue(), P = I && typeof I == "object" && B === void 0;
             if (P && v.has(I))
               return v.get(I);
-            let R = y(w, g, F, B);
-            return P && v.set(I, R), R;
+            let $ = y(w, g, F, B);
+            return P && v.set(I, $), $;
           }
         }
         function c(h, g) {
@@ -6688,15 +6687,15 @@ ${P}`), h ? g.reset(P) : P;
           if (A === B)
             return { startNode: A, endNode: B };
           let I = T(D.node);
-          for (let R of u(v.parentNodes))
-            if (T(R) >= I)
-              B = R;
+          for (let $ of u(v.parentNodes))
+            if (T($) >= I)
+              B = $;
             else
               break;
           let P = F(v.node);
-          for (let R of u(D.parentNodes)) {
-            if (F(R) <= P)
-              A = R;
+          for (let $ of u(D.parentNodes)) {
+            if (F($) <= P)
+              A = $;
             else
               break;
             if (A === B)
@@ -6705,8 +6704,8 @@ ${P}`), h ? g.reset(P) : P;
           return { startNode: A, endNode: B };
         }
         function l(D, v, w, T) {
-          let F = arguments.length > 4 && arguments[4] !== void 0 ? arguments[4] : [], A = arguments.length > 5 ? arguments[5] : void 0, { locStart: B, locEnd: I } = w, P = B(D), R = I(D);
-          if (!(v > R || v < P || A === "rangeEnd" && v === P || A === "rangeStart" && v === R)) {
+          let F = arguments.length > 4 && arguments[4] !== void 0 ? arguments[4] : [], A = arguments.length > 5 ? arguments[5] : void 0, { locStart: B, locEnd: I } = w, P = B(D), $ = I(D);
+          if (!(v > $ || v < P || A === "rangeEnd" && v === P || A === "rangeStart" && v === $)) {
             for (let f of s.getSortedChildNodes(D, w)) {
               let x = l(f, v, w, T, [D, ...F], A);
               if (x)
@@ -6752,15 +6751,15 @@ ${P}`), h ? g.reset(P) : P;
           if (!P)
             for (T += I; F > T && !/\S/.test(D[F - 1]); --F)
               ;
-          let R = l(w, T, v, (E, o) => g(v, E, o), [], "rangeStart"), f = P ? R : l(w, F, v, (E) => g(v, E), [], "rangeEnd");
-          if (!R || !f)
+          let $ = l(w, T, v, (E, o) => g(v, E, o), [], "rangeStart"), f = P ? $ : l(w, F, v, (E) => g(v, E), [], "rangeEnd");
+          if (!$ || !f)
             return { rangeStart: 0, rangeEnd: 0 };
           let x, m;
           if (a(v)) {
-            let E = r(R, f);
+            let E = r($, f);
             x = E, m = E;
           } else
-            ({ startNode: x, endNode: m } = i(R, f, v));
+            ({ startNode: x, endNode: m } = i($, f, v));
           return { rangeStart: Math.min(A(x), A(m)), rangeEnd: Math.max(B(x), B(m)) };
         }
         n.exports = { calculateRange: p, findNodeAtOffset: l };
@@ -6787,10 +6786,10 @@ ${P}`), h ? g.reset(P) : P;
             N.cursorNodeStart !== void 0 && (N.cursorNodeStart -= N.formatted.indexOf(k)), N.formatted = k + i(E.endOfLine);
           }
           if (E.cursorOffset >= 0) {
-            let k, $, M, q, J;
-            if (E.cursorNode && N.cursorNodeText ? (k = E.locStart(E.cursorNode), $ = C.slice(k, E.locEnd(E.cursorNode)), M = E.cursorOffset - k, q = N.cursorNodeStart, J = N.cursorNodeText) : (k = 0, $ = C, M = E.cursorOffset, q = 0, J = N.formatted), $ === J)
+            let k, R, M, q, J;
+            if (E.cursorNode && N.cursorNodeText ? (k = E.locStart(E.cursorNode), R = C.slice(k, E.locEnd(E.cursorNode)), M = E.cursorOffset - k, q = N.cursorNodeStart, J = N.cursorNodeText) : (k = 0, R = C, M = E.cursorOffset, q = 0, J = N.formatted), R === J)
               return { formatted: N.formatted, cursorOffset: q + M, comments: _ };
-            let L = [...$];
+            let L = [...R];
             L.splice(M, 0, T);
             let Y = [...J], V = t(L, Y), O = q;
             for (let K of V)
@@ -6805,7 +6804,7 @@ ${P}`), h ? g.reset(P) : P;
         }
         function B(m, E) {
           let { ast: o, text: d } = p.parse(m, E), { rangeStart: C, rangeEnd: _ } = v.calculateRange(d, E, o), b = d.slice(C, _), N = Math.min(C, d.lastIndexOf(`
-`, C) + 1), k = d.slice(N, C).match(/^\s*/)[0], $ = r(k, E.tabWidth), M = A(b, Object.assign(Object.assign({}, E), {}, { rangeStart: 0, rangeEnd: Number.POSITIVE_INFINITY, cursorOffset: E.cursorOffset > C && E.cursorOffset <= _ ? E.cursorOffset - C : -1, endOfLine: "lf" }), $), q = M.formatted.trimEnd(), { cursorOffset: J } = E;
+`, C) + 1), k = d.slice(N, C).match(/^\s*/)[0], R = r(k, E.tabWidth), M = A(b, Object.assign(Object.assign({}, E), {}, { rangeStart: 0, rangeEnd: Number.POSITIVE_INFINITY, cursorOffset: E.cursorOffset > C && E.cursorOffset <= _ ? E.cursorOffset - C : -1, endOfLine: "lf" }), R), q = M.formatted.trimEnd(), { cursorOffset: J } = E;
           J > _ ? J += q.length - b.length : M.cursorOffset >= 0 && (J = M.cursorOffset + C);
           let L = d.slice(0, C) + q + d.slice(_);
           if (E.endOfLine !== "lf") {
@@ -6823,7 +6822,7 @@ ${P}`), h ? g.reset(P) : P;
           let { cursorOffset: o, rangeStart: d, rangeEnd: C } = E;
           return o = I(m, o, -1), d = I(m, d, 0), C = I(m, C, m.length), Object.assign(Object.assign({}, E), {}, { cursorOffset: o, rangeStart: d, rangeEnd: C });
         }
-        function R(m, E) {
+        function $(m, E) {
           let { cursorOffset: o, rangeStart: d, rangeEnd: C, endOfLine: _ } = P(m, E), b = m.charAt(0) === w;
           if (b && (m = m.slice(1), o--, d--, C--), _ === "auto" && (_ = u(m)), m.includes("\r")) {
             let N = (k) => l(m.slice(0, Math.max(k, 0)), `\r
@@ -6837,14 +6836,14 @@ ${P}`), h ? g.reset(P) : P;
           return !o.hasPragma || o.hasPragma(m);
         }
         function x(m, E) {
-          let { hasBOM: o, text: d, options: C } = R(m, y(E));
+          let { hasBOM: o, text: d, options: C } = $(m, y(E));
           if (C.rangeStart >= C.rangeEnd && d !== "" || C.requirePragma && !f(d, C))
             return { formatted: m, cursorOffset: E.cursorOffset, comments: [] };
           let _;
           return C.rangeStart > 0 || C.rangeEnd < d.length ? _ = B(d, C) : (!C.requirePragma && C.insertPragma && C.printer.insertPragma && !f(d, C) && (d = C.printer.insertPragma(d)), _ = A(d, C)), o && (_.formatted = w + _.formatted, _.cursorOffset >= 0 && _.cursorOffset++), _;
         }
         n.exports = { formatWithCursor: x, parse(m, E, o) {
-          let { text: d, options: C } = R(m, y(E)), _ = p.parse(d, C);
+          let { text: d, options: C } = $(m, y(E)), _ = p.parse(d, C);
           return o && (_.ast = h(_.ast, C)), _;
         }, formatAST(m, E) {
           E = y(E);
@@ -6862,8 +6861,8 @@ ${P}`), h ? g.reset(P) : P;
       } }), Cm = ee({ "src/common/util-shared.js"(e, n) {
         "use strict";
         re();
-        var { getMaxContinuousCount: t, getStringWidth: s, getAlignmentSize: a, getIndentSize: r, skip: u, skipWhitespace: i, skipSpaces: l, skipNewline: c, skipToLineEnd: y, skipEverythingButNewLine: h, skipInlineComment: g, skipTrailingComment: p, hasNewline: D, hasNewlineInRange: v, hasSpaces: w, isNextLineEmpty: T, isNextLineEmptyAfterIndex: F, isPreviousLineEmpty: A, getNextNonSpaceNonCommentCharacterIndex: B, makeString: I, addLeadingComment: P, addDanglingComment: R, addTrailingComment: f } = Ge();
-        n.exports = { getMaxContinuousCount: t, getStringWidth: s, getAlignmentSize: a, getIndentSize: r, skip: u, skipWhitespace: i, skipSpaces: l, skipNewline: c, skipToLineEnd: y, skipEverythingButNewLine: h, skipInlineComment: g, skipTrailingComment: p, hasNewline: D, hasNewlineInRange: v, hasSpaces: w, isNextLineEmpty: T, isNextLineEmptyAfterIndex: F, isPreviousLineEmpty: A, getNextNonSpaceNonCommentCharacterIndex: B, makeString: I, addLeadingComment: P, addDanglingComment: R, addTrailingComment: f };
+        var { getMaxContinuousCount: t, getStringWidth: s, getAlignmentSize: a, getIndentSize: r, skip: u, skipWhitespace: i, skipSpaces: l, skipNewline: c, skipToLineEnd: y, skipEverythingButNewLine: h, skipInlineComment: g, skipTrailingComment: p, hasNewline: D, hasNewlineInRange: v, hasSpaces: w, isNextLineEmpty: T, isNextLineEmptyAfterIndex: F, isPreviousLineEmpty: A, getNextNonSpaceNonCommentCharacterIndex: B, makeString: I, addLeadingComment: P, addDanglingComment: $, addTrailingComment: f } = Ge();
+        n.exports = { getMaxContinuousCount: t, getStringWidth: s, getAlignmentSize: a, getIndentSize: r, skip: u, skipWhitespace: i, skipSpaces: l, skipNewline: c, skipToLineEnd: y, skipEverythingButNewLine: h, skipInlineComment: g, skipTrailingComment: p, hasNewline: D, hasNewlineInRange: v, hasSpaces: w, isNextLineEmpty: T, isNextLineEmptyAfterIndex: F, isPreviousLineEmpty: A, getNextNonSpaceNonCommentCharacterIndex: B, makeString: I, addLeadingComment: P, addDanglingComment: $, addTrailingComment: f };
       } }), wt = ee({ "src/utils/create-language.js"(e, n) {
         "use strict";
         re(), n.exports = function(t, s) {
@@ -7175,15 +7174,15 @@ ${P}`), h ? g.reset(P) : P;
             return ["expression"];
           throw new Error("Unexpected node has no left side.");
         }
-        function R(j) {
+        function $(j) {
           return j = new Set(j), (me) => j.has(me == null ? void 0 : me.type);
         }
-        var f = R(["Line", "CommentLine", "SingleLine", "HashbangComment", "HTMLOpen", "HTMLClose"]), x = R(["ExportDefaultDeclaration", "ExportDefaultSpecifier", "DeclareExportDeclaration", "ExportNamedDeclaration", "ExportAllDeclaration"]);
+        var f = $(["Line", "CommentLine", "SingleLine", "HashbangComment", "HTMLOpen", "HTMLClose"]), x = $(["ExportDefaultDeclaration", "ExportDefaultSpecifier", "DeclareExportDeclaration", "ExportNamedDeclaration", "ExportAllDeclaration"]);
         function m(j) {
           let me = j.getParentNode();
           return j.getName() === "declaration" && x(me) ? me : null;
         }
-        var E = R(["BooleanLiteral", "DirectiveLiteral", "Literal", "NullLiteral", "NumericLiteral", "BigIntLiteral", "DecimalLiteral", "RegExpLiteral", "StringLiteral", "TemplateLiteral", "TSTypeLiteral", "JSXText"]);
+        var E = $(["BooleanLiteral", "DirectiveLiteral", "Literal", "NullLiteral", "NumericLiteral", "BigIntLiteral", "DecimalLiteral", "RegExpLiteral", "StringLiteral", "TemplateLiteral", "TSTypeLiteral", "JSXText"]);
         function o(j) {
           return j.type === "NumericLiteral" || j.type === "Literal" && typeof j.value == "number";
         }
@@ -7193,19 +7192,19 @@ ${P}`), h ? g.reset(P) : P;
         function C(j) {
           return j.type === "StringLiteral" || j.type === "Literal" && typeof j.value == "string";
         }
-        var _ = R(["ObjectTypeAnnotation", "TSTypeLiteral", "TSMappedType"]), b = R(["FunctionExpression", "ArrowFunctionExpression"]);
+        var _ = $(["ObjectTypeAnnotation", "TSTypeLiteral", "TSMappedType"]), b = $(["FunctionExpression", "ArrowFunctionExpression"]);
         function N(j) {
           return j.type === "FunctionExpression" || j.type === "ArrowFunctionExpression" && j.body.type === "BlockStatement";
         }
         function k(j) {
           return oe(j) && j.callee.type === "Identifier" && ["async", "inject", "fakeAsync", "waitForAsync"].includes(j.callee.name);
         }
-        var $ = R(["JSXElement", "JSXFragment"]);
+        var R = $(["JSXElement", "JSXFragment"]);
         function M(j, me) {
           if (j.parentParser !== "markdown" && j.parentParser !== "mdx")
             return false;
           let Ie = me.getNode();
-          if (!Ie.expression || !$(Ie.expression))
+          if (!Ie.expression || !R(Ie.expression))
             return false;
           let je = me.getParentNode();
           return je.type === "Program" && je.body.length === 1;
@@ -7222,7 +7221,7 @@ ${P}`), h ? g.reset(P) : P;
         function Y(j) {
           return (j.type === "TypeAnnotation" || j.type === "TSTypeAnnotation") && j.typeAnnotation.type === "FunctionTypeAnnotation" && !j.static && !h(j, j.typeAnnotation);
         }
-        var V = R(["BinaryExpression", "LogicalExpression", "NGPipeExpression"]);
+        var V = $(["BinaryExpression", "LogicalExpression", "NGPipeExpression"]);
         function O(j) {
           return ae(j) || j.type === "BindExpression" && Boolean(j.object);
         }
@@ -7250,7 +7249,7 @@ ${P}`), h ? g.reset(P) : P;
             return j.arguments[2] && !o(j.arguments[2]) ? false : (j.arguments.length === 2 ? b(j.arguments[1]) : N(j.arguments[1]) && Fe(j.arguments[1]).length <= 1) || k(j.arguments[1]);
           return false;
         }
-        var oe = R(["CallExpression", "OptionalCallExpression"]), ae = R(["MemberExpression", "OptionalMemberExpression"]);
+        var oe = $(["CallExpression", "OptionalCallExpression"]), ae = $(["MemberExpression", "OptionalMemberExpression"]);
         function Ae(j) {
           let me = "expressions";
           j.type === "TSTemplateLiteralType" && (me = "types");
@@ -7278,7 +7277,7 @@ ${P}`), h ? g.reset(P) : P;
           return je !== false && j.slice(Ie, Ie + 2) === "/*" && j.slice(je, je + 2) === "*/";
         }
         function Z(j, me) {
-          return $(me) ? Ve(me) : ue(me, ke.Leading, (Ie) => a(j, y(Ie)));
+          return R(me) ? Ve(me) : ue(me, ke.Leading, (Ie) => a(j, y(Ie)));
         }
         function ne(j, me) {
           return me.parser !== "json" && C(j.key) && ce(j.key).slice(1, -1) === j.key.value && (t(j.key.value) && !(me.parser === "babel-ts" && j.type === "ClassProperty" || me.parser === "typescript" && j.type === "PropertyDefinition") || fe(j.key.value) && String(Number(j.key.value)) === j.key.value && (me.parser === "babel" || me.parser === "acorn" || me.parser === "espree" || me.parser === "meriyah" || me.parser === "__babel_estree"));
@@ -7481,7 +7480,7 @@ ${P}`), h ? g.reset(P) : P;
         function nt(j) {
           return j.type === "TSAsExpression" || j.type === "TSSatisfiesExpression";
         }
-        n.exports = { getFunctionParameters: Fe, iterateFunctionParametersPath: Ze, getCallArguments: Je, iterateCallArgumentsPath: we, hasRestParameter: Te, getLeftSide: I, getLeftSidePathName: P, getParentExportDeclaration: m, getTypeScriptMappedTypeModifier: z, hasFlowAnnotationComment: F, hasFlowShorthandAnnotationComment: T, hasLeadingOwnLineComment: Z, hasNakedLeftSide: B, hasNode: A, hasIgnoreComment: be, hasNodeIgnoreComment: Ve, identity: U, isBinaryish: V, isCallLikeExpression: He, isEnabledHackPipeline: Xe, isLineComment: f, isPrettierIgnoreComment: Le, isCallExpression: oe, isMemberExpression: ae, isExportDeclaration: x, isFlowAnnotationComment: H, isFunctionCompositionArgs: pe, isFunctionNotation: J, isFunctionOrArrowExpression: b, isGetterOrSetter: q, isJestEachTemplateLiteral: ge, isJsxNode: $, isLiteral: E, isLongCurriedCallExpression: ie, isSimpleCallArgument: ve, isMemberish: O, isNumericLiteral: o, isSignedNumericLiteral: d, isObjectProperty: Ue, isObjectType: _, isObjectTypePropertyAFunction: L, isSimpleType: se, isSimpleNumber: fe, isSimpleTemplateLiteral: Ae, isStringLiteral: C, isStringPropSafeToUnquote: ne, isTemplateOnItsOwnLine: _e, isTestCall: X, isTheOnlyJsxElementInMarkdown: M, isTSXFile: de, isTypeAnnotationAFunction: Y, isNextLineEmpty: rt, needsHardlineAfterDanglingComment: Oe, rawText: ce, shouldPrintComma: De, isBitwiseOperator: Re, shouldFlatten: S, startsWithNoLookaheadToken: he, getPrecedence: te, hasComment: ue, getComments: st, CommentCheckFlags: ke, markerForIfWithoutBlockAndSameLineComment: at, isTSTypeExpression: nt };
+        n.exports = { getFunctionParameters: Fe, iterateFunctionParametersPath: Ze, getCallArguments: Je, iterateCallArgumentsPath: we, hasRestParameter: Te, getLeftSide: I, getLeftSidePathName: P, getParentExportDeclaration: m, getTypeScriptMappedTypeModifier: z, hasFlowAnnotationComment: F, hasFlowShorthandAnnotationComment: T, hasLeadingOwnLineComment: Z, hasNakedLeftSide: B, hasNode: A, hasIgnoreComment: be, hasNodeIgnoreComment: Ve, identity: U, isBinaryish: V, isCallLikeExpression: He, isEnabledHackPipeline: Xe, isLineComment: f, isPrettierIgnoreComment: Le, isCallExpression: oe, isMemberExpression: ae, isExportDeclaration: x, isFlowAnnotationComment: H, isFunctionCompositionArgs: pe, isFunctionNotation: J, isFunctionOrArrowExpression: b, isGetterOrSetter: q, isJestEachTemplateLiteral: ge, isJsxNode: R, isLiteral: E, isLongCurriedCallExpression: ie, isSimpleCallArgument: ve, isMemberish: O, isNumericLiteral: o, isSignedNumericLiteral: d, isObjectProperty: Ue, isObjectType: _, isObjectTypePropertyAFunction: L, isSimpleType: se, isSimpleNumber: fe, isSimpleTemplateLiteral: Ae, isStringLiteral: C, isStringPropSafeToUnquote: ne, isTemplateOnItsOwnLine: _e, isTestCall: X, isTheOnlyJsxElementInMarkdown: M, isTSXFile: de, isTypeAnnotationAFunction: Y, isNextLineEmpty: rt, needsHardlineAfterDanglingComment: Oe, rawText: ce, shouldPrintComma: De, isBitwiseOperator: Re, shouldFlatten: S, startsWithNoLookaheadToken: he, getPrecedence: te, hasComment: ue, getComments: st, CommentCheckFlags: ke, markerForIfWithoutBlockAndSameLineComment: at, isTSTypeExpression: nt };
       } }), jt = ee({ "src/language-js/print/template-literal.js"(e, n) {
         "use strict";
         re();
@@ -7495,12 +7494,12 @@ ${P}`), h ? g.reset(P) : P;
           }
           let b = "expressions";
           C.type === "TSTemplateLiteralType" && (b = "types");
-          let N = [], k = E.map(o, b), $ = T(C);
-          return $ && (k = k.map((M) => p(M, Object.assign(Object.assign({}, d), {}, { printWidth: Number.POSITIVE_INFINITY })).formatted)), N.push(h, "`"), E.each((M) => {
+          let N = [], k = E.map(o, b), R = T(C);
+          return R && (k = k.map((M) => p(M, Object.assign(Object.assign({}, d), {}, { printWidth: Number.POSITIVE_INFINITY })).formatted)), N.push(h, "`"), E.each((M) => {
             let q = M.getName();
             if (N.push(o()), q < k.length) {
               let { tabWidth: J } = d, L = M.getValue(), Y = a(L.value.raw, J), V = k[q];
-              if (!$) {
+              if (!R) {
                 let K = C[b][q];
                 (F(K) || A(K) || K.type === "ConditionalExpression" || K.type === "SequenceExpression" || B(K) || v(K)) && (V = [c([i, V]), i]);
               }
@@ -7516,26 +7515,26 @@ ${P}`), h ? g.reset(P) : P;
             o.__inJestEach = true;
             let b = E.map(d, "expressions");
             o.__inJestEach = false;
-            let N = [], k = b.map((L) => "${" + p(L, Object.assign(Object.assign({}, o), {}, { printWidth: Number.POSITIVE_INFINITY, endOfLine: "lf" })).formatted + "}"), $ = [{ hasLineBreak: false, cells: [] }];
+            let N = [], k = b.map((L) => "${" + p(L, Object.assign(Object.assign({}, o), {}, { printWidth: Number.POSITIVE_INFINITY, endOfLine: "lf" })).formatted + "}"), R = [{ hasLineBreak: false, cells: [] }];
             for (let L = 1; L < C.quasis.length; L++) {
-              let Y = t($), V = k[L - 1];
+              let Y = t(R), V = k[L - 1];
               Y.cells.push(V), V.includes(`
 `) && (Y.hasLineBreak = true), C.quasis[L].value.raw.includes(`
-`) && $.push({ hasLineBreak: false, cells: [] });
+`) && R.push({ hasLineBreak: false, cells: [] });
             }
-            let M = Math.max(_.length, ...$.map((L) => L.cells.length)), q = Array.from({ length: M }).fill(0), J = [{ cells: _ }, ...$.filter((L) => L.cells.length > 0)];
+            let M = Math.max(_.length, ...R.map((L) => L.cells.length)), q = Array.from({ length: M }).fill(0), J = [{ cells: _ }, ...R.filter((L) => L.cells.length > 0)];
             for (let { cells: L } of J.filter((Y) => !Y.hasLineBreak))
               for (let [Y, V] of L.entries())
                 q[Y] = Math.max(q[Y], s(V));
             return N.push(h, "`", c([u, r(u, J.map((L) => r(" | ", L.cells.map((Y, V) => L.hasLineBreak ? Y : Y + " ".repeat(q[V] - s(Y))))))]), u, "`"), N;
           }
         }
-        function R(E, o) {
+        function $(E, o) {
           let d = E.getValue(), C = o();
           return F(d) && (C = l([c([i, C]), i])), ["${", C, h, "}"];
         }
         function f(E, o) {
-          return E.map((d) => R(d, o), "expressions");
+          return E.map((d) => $(d, o), "expressions");
         }
         function x(E, o) {
           return D(E, (d) => typeof d == "string" ? o ? d.replace(/(\\*)`/g, "$1$1\\`") : m(d) : d);
@@ -7564,7 +7563,7 @@ ${P}`), h ? g.reset(P) : P;
         re();
         var { isNonEmptyArray: t } = Ge(), { builders: { indent: s, hardline: a, softline: r }, utils: { mapDoc: u, replaceEndOfLine: i, cleanDoc: l } } = qe(), { printTemplateExpressions: c } = jt();
         function y(p, D, v) {
-          let w = p.getValue(), T = w.quasis.map((P) => P.value.raw), F = 0, A = T.reduce((P, R, f) => f === 0 ? R : P + "@prettier-placeholder-" + F++ + "-id" + R, ""), B = v(A, { parser: "scss" }, { stripTrailingHardline: true }), I = c(p, D);
+          let w = p.getValue(), T = w.quasis.map((P) => P.value.raw), F = 0, A = T.reduce((P, $, f) => f === 0 ? $ : P + "@prettier-placeholder-" + F++ + "-id" + $, ""), B = v(A, { parser: "scss" }, { stripTrailingHardline: true }), I = c(p, D);
           return h(B, w, I);
         }
         function h(p, D, v) {
@@ -7593,11 +7592,11 @@ ${P}`), h ? g.reset(P) : P;
           let D = u(c, y), v = [];
           for (let w = 0; w < p; w++) {
             let T = g.quasis[w], F = w === 0, A = w === p - 1, B = T.value.cooked, I = B.split(`
-`), P = I.length, R = D[w], f = P > 2 && I[0].trim() === "" && I[1].trim() === "", x = P > 2 && I[P - 1].trim() === "" && I[P - 2].trim() === "", m = I.every((o) => /^\s*(?:#[^\n\r]*)?$/.test(o));
+`), P = I.length, $ = D[w], f = P > 2 && I[0].trim() === "" && I[1].trim() === "", x = P > 2 && I[P - 1].trim() === "" && I[P - 2].trim() === "", m = I.every((o) => /^\s*(?:#[^\n\r]*)?$/.test(o));
             if (!A && /#[^\n\r]*$/.test(I[P - 1]))
               return null;
             let E = null;
-            m ? E = l(I) : E = h(B, { parser: "graphql" }, { stripTrailingHardline: true }), E ? (E = r(E, false), !F && f && v.push(""), v.push(E), !A && x && v.push("")) : !F && !A && f && v.push(""), R && v.push(R);
+            m ? E = l(I) : E = h(B, { parser: "graphql" }, { stripTrailingHardline: true }), E ? (E = r(E, false), !F && f && v.push(""), v.push(E), !A && x && v.push("")) : !F && !A && f && v.push(""), $ && v.push($);
           }
           return ["`", t([a, s(a, v)]), a, "`"];
         }
@@ -7618,8 +7617,8 @@ ${P}`), h ? g.reset(P) : P;
           let A = (d) => `PRETTIER_HTML_PLACEHOLDER_${d}_${F}_IN_JS`, B = T.quasis.map((d, C, _) => C === _.length - 1 ? d.value.cooked : d.value.cooked + A(C)).join(""), I = i(h, g);
           if (I.length === 0 && B.trim().length === 0)
             return "``";
-          let P = new RegExp(A("(\\d+)"), "g"), R = 0, f = p(B, { parser: w, __onHtmlRoot(d) {
-            R = d.children.length;
+          let P = new RegExp(A("(\\d+)"), "g"), $ = 0, f = p(B, { parser: w, __onHtmlRoot(d) {
+            $ = d.children.length;
           } }, { stripTrailingHardline: true }), x = u(f, (d) => {
             if (typeof d != "string")
               return d;
@@ -7635,7 +7634,7 @@ ${P}`), h ? g.reset(P) : P;
             }
             return C;
           }), m = /^\s/.test(B) ? " " : "", E = /\s$/.test(B) ? " " : "", o = D.htmlWhitespaceSensitivity === "ignore" ? a : m && E ? s : null;
-          return r(o ? ["`", t([o, r(x)]), o, "`"] : ["`", m, R > 1 ? t(r(x)) : r(x), E, "`"]);
+          return r(o ? ["`", t([o, r(x)]), o, "`"] : ["`", m, $ > 1 ? t(r(x)) : r(x), E, "`"]);
         }
         n.exports = y;
       } }), Nm = ee({ "src/language-js/embed.js"(e, n) {
@@ -7656,7 +7655,7 @@ ${P}`), h ? g.reset(P) : P;
         }
         function y(f, x, m, E) {
           let o = f.getValue();
-          if (o.type !== "TemplateLiteral" || R(o))
+          if (o.type !== "TemplateLiteral" || $(o))
             return;
           let d = c(f);
           if (d) {
@@ -7724,7 +7723,7 @@ ${P}`), h ? g.reset(P) : P;
         function P(f) {
           return I(f.getValue(), "HTML") || f.match((x) => x.type === "TemplateLiteral", (x, m) => x.type === "TaggedTemplateExpression" && x.tag.type === "Identifier" && x.tag.name === "html" && m === "quasi");
         }
-        function R(f) {
+        function $(f) {
           let { quasis: x } = f;
           return x.some((m) => {
             let { value: { cooked: E } } = m;
@@ -7761,7 +7760,7 @@ ${P}`), h ? g.reset(P) : P;
           }
           if (u.type === "TaggedTemplateExpression" && (u.tag.type === "MemberExpression" || u.tag.type === "Identifier" && (u.tag.name === "gql" || u.tag.name === "graphql" || u.tag.name === "css" || u.tag.name === "md" || u.tag.name === "markdown" || u.tag.name === "html") || u.tag.type === "CallExpression") && a(i.quasi), u.type === "TemplateLiteral") {
             var y;
-            (((y = u.leadingComments) === null || y === void 0 ? void 0 : y.some((g) => t(g) && ["GraphQL", "HTML"].some((p) => g.value === ` ${p} `))) || l.type === "CallExpression" && l.callee.name === "graphql" || !u.leadingComments) && a(i);
+            (!((y = u.leadingComments) === null || y === void 0) && y.some((g) => t(g) && ["GraphQL", "HTML"].some((p) => g.value === ` ${p} `)) || l.type === "CallExpression" && l.callee.name === "graphql" || !u.leadingComments) && a(i);
           }
           if (u.type === "InterpreterDirective" && (i.value = i.value.trimEnd()), (u.type === "TSIntersectionType" || u.type === "TSUnionType") && u.types.length === 1)
             return i.types[0];
@@ -7884,25 +7883,25 @@ ${P}`), h ? g.reset(P) : P;
           for (; I !== A; )
             I = A, A = A.replace(c, `${B}$1 $2${B}`);
           A = A.replace(l, "").trimRight();
-          let P = /* @__PURE__ */ Object.create(null), R = A.replace(y, "").replace(l, "").trimRight(), f;
+          let P = /* @__PURE__ */ Object.create(null), $ = A.replace(y, "").replace(l, "").trimRight(), f;
           for (; f = y.exec(A); ) {
             let x = f[2].replace(i, "");
             typeof P[f[1]] == "string" || Array.isArray(P[f[1]]) ? P[f[1]] = g.concat(P[f[1]], x) : P[f[1]] = x;
           }
-          return { comments: R, pragmas: P };
+          return { comments: $, pragmas: P };
         }
         function T(A) {
-          let { comments: B = "", pragmas: I = {} } = A, P = (0, t().default)(B) || n().EOL, R = "/**", f = " *", x = " */", m = Object.keys(I), E = m.map((d) => F(d, I[d])).reduce((d, C) => d.concat(C), []).map((d) => `${f} ${d}${P}`).join("");
+          let { comments: B = "", pragmas: I = {} } = A, P = (0, t().default)(B) || n().EOL, $ = "/**", f = " *", x = " */", m = Object.keys(I), E = m.map((d) => F(d, I[d])).reduce((d, C) => d.concat(C), []).map((d) => `${f} ${d}${P}`).join("");
           if (!B) {
             if (m.length === 0)
               return "";
             if (m.length === 1 && !Array.isArray(I[m[0]])) {
               let d = I[m[0]];
-              return `${R} ${F(m[0], d)[0]}${x}`;
+              return `${$} ${F(m[0], d)[0]}${x}`;
             }
           }
           let o = B.split(P).map((d) => `${f} ${d}`).join(P) + P;
-          return R + P + (B ? o : "") + (B && m.length ? f + P : "") + E + x;
+          return $ + P + (B ? o : "") + (B && m.length ? f + P : "") + E + x;
         }
         function F(A, B) {
           return g.concat(B).map((I) => `@${A} ${I}`.trim());
@@ -7945,12 +7944,12 @@ ${P}`), h ? g.reset(P) : P;
       } }), Za = ee({ "src/language-js/comments.js"(e, n) {
         "use strict";
         re();
-        var { getLast: t, hasNewline: s, getNextNonSpaceNonCommentCharacterIndexWithStartIndex: a, getNextNonSpaceNonCommentCharacter: r, hasNewlineInRange: u, addLeadingComment: i, addTrailingComment: l, addDanglingComment: c, getNextNonSpaceNonCommentCharacterIndex: y, isNonEmptyArray: h } = Ge(), { getFunctionParameters: g, isPrettierIgnoreComment: p, isJsxNode: D, hasFlowShorthandAnnotationComment: v, hasFlowAnnotationComment: w, hasIgnoreComment: T, isCallLikeExpression: F, getCallArguments: A, isCallExpression: B, isMemberExpression: I, isObjectProperty: P, isLineComment: R, getComments: f, CommentCheckFlags: x, markerForIfWithoutBlockAndSameLineComment: m } = Ke(), { locStart: E, locEnd: o } = it(), d = Lt();
+        var { getLast: t, hasNewline: s, getNextNonSpaceNonCommentCharacterIndexWithStartIndex: a, getNextNonSpaceNonCommentCharacter: r, hasNewlineInRange: u, addLeadingComment: i, addTrailingComment: l, addDanglingComment: c, getNextNonSpaceNonCommentCharacterIndex: y, isNonEmptyArray: h } = Ge(), { getFunctionParameters: g, isPrettierIgnoreComment: p, isJsxNode: D, hasFlowShorthandAnnotationComment: v, hasFlowAnnotationComment: w, hasIgnoreComment: T, isCallLikeExpression: F, getCallArguments: A, isCallExpression: B, isMemberExpression: I, isObjectProperty: P, isLineComment: $, getComments: f, CommentCheckFlags: x, markerForIfWithoutBlockAndSameLineComment: m } = Ke(), { locStart: E, locEnd: o } = it(), d = Lt();
         function C(ye) {
           return [ce, ae, L, M, q, J, K, ge, Z, fe, Ce, _e, Q, Ae, z].some((S) => S(ye));
         }
         function _(ye) {
-          return [$, ae, Y, Ce, M, q, J, K, Ae, H, ne, fe, ie, z, de].some((S) => S(ye));
+          return [R, ae, Y, Ce, M, q, J, K, Ae, H, ne, fe, ie, z, de].some((S) => S(ye));
         }
         function b(ye) {
           return [ce, M, q, V, oe, Q, fe, X, W, U, z, ve].some((S) => S(ye));
@@ -7965,7 +7964,7 @@ ${P}`), h ? g.reset(P) : P;
         function k(ye, S) {
           ye.type === "BlockStatement" ? N(ye, S) : i(ye, S);
         }
-        function $(ye) {
+        function R(ye) {
           let { comment: S, followingNode: G } = ye;
           return G && Be(S) ? (i(G, S), true) : false;
         }
@@ -8121,7 +8120,7 @@ ${P}`), h ? g.reset(P) : P;
         }
         function de(ye) {
           let { comment: S, enclosingNode: G, followingNode: te } = ye;
-          return !G || G.type !== "SwitchCase" || G.test ? false : (te.type === "BlockStatement" && R(S) ? N(te, S) : c(G, S), true);
+          return !G || G.type !== "SwitchCase" || G.test ? false : (te.type === "BlockStatement" && $(S) ? N(te, S) : c(G, S), true);
         }
         function De(ye) {
           return ye.type === "ArrowFunctionExpression" || ye.type === "FunctionExpression" || ye.type === "FunctionDeclaration" || ye.type === "ObjectMethod" || ye.type === "ClassMethod" || ye.type === "TSDeclareFunction" || ye.type === "TSCallSignatureDeclaration" || ye.type === "TSConstructSignatureDeclaration" || ye.type === "TSMethodSignature" || ye.type === "TSConstructorType" || ye.type === "TSFunctionType" || ye.type === "TSDeclareMethod";
@@ -8165,7 +8164,7 @@ ${P}`), h ? g.reset(P) : P;
               break;
             }
             case "ExportDefaultDeclaration":
-              return R(f, x) || o.type === "SequenceExpression";
+              return $(f, x) || o.type === "SequenceExpression";
             case "Decorator": {
               if (E === "expression") {
                 let d = false, C = false, _ = o;
@@ -8547,9 +8546,9 @@ ${P}`), h ? g.reset(P) : P;
           }
           return false;
         }
-        function R(f, x) {
+        function $(f, x) {
           let m = f.getValue(), E = f.getParentNode();
-          return m.type === "FunctionExpression" || m.type === "ClassExpression" ? E.type === "ExportDefaultDeclaration" || !T(f, x) : !i(m) || E.type !== "ExportDefaultDeclaration" && T(f, x) ? false : f.call((o) => R(o, x), ...r(f, m));
+          return m.type === "FunctionExpression" || m.type === "ClassExpression" ? E.type === "ExportDefaultDeclaration" || !T(f, x) : !i(m) || E.type !== "ExportDefaultDeclaration" && T(f, x) ? false : f.call((o) => $(o, x), ...r(f, m));
         }
         n.exports = T;
       } }), eo = ee({ "src/language-js/print-preprocess.js"(e, n) {
@@ -8605,12 +8604,12 @@ ${P}`), h ? g.reset(P) : P;
       } }), Jn = ee({ "src/language-js/print/binaryish.js"(e, n) {
         "use strict";
         re();
-        var { printComments: t } = et(), { getLast: s } = Ge(), { builders: { join: a, line: r, softline: u, group: i, indent: l, align: c, indentIfBreak: y }, utils: { cleanDoc: h, getDocParts: g, isConcat: p } } = qe(), { hasLeadingOwnLineComment: D, isBinaryish: v, isJsxNode: w, shouldFlatten: T, hasComment: F, CommentCheckFlags: A, isCallExpression: B, isMemberExpression: I, isObjectProperty: P, isEnabledHackPipeline: R } = Ke(), f = 0;
+        var { printComments: t } = et(), { getLast: s } = Ge(), { builders: { join: a, line: r, softline: u, group: i, indent: l, align: c, indentIfBreak: y }, utils: { cleanDoc: h, getDocParts: g, isConcat: p } } = qe(), { hasLeadingOwnLineComment: D, isBinaryish: v, isJsxNode: w, shouldFlatten: T, hasComment: F, CommentCheckFlags: A, isCallExpression: B, isMemberExpression: I, isObjectProperty: P, isEnabledHackPipeline: $ } = Ke(), f = 0;
         function x(o, d, C) {
-          let _ = o.getValue(), b = o.getParentNode(), N = o.getParentNode(1), k = _ !== b.body && (b.type === "IfStatement" || b.type === "WhileStatement" || b.type === "SwitchStatement" || b.type === "DoWhileStatement"), $ = R(d) && _.operator === "|>", M = m(o, C, d, false, k);
+          let _ = o.getValue(), b = o.getParentNode(), N = o.getParentNode(1), k = _ !== b.body && (b.type === "IfStatement" || b.type === "WhileStatement" || b.type === "SwitchStatement" || b.type === "DoWhileStatement"), R = $(d) && _.operator === "|>", M = m(o, C, d, false, k);
           if (k)
             return M;
-          if ($)
+          if (R)
             return i(M);
           if (B(b) && b.callee === _ || b.type === "UnaryExpression" || I(b) && !b.computed)
             return i([l([u, ...M]), u]);
@@ -8631,11 +8630,11 @@ ${P}`), h ? g.reset(P) : P;
             return [i(d())];
           let k = [];
           T(N.operator, N.left.operator) ? k = o.call((K) => m(K, d, C, true, b), "left") : k.push(i(d("left")));
-          let $ = E(N), M = (N.operator === "|>" || N.type === "NGPipeExpression" || N.operator === "|" && C.parser === "__vue_expression") && !D(C.originalText, N.right), q = N.type === "NGPipeExpression" ? "|" : N.operator, J = N.type === "NGPipeExpression" && N.arguments.length > 0 ? i(l([r, ": ", a([r, ": "], o.map(d, "arguments").map((K) => c(2, i(K))))])) : "", L;
-          if ($)
+          let R = E(N), M = (N.operator === "|>" || N.type === "NGPipeExpression" || N.operator === "|" && C.parser === "__vue_expression") && !D(C.originalText, N.right), q = N.type === "NGPipeExpression" ? "|" : N.operator, J = N.type === "NGPipeExpression" && N.arguments.length > 0 ? i(l([r, ": ", a([r, ": "], o.map(d, "arguments").map((K) => c(2, i(K))))])) : "", L;
+          if (R)
             L = [q, " ", d("right"), J];
           else {
-            let se = R(C) && q === "|>" ? o.call((Q) => m(Q, d, C, true, b), "right") : d("right");
+            let se = $(C) && q === "|>" ? o.call((Q) => m(Q, d, C, true, b), "right") : d("right");
             L = [M ? r : "", q, M ? " " : r, se, J];
           }
           let Y = o.getParentNode(), V = F(N.left, A.Trailing | A.Line), O = V || !(b && N.type === "LogicalExpression") && Y.type !== N.type && N.left.type !== N.type && N.right.type !== N.type;
@@ -8704,7 +8703,7 @@ ${P}`), h ? g.reset(P) : P;
       } }), Rm = ee({ "src/language-js/print/jsx.js"(e, n) {
         "use strict";
         re();
-        var { printComments: t, printDanglingComments: s } = et(), { builders: { line: a, hardline: r, softline: u, group: i, indent: l, conditionalGroup: c, fill: y, ifBreak: h, lineSuffixBoundary: g, join: p }, utils: { willBreak: D } } = qe(), { getLast: v, getPreferredQuote: w } = Ge(), { isJsxNode: T, rawText: F, isLiteral: A, isCallExpression: B, isStringLiteral: I, isBinaryish: P, hasComment: R, CommentCheckFlags: f, hasNodeIgnoreComment: x } = Ke(), m = Ot(), { willPrintOwnComments: E } = Za(), o = (H) => H === "" || H === a || H === r || H === u;
+        var { printComments: t, printDanglingComments: s } = et(), { builders: { line: a, hardline: r, softline: u, group: i, indent: l, conditionalGroup: c, fill: y, ifBreak: h, lineSuffixBoundary: g, join: p }, utils: { willBreak: D } } = qe(), { getLast: v, getPreferredQuote: w } = Ge(), { isJsxNode: T, rawText: F, isLiteral: A, isCallExpression: B, isStringLiteral: I, isBinaryish: P, hasComment: $, CommentCheckFlags: f, hasNodeIgnoreComment: x } = Ke(), m = Ot(), { willPrintOwnComments: E } = Za(), o = (H) => H === "" || H === a || H === r || H === u;
         function d(H, Z, ne) {
           let fe = H.getValue();
           if (fe.type === "JSXElement" && oe(fe))
@@ -8819,16 +8818,16 @@ ${P}`), h ? g.reset(P) : P;
           }
           return ge;
         }
-        function $(H, Z, ne) {
-          let fe = H.getValue(), ge = (Ce, _e) => Ce.type === "JSXEmptyExpression" || !R(Ce) && (Ce.type === "ArrayExpression" || Ce.type === "ObjectExpression" || Ce.type === "ArrowFunctionExpression" || Ce.type === "AwaitExpression" && (ge(Ce.argument, Ce) || Ce.argument.type === "JSXElement") || B(Ce) || Ce.type === "FunctionExpression" || Ce.type === "TemplateLiteral" || Ce.type === "TaggedTemplateExpression" || Ce.type === "DoExpression" || T(_e) && (Ce.type === "ConditionalExpression" || P(Ce)));
+        function R(H, Z, ne) {
+          let fe = H.getValue(), ge = (Ce, _e) => Ce.type === "JSXEmptyExpression" || !$(Ce) && (Ce.type === "ArrayExpression" || Ce.type === "ObjectExpression" || Ce.type === "ArrowFunctionExpression" || Ce.type === "AwaitExpression" && (ge(Ce.argument, Ce) || Ce.argument.type === "JSXElement") || B(Ce) || Ce.type === "FunctionExpression" || Ce.type === "TemplateLiteral" || Ce.type === "TaggedTemplateExpression" || Ce.type === "DoExpression" || T(_e) && (Ce.type === "ConditionalExpression" || P(Ce)));
           return ge(fe.expression, H.getParentNode(0)) ? i(["{", ne("expression"), g, "}"]) : i(["{", l([u, ne("expression")]), u, g, "}"]);
         }
         function M(H, Z, ne) {
-          let fe = H.getValue(), ge = fe.name && R(fe.name) || fe.typeParameters && R(fe.typeParameters);
+          let fe = H.getValue(), ge = fe.name && $(fe.name) || fe.typeParameters && $(fe.typeParameters);
           if (fe.selfClosing && fe.attributes.length === 0 && !ge)
             return ["<", ne("name"), ne("typeParameters"), " />"];
           if (fe.attributes && fe.attributes.length === 1 && fe.attributes[0].value && I(fe.attributes[0].value) && !fe.attributes[0].value.value.includes(`
-`) && !ge && !R(fe.attributes[0]))
+`) && !ge && !$(fe.attributes[0]))
             return i(["<", ne("name"), ne("typeParameters"), " ", ...H.map(ne, "attributes"), fe.selfClosing ? " />" : ">"]);
           let Ce = fe.attributes && fe.attributes.some((Oe) => Oe.value && I(Oe.value) && Oe.value.value.includes(`
 `)), _e = Z.singleAttributePerLine && fe.attributes.length > 1 ? r : a;
@@ -8838,17 +8837,17 @@ ${P}`), h ? g.reset(P) : P;
           return H.selfClosing ? [a, "/>"] : J(H, Z, ne) ? [">"] : [u, ">"];
         }
         function J(H, Z, ne) {
-          let fe = H.attributes.length > 0 && R(v(H.attributes), f.Trailing);
+          let fe = H.attributes.length > 0 && $(v(H.attributes), f.Trailing);
           return H.attributes.length === 0 && !ne || (Z.bracketSameLine || Z.jsxBracketSameLine) && (!ne || H.attributes.length > 0) && !fe;
         }
         function L(H, Z, ne) {
           let fe = H.getValue(), ge = [];
           ge.push("</");
           let Ce = ne("name");
-          return R(fe.name, f.Leading | f.Line) ? ge.push(l([r, Ce]), r) : R(fe.name, f.Leading | f.Block) ? ge.push(" ", Ce) : ge.push(Ce), ge.push(">"), ge;
+          return $(fe.name, f.Leading | f.Line) ? ge.push(l([r, Ce]), r) : $(fe.name, f.Leading | f.Block) ? ge.push(" ", Ce) : ge.push(Ce), ge.push(">"), ge;
         }
         function Y(H, Z) {
-          let ne = H.getValue(), fe = R(ne), ge = R(ne, f.Line), Ce = ne.type === "JSXOpeningFragment";
+          let ne = H.getValue(), fe = $(ne), ge = $(ne, f.Line), Ce = ne.type === "JSXOpeningFragment";
           return [Ce ? "<" : "</", l([ge ? r : fe && !Ce ? " " : "", s(H, Z, true)]), ge ? r : "", ">"];
         }
         function V(H, Z, ne) {
@@ -8856,14 +8855,14 @@ ${P}`), h ? g.reset(P) : P;
           return N(H, fe, Z);
         }
         function O(H, Z) {
-          let ne = H.getValue(), fe = R(ne, f.Line);
+          let ne = H.getValue(), fe = $(ne, f.Line);
           return [s(H, Z, !fe), fe ? r : ""];
         }
         function K(H, Z, ne) {
           let fe = H.getValue();
           return ["{", H.call((ge) => {
             let Ce = ["...", ne()], _e = ge.getValue();
-            return !R(_e) || !E(ge) ? Ce : [l([u, t(ge, Ce, Z)]), u];
+            return !$(_e) || !E(ge) ? Ce : [l([u, t(ge, Ce, Z)]), u];
           }, fe.type === "JSXSpreadAttribute" ? "argument" : "expression"), "}"];
         }
         function se(H, Z, ne) {
@@ -8883,7 +8882,7 @@ ${P}`), h ? g.reset(P) : P;
               case "JSXSpreadChild":
                 return K(H, Z, ne);
               case "JSXExpressionContainer":
-                return $(H, Z, ne);
+                return R(H, Z, ne);
               case "JSXFragment":
               case "JSXElement":
                 return V(H, Z, ne);
@@ -8916,7 +8915,7 @@ ${P}`), h ? g.reset(P) : P;
           return A(H) && (W.test(F(H)) || !/\n/.test(F(H)));
         }
         function Ae(H) {
-          return H.type === "JSXExpressionContainer" && A(H.expression) && H.expression.value === " " && !R(H.expression);
+          return H.type === "JSXExpressionContainer" && A(H.expression) && H.expression.value === " " && !$(H.expression);
         }
         function z(H) {
           let Z = H.getValue(), ne = H.getParentNode();
@@ -8978,7 +8977,7 @@ ${P}`), h ? g.reset(P) : P;
           if (o.elements.length === 0)
             p(o, D.Dangling) ? d.push(u([C, t(x, m), a, _])) : d.push(C, _);
           else {
-            let b = y(o.elements), N = !(b && b.type === "RestElement"), k = b === null, $ = Symbol("array"), M = !m.__inJestEach && o.elements.length > 1 && o.elements.every((L, Y, V) => {
+            let b = y(o.elements), N = !(b && b.type === "RestElement"), k = b === null, R = Symbol("array"), M = !m.__inJestEach && o.elements.length > 1 && o.elements.every((L, Y, V) => {
               let O = L && L.type;
               if (O !== "ArrayExpression" && O !== "ObjectExpression")
                 return false;
@@ -8987,15 +8986,15 @@ ${P}`), h ? g.reset(P) : P;
                 return false;
               let se = O === "ArrayExpression" ? "elements" : "properties";
               return L[se] && L[se].length > 1;
-            }), q = P(o, m), J = N ? k ? "," : g(m) ? q ? l(",", "", { groupId: $ }) : l(",") : "" : "";
-            d.push(u([C, i([a, q ? f(x, m, E, J) : [R(x, m, "elements", E), J], t(x, m, true)]), a, _], { shouldBreak: M, id: $ }));
+            }), q = P(o, m), J = N ? k ? "," : g(m) ? q ? l(",", "", { groupId: R }) : l(",") : "" : "";
+            d.push(u([C, i([a, q ? f(x, m, E, J) : [$(x, m, "elements", E), J], t(x, m, true)]), a, _], { shouldBreak: M, id: R }));
           }
           return d.push(A(x), B(x, m, E)), d;
         }
         function P(x, m) {
           return x.elements.length > 1 && x.elements.every((E) => E && (w(E) || T(E) && !p(E.argument)) && !p(E, D.Trailing | D.Line, (o) => !h(m.originalText, F(o), { backwards: true })));
         }
-        function R(x, m, E, o) {
+        function $(x, m, E, o) {
           let d = [], C = [];
           return x.each((_) => {
             d.push(C, u(o())), C = [",", s], _.getValue() && v(_.getValue(), m) && C.push(a);
@@ -9008,11 +9007,11 @@ ${P}`), h ? g.reset(P) : P;
             d.push([E(), N ? o : ","]), N || d.push(v(C.getValue(), m) ? [r, r] : p(b[_ + 1], D.Leading | D.Line) ? r : s);
           }, "elements"), c(d);
         }
-        n.exports = { printArray: I, printArrayItems: R, isConciselyPrintedArray: P };
+        n.exports = { printArray: I, printArrayItems: $, isConciselyPrintedArray: P };
       } }), to = ee({ "src/language-js/print/call-arguments.js"(e, n) {
         "use strict";
         re();
-        var { printDanglingComments: t } = et(), { getLast: s, getPenultimate: a } = Ge(), { getFunctionParameters: r, hasComment: u, CommentCheckFlags: i, isFunctionCompositionArgs: l, isJsxNode: c, isLongCurriedCallExpression: y, shouldPrintComma: h, getCallArguments: g, iterateCallArgumentsPath: p, isNextLineEmpty: D, isCallExpression: v, isStringLiteral: w, isObjectProperty: T, isTSTypeExpression: F } = Ke(), { builders: { line: A, hardline: B, softline: I, group: P, indent: R, conditionalGroup: f, ifBreak: x, breakParent: m }, utils: { willBreak: E } } = qe(), { ArgExpansionBailout: o } = Kt(), { isConciselyPrintedArray: d } = Qt();
+        var { printDanglingComments: t } = et(), { getLast: s, getPenultimate: a } = Ge(), { getFunctionParameters: r, hasComment: u, CommentCheckFlags: i, isFunctionCompositionArgs: l, isJsxNode: c, isLongCurriedCallExpression: y, shouldPrintComma: h, getCallArguments: g, iterateCallArgumentsPath: p, isNextLineEmpty: D, isCallExpression: v, isStringLiteral: w, isObjectProperty: T, isTSTypeExpression: F } = Ke(), { builders: { line: A, hardline: B, softline: I, group: P, indent: $, conditionalGroup: f, ifBreak: x, breakParent: m }, utils: { willBreak: E } } = qe(), { ArgExpansionBailout: o } = Kt(), { isConciselyPrintedArray: d } = Qt();
         function C(q, J, L) {
           let Y = q.getValue(), V = Y.type === "ImportExpression", O = g(Y);
           if (O.length === 0)
@@ -9026,7 +9025,7 @@ ${P}`), h ? g.reset(P) : P;
           });
           let W = !(V || Y.callee && Y.callee.type === "Import") && h(J, "all") ? "," : "";
           function X() {
-            return P(["(", R([A, ...le]), W, A, ")"], { shouldBreak: true });
+            return P(["(", $([A, ...le]), W, A, ")"], { shouldBreak: true });
           }
           if (K || q.getParentNode().type !== "Decorator" && l(O))
             return X();
@@ -9048,12 +9047,12 @@ ${P}`), h ? g.reset(P) : P;
             }
             return [le.some(E) ? m : "", f([["(", ...z, ")"], oe ? ["(", P(z[0], { shouldBreak: true }), ...z.slice(1), ")"] : ["(", ...le.slice(0, -1), P(s(z), { shouldBreak: true }), ")"], X()])];
           }
-          let Ae = ["(", R([I, ...le]), x(W), I, ")"];
+          let Ae = ["(", $([I, ...le]), x(W), I, ")"];
           return y(q) ? Ae : P(Ae, { shouldBreak: le.some(E) || K });
         }
         function _(q) {
           let J = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : false;
-          return q.type === "ObjectExpression" && (q.properties.length > 0 || u(q)) || q.type === "ArrayExpression" && (q.elements.length > 0 || u(q)) || q.type === "TSTypeAssertion" && _(q.expression) || F(q) && _(q.expression) || q.type === "FunctionExpression" || q.type === "ArrowFunctionExpression" && (!q.returnType || !q.returnType.typeAnnotation || q.returnType.typeAnnotation.type !== "TSTypeReference" || $(q.body)) && (q.body.type === "BlockStatement" || q.body.type === "ArrowFunctionExpression" && _(q.body, true) || q.body.type === "ObjectExpression" || q.body.type === "ArrayExpression" || !J && (v(q.body) || q.body.type === "ConditionalExpression") || c(q.body)) || q.type === "DoExpression" || q.type === "ModuleExpression";
+          return q.type === "ObjectExpression" && (q.properties.length > 0 || u(q)) || q.type === "ArrayExpression" && (q.elements.length > 0 || u(q)) || q.type === "TSTypeAssertion" && _(q.expression) || F(q) && _(q.expression) || q.type === "FunctionExpression" || q.type === "ArrowFunctionExpression" && (!q.returnType || !q.returnType.typeAnnotation || q.returnType.typeAnnotation.type !== "TSTypeReference" || R(q.body)) && (q.body.type === "BlockStatement" || q.body.type === "ArrowFunctionExpression" && _(q.body, true) || q.body.type === "ObjectExpression" || q.body.type === "ArrayExpression" || !J && (v(q.body) || q.body.type === "ConditionalExpression") || c(q.body)) || q.type === "DoExpression" || q.type === "ModuleExpression";
         }
         function b(q, J) {
           let L = s(q), Y = a(q);
@@ -9068,7 +9067,7 @@ ${P}`), h ? g.reset(P) : P;
         function k(q) {
           return q.length === 2 && q[0].type === "ArrowFunctionExpression" && r(q[0]).length === 0 && q[0].body.type === "BlockStatement" && q[1].type === "ArrayExpression" && !q.some((J) => u(J));
         }
-        function $(q) {
+        function R(q) {
           return q.type === "BlockStatement" && (q.body.some((J) => J.type !== "EmptyStatement") || u(q, i.Dangling));
         }
         function M(q) {
@@ -9095,9 +9094,9 @@ ${P}`), h ? g.reset(P) : P;
       } }), $m = ee({ "src/language-js/print/member-chain.js"(e, n) {
         "use strict";
         re();
-        var { printComments: t } = et(), { getLast: s, isNextLineEmptyAfterIndex: a, getNextNonSpaceNonCommentCharacterIndex: r } = Ge(), u = Ot(), { isCallExpression: i, isMemberExpression: l, isFunctionOrArrowExpression: c, isLongCurriedCallExpression: y, isMemberish: h, isNumericLiteral: g, isSimpleCallArgument: p, hasComment: D, CommentCheckFlags: v, isNextLineEmpty: w } = Ke(), { locEnd: T } = it(), { builders: { join: F, hardline: A, group: B, indent: I, conditionalGroup: P, breakParent: R, label: f }, utils: { willBreak: x } } = qe(), m = to(), { printMemberLookup: E } = ro(), { printOptionalToken: o, printFunctionTypeParameters: d, printBindExpressionCallee: C } = Dt();
+        var { printComments: t } = et(), { getLast: s, isNextLineEmptyAfterIndex: a, getNextNonSpaceNonCommentCharacterIndex: r } = Ge(), u = Ot(), { isCallExpression: i, isMemberExpression: l, isFunctionOrArrowExpression: c, isLongCurriedCallExpression: y, isMemberish: h, isNumericLiteral: g, isSimpleCallArgument: p, hasComment: D, CommentCheckFlags: v, isNextLineEmpty: w } = Ke(), { locEnd: T } = it(), { builders: { join: F, hardline: A, group: B, indent: I, conditionalGroup: P, breakParent: $, label: f }, utils: { willBreak: x } } = qe(), m = to(), { printMemberLookup: E } = ro(), { printOptionalToken: o, printFunctionTypeParameters: d, printBindExpressionCallee: C } = Dt();
         function _(b, N, k) {
-          let $ = b.getParentNode(), M = !$ || $.type === "ExpressionStatement", q = [];
+          let R = b.getParentNode(), M = !R || R.type === "ExpressionStatement", q = [];
           function J(ie) {
             let { originalText: ve } = N, ce = r(ve, ie, T);
             return ve.charAt(ce) === ")" ? ce !== false && a(ve, ce + 1) : w(ie, N);
@@ -9162,7 +9161,7 @@ ${P}`), h ? g.reset(P) : P;
             return i(ie) && x(ve) && _e.slice(0, -1).some((ce) => ce.arguments.some(c));
           }
           let pe;
-          return ne || _e.length > 2 && _e.some((ie) => !ie.arguments.every((ve) => p(ve, 0))) || Ae.slice(0, -1).some(x) || Oe() ? pe = B(Ce) : pe = [x(z) || ge ? R : "", P([z, Ce])], f("member-chain", pe);
+          return ne || _e.length > 2 && _e.some((ie) => !ie.arguments.every((ve) => p(ve, 0))) || Ae.slice(0, -1).some(x) || Oe() ? pe = B(Ce) : pe = [x(z) || ge ? $ : "", P([z, Ce])], f("member-chain", pe);
         }
         n.exports = _;
       } }), no = ee({ "src/language-js/print/call-expression.js"(e, n) {
@@ -9170,8 +9169,8 @@ ${P}`), h ? g.reset(P) : P;
         re();
         var { builders: { join: t, group: s } } = qe(), a = Ot(), { getCallArguments: r, hasFlowAnnotationComment: u, isCallExpression: i, isMemberish: l, isStringLiteral: c, isTemplateOnItsOwnLine: y, isTestCall: h, iterateCallArgumentsPath: g } = Ke(), p = $m(), D = to(), { printOptionalToken: v, printFunctionTypeParameters: w } = Dt();
         function T(A, B, I) {
-          let P = A.getValue(), R = A.getParentNode(), f = P.type === "NewExpression", x = P.type === "ImportExpression", m = v(A), E = r(P);
-          if (E.length > 0 && (!x && !f && F(P, R) || E.length === 1 && y(E[0], B.originalText) || !f && h(P, R))) {
+          let P = A.getValue(), $ = A.getParentNode(), f = P.type === "NewExpression", x = P.type === "ImportExpression", m = v(A), E = r(P);
+          if (E.length > 0 && (!x && !f && F(P, $) || E.length === 1 && y(E[0], B.originalText) || !f && h(P, $))) {
             let C = [];
             return g(A, () => {
               C.push(I());
@@ -9198,7 +9197,7 @@ ${P}`), h ? g.reset(P) : P;
       } }), Zt = ee({ "src/language-js/print/assignment.js"(e, n) {
         "use strict";
         re();
-        var { isNonEmptyArray: t, getStringWidth: s } = Ge(), { builders: { line: a, group: r, indent: u, indentIfBreak: i, lineSuffixBoundary: l }, utils: { cleanDoc: c, willBreak: y, canBreak: h } } = qe(), { hasLeadingOwnLineComment: g, isBinaryish: p, isStringLiteral: D, isLiteral: v, isNumericLiteral: w, isCallExpression: T, isMemberExpression: F, getCallArguments: A, rawText: B, hasComment: I, isSignedNumericLiteral: P, isObjectProperty: R } = Ke(), { shouldInlineLogicalExpression: f } = Jn(), { printCallExpression: x } = no();
+        var { isNonEmptyArray: t, getStringWidth: s } = Ge(), { builders: { line: a, group: r, indent: u, indentIfBreak: i, lineSuffixBoundary: l }, utils: { cleanDoc: c, willBreak: y, canBreak: h } } = qe(), { hasLeadingOwnLineComment: g, isBinaryish: p, isStringLiteral: D, isLiteral: v, isNumericLiteral: w, isCallExpression: T, isMemberExpression: F, getCallArguments: A, rawText: B, hasComment: I, isSignedNumericLiteral: P, isObjectProperty: $ } = Ke(), { shouldInlineLogicalExpression: f } = Jn(), { printCallExpression: x } = no();
         function m(W, X, oe, ae, Ae, z) {
           let H = d(W, X, oe, ae, z), Z = oe(z, { assignmentLayout: H });
           switch (H) {
@@ -9275,7 +9274,7 @@ ${P}`), h ? g.reset(P) : P;
         function _(W) {
           if (N(W)) {
             let X = W.left || W.id;
-            return X.type === "ObjectPattern" && X.properties.length > 2 && X.properties.some((oe) => R(oe) && (!oe.shorthand || oe.value && oe.value.type === "AssignmentPattern"));
+            return X.type === "ObjectPattern" && X.properties.length > 2 && X.properties.some((oe) => $(oe) && (!oe.shorthand || oe.value && oe.value.type === "AssignmentPattern"));
           }
           return false;
         }
@@ -9286,7 +9285,7 @@ ${P}`), h ? g.reset(P) : P;
           return b(W) || W.type === "VariableDeclarator";
         }
         function k(W) {
-          let X = $(W);
+          let X = R(W);
           if (t(X)) {
             let oe = W.type === "TSTypeAliasDeclaration" ? "constraint" : "bound";
             if (X.length > 1 && X.some((ae) => ae[oe] || ae.default))
@@ -9294,7 +9293,7 @@ ${P}`), h ? g.reset(P) : P;
           }
           return false;
         }
-        function $(W) {
+        function R(W) {
           return M(W) && W.typeParameters && W.typeParameters.params ? W.typeParameters.params : null;
         }
         function M(W) {
@@ -9343,7 +9342,7 @@ ${P}`), h ? g.reset(P) : P;
 `) : v(W);
         }
         function se(W, X, oe) {
-          if (!R(W))
+          if (!$(W))
             return false;
           X = c(X);
           let ae = 3;
@@ -9372,22 +9371,22 @@ ${P}`), h ? g.reset(P) : P;
       } }), kr = ee({ "src/language-js/print/function-parameters.js"(e, n) {
         "use strict";
         re();
-        var { getNextNonSpaceNonCommentCharacter: t } = Ge(), { printDanglingComments: s } = et(), { builders: { line: a, hardline: r, softline: u, group: i, indent: l, ifBreak: c }, utils: { removeLines: y, willBreak: h } } = qe(), { getFunctionParameters: g, iterateFunctionParametersPath: p, isSimpleType: D, isTestCall: v, isTypeAnnotationAFunction: w, isObjectType: T, isObjectTypePropertyAFunction: F, hasRestParameter: A, shouldPrintComma: B, hasComment: I, isNextLineEmpty: P } = Ke(), { locEnd: R } = it(), { ArgExpansionBailout: f } = Kt(), { printFunctionTypeParameters: x } = Dt();
+        var { getNextNonSpaceNonCommentCharacter: t } = Ge(), { printDanglingComments: s } = et(), { builders: { line: a, hardline: r, softline: u, group: i, indent: l, ifBreak: c }, utils: { removeLines: y, willBreak: h } } = qe(), { getFunctionParameters: g, iterateFunctionParametersPath: p, isSimpleType: D, isTestCall: v, isTypeAnnotationAFunction: w, isObjectType: T, isObjectTypePropertyAFunction: F, hasRestParameter: A, shouldPrintComma: B, hasComment: I, isNextLineEmpty: P } = Ke(), { locEnd: $ } = it(), { ArgExpansionBailout: f } = Kt(), { printFunctionTypeParameters: x } = Dt();
         function m(C, _, b, N, k) {
-          let $ = C.getValue(), M = g($), q = k ? x(C, b, _) : "";
+          let R = C.getValue(), M = g(R), q = k ? x(C, b, _) : "";
           if (M.length === 0)
-            return [q, "(", s(C, b, true, (se) => t(b.originalText, se, R) === ")"), ")"];
-          let J = C.getParentNode(), L = v(J), Y = E($), V = [];
+            return [q, "(", s(C, b, true, (se) => t(b.originalText, se, $) === ")"), ")"];
+          let J = C.getParentNode(), L = v(J), Y = E(R), V = [];
           if (p(C, (se, Q) => {
             let le = Q === M.length - 1;
-            le && $.rest && V.push("..."), V.push(_()), !le && (V.push(","), L || Y ? V.push(" ") : P(M[Q], b) ? V.push(r, r) : V.push(a));
+            le && R.rest && V.push("..."), V.push(_()), !le && (V.push(","), L || Y ? V.push(" ") : P(M[Q], b) ? V.push(r, r) : V.push(a));
           }), N) {
             if (h(q) || h(V))
               throw new f();
             return i([y(q), "(", y(V), ")"]);
           }
           let O = M.every((se) => !se.decorators);
-          return Y && O ? [q, "(", ...V, ")"] : L ? [q, "(", ...V, ")"] : (F(J) || w(J) || J.type === "TypeAlias" || J.type === "UnionTypeAnnotation" || J.type === "TSUnionType" || J.type === "IntersectionTypeAnnotation" || J.type === "FunctionTypeAnnotation" && J.returnType === $) && M.length === 1 && M[0].name === null && $.this !== M[0] && M[0].typeAnnotation && $.typeParameters === null && D(M[0].typeAnnotation) && !$.rest ? b.arrowParens === "always" ? ["(", ...V, ")"] : V : [q, "(", l([u, ...V]), c(!A($) && B(b, "all") ? "," : ""), u, ")"];
+          return Y && O ? [q, "(", ...V, ")"] : L ? [q, "(", ...V, ")"] : (F(J) || w(J) || J.type === "TypeAlias" || J.type === "UnionTypeAnnotation" || J.type === "TSUnionType" || J.type === "IntersectionTypeAnnotation" || J.type === "FunctionTypeAnnotation" && J.returnType === R) && M.length === 1 && M[0].name === null && R.this !== M[0] && M[0].typeAnnotation && R.typeParameters === null && D(M[0].typeAnnotation) && !R.rest ? b.arrowParens === "always" ? ["(", ...V, ")"] : V : [q, "(", l([u, ...V]), c(!A(R) && B(b, "all") ? "," : ""), u, ")"];
         }
         function E(C) {
           if (!C)
@@ -9423,61 +9422,61 @@ ${P}`), h ? g.reset(P) : P;
         "use strict";
         re();
         var { printComments: t, printDanglingComments: s } = et(), { isNonEmptyArray: a } = Ge(), { builders: { group: r, join: u, line: i, softline: l, indent: c, align: y, ifBreak: h } } = qe(), g = Ot(), { locStart: p } = it(), { isSimpleType: D, isObjectType: v, hasLeadingOwnLineComment: w, isObjectTypePropertyAFunction: T, shouldPrintComma: F } = Ke(), { printAssignment: A } = Zt(), { printFunctionParameters: B, shouldGroupFunctionParameters: I } = kr(), { printArrayItems: P } = Qt();
-        function R(b) {
+        function $(b) {
           if (D(b) || v(b))
             return true;
           if (b.type === "UnionTypeAnnotation" || b.type === "TSUnionType") {
-            let N = b.types.filter(($) => $.type === "VoidTypeAnnotation" || $.type === "TSVoidKeyword" || $.type === "NullLiteralTypeAnnotation" || $.type === "TSNullKeyword").length, k = b.types.some(($) => $.type === "ObjectTypeAnnotation" || $.type === "TSTypeLiteral" || $.type === "GenericTypeAnnotation" || $.type === "TSTypeReference");
+            let N = b.types.filter((R) => R.type === "VoidTypeAnnotation" || R.type === "TSVoidKeyword" || R.type === "NullLiteralTypeAnnotation" || R.type === "TSNullKeyword").length, k = b.types.some((R) => R.type === "ObjectTypeAnnotation" || R.type === "TSTypeLiteral" || R.type === "GenericTypeAnnotation" || R.type === "TSTypeReference");
             if (b.types.length - 1 === N && k)
               return true;
           }
           return false;
         }
         function f(b, N, k) {
-          let $ = N.semi ? ";" : "", M = b.getValue(), q = [];
-          return q.push("opaque type ", k("id"), k("typeParameters")), M.supertype && q.push(": ", k("supertype")), M.impltype && q.push(" = ", k("impltype")), q.push($), q;
+          let R = N.semi ? ";" : "", M = b.getValue(), q = [];
+          return q.push("opaque type ", k("id"), k("typeParameters")), M.supertype && q.push(": ", k("supertype")), M.impltype && q.push(" = ", k("impltype")), q.push(R), q;
         }
         function x(b, N, k) {
-          let $ = N.semi ? ";" : "", M = b.getValue(), q = [];
+          let R = N.semi ? ";" : "", M = b.getValue(), q = [];
           M.declare && q.push("declare "), q.push("type ", k("id"), k("typeParameters"));
           let J = M.type === "TSTypeAliasDeclaration" ? "typeAnnotation" : "right";
-          return [A(b, N, k, q, " =", J), $];
+          return [A(b, N, k, q, " =", J), R];
         }
         function m(b, N, k) {
-          let $ = b.getValue(), M = b.map(k, "types"), q = [], J = false;
+          let R = b.getValue(), M = b.map(k, "types"), q = [], J = false;
           for (let L = 0; L < M.length; ++L)
-            L === 0 ? q.push(M[L]) : v($.types[L - 1]) && v($.types[L]) ? q.push([" & ", J ? c(M[L]) : M[L]]) : !v($.types[L - 1]) && !v($.types[L]) ? q.push(c([" &", i, M[L]])) : (L > 1 && (J = true), q.push(" & ", L > 1 ? c(M[L]) : M[L]));
+            L === 0 ? q.push(M[L]) : v(R.types[L - 1]) && v(R.types[L]) ? q.push([" & ", J ? c(M[L]) : M[L]]) : !v(R.types[L - 1]) && !v(R.types[L]) ? q.push(c([" &", i, M[L]])) : (L > 1 && (J = true), q.push(" & ", L > 1 ? c(M[L]) : M[L]));
           return r(q);
         }
         function E(b, N, k) {
-          let $ = b.getValue(), M = b.getParentNode(), q = M.type !== "TypeParameterInstantiation" && M.type !== "TSTypeParameterInstantiation" && M.type !== "GenericTypeAnnotation" && M.type !== "TSTypeReference" && M.type !== "TSTypeAssertion" && M.type !== "TupleTypeAnnotation" && M.type !== "TSTupleType" && !(M.type === "FunctionTypeParam" && !M.name && b.getParentNode(1).this !== M) && !((M.type === "TypeAlias" || M.type === "VariableDeclarator" || M.type === "TSTypeAliasDeclaration") && w(N.originalText, $)), J = R($), L = b.map((O) => {
+          let R = b.getValue(), M = b.getParentNode(), q = M.type !== "TypeParameterInstantiation" && M.type !== "TSTypeParameterInstantiation" && M.type !== "GenericTypeAnnotation" && M.type !== "TSTypeReference" && M.type !== "TSTypeAssertion" && M.type !== "TupleTypeAnnotation" && M.type !== "TSTupleType" && !(M.type === "FunctionTypeParam" && !M.name && b.getParentNode(1).this !== M) && !((M.type === "TypeAlias" || M.type === "VariableDeclarator" || M.type === "TSTypeAliasDeclaration") && w(N.originalText, R)), J = $(R), L = b.map((O) => {
             let K = k();
             return J || (K = y(2, K)), t(O, K, N);
           }, "types");
           if (J)
             return u(" | ", L);
-          let Y = q && !w(N.originalText, $), V = [h([Y ? i : "", "| "]), u([i, "| "], L)];
+          let Y = q && !w(N.originalText, R), V = [h([Y ? i : "", "| "]), u([i, "| "], L)];
           return g(b, N) ? r([c(V), l]) : M.type === "TupleTypeAnnotation" && M.types.length > 1 || M.type === "TSTupleType" && M.elementTypes.length > 1 ? r([c([h(["(", l]), V]), l, h(")")]) : r(q ? c(V) : V);
         }
         function o(b, N, k) {
-          let $ = b.getValue(), M = [], q = b.getParentNode(0), J = b.getParentNode(1), L = b.getParentNode(2), Y = $.type === "TSFunctionType" || !((q.type === "ObjectTypeProperty" || q.type === "ObjectTypeInternalSlot") && !q.variance && !q.optional && p(q) === p($) || q.type === "ObjectTypeCallProperty" || L && L.type === "DeclareFunction"), V = Y && (q.type === "TypeAnnotation" || q.type === "TSTypeAnnotation"), O = V && Y && (q.type === "TypeAnnotation" || q.type === "TSTypeAnnotation") && J.type === "ArrowFunctionExpression";
+          let R = b.getValue(), M = [], q = b.getParentNode(0), J = b.getParentNode(1), L = b.getParentNode(2), Y = R.type === "TSFunctionType" || !((q.type === "ObjectTypeProperty" || q.type === "ObjectTypeInternalSlot") && !q.variance && !q.optional && p(q) === p(R) || q.type === "ObjectTypeCallProperty" || L && L.type === "DeclareFunction"), V = Y && (q.type === "TypeAnnotation" || q.type === "TSTypeAnnotation"), O = V && Y && (q.type === "TypeAnnotation" || q.type === "TSTypeAnnotation") && J.type === "ArrowFunctionExpression";
           T(q) && (Y = true, V = true), O && M.push("(");
-          let K = B(b, k, N, false, true), se = $.returnType || $.predicate || $.typeAnnotation ? [Y ? " => " : ": ", k("returnType"), k("predicate"), k("typeAnnotation")] : "", Q = I($, se);
+          let K = B(b, k, N, false, true), se = R.returnType || R.predicate || R.typeAnnotation ? [Y ? " => " : ": ", k("returnType"), k("predicate"), k("typeAnnotation")] : "", Q = I(R, se);
           return M.push(Q ? r(K) : K), se && M.push(se), O && M.push(")"), r(M);
         }
         function d(b, N, k) {
-          let $ = b.getValue(), M = $.type === "TSTupleType" ? "elementTypes" : "types", q = $[M], J = a(q), L = J ? l : "";
+          let R = b.getValue(), M = R.type === "TSTupleType" ? "elementTypes" : "types", q = R[M], J = a(q), L = J ? l : "";
           return r(["[", c([L, P(b, N, M, k)]), h(J && F(N, "all") ? "," : ""), s(b, N, true), L, "]"]);
         }
         function C(b, N, k) {
-          let $ = b.getValue(), M = $.type === "OptionalIndexedAccessType" && $.optional ? "?.[" : "[";
+          let R = b.getValue(), M = R.type === "OptionalIndexedAccessType" && R.optional ? "?.[" : "[";
           return [k("objectType"), M, k("indexType"), "]"];
         }
         function _(b, N, k) {
-          let $ = b.getValue();
-          return [$.postfix ? "" : k, N("typeAnnotation"), $.postfix ? k : ""];
+          let R = b.getValue();
+          return [R.postfix ? "" : k, N("typeAnnotation"), R.postfix ? k : ""];
         }
-        n.exports = { printOpaqueType: f, printTypeAlias: x, printIntersectionType: m, printUnionType: E, printFunctionType: o, printTupleType: d, printIndexedAccessType: C, shouldHugType: R, printJSDocType: _ };
+        n.exports = { printOpaqueType: f, printTypeAlias: x, printIntersectionType: m, printUnionType: E, printFunctionType: o, printTupleType: d, printIndexedAccessType: C, shouldHugType: $, printJSDocType: _ };
       } }), jr = ee({ "src/language-js/print/type-parameters.js"(e, n) {
         "use strict";
         re();
@@ -9489,7 +9488,7 @@ ${P}`), h ? g.reset(P) : P;
           if (!Array.isArray(o[E]))
             return m(E);
           let d = f.getNode(2), C = d && y(d);
-          if (!f.match((k) => !(k[E].length === 1 && w(k[E][0])), void 0, (k, $) => $ === "typeAnnotation", (k) => k.type === "Identifier", A) && (C || o[E].length === 0 || o[E].length === 1 && (o[E][0].type === "NullableTypeAnnotation" || F(o[E][0]))))
+          if (!f.match((k) => !(k[E].length === 1 && w(k[E][0])), void 0, (k, R) => R === "typeAnnotation", (k) => k.type === "Identifier", A) && (C || o[E].length === 0 || o[E].length === 1 && (o[E][0].type === "NullableTypeAnnotation" || F(o[E][0]))))
             return ["<", s(", ", f.map(m, E)), P(f, x), ">"];
           let N = o.type === "TSTypeParameterInstantiation" ? "" : v(o).length === 1 && p(x) && !o[E][0].constraint && f.getParentNode().type === "ArrowFunctionExpression" ? "," : D(x, "all") ? c(",") : "";
           return i(["<", l([u, s([",", a], f.map(m, E))]), N, u, ">"], { id: B(o) });
@@ -9501,11 +9500,11 @@ ${P}`), h ? g.reset(P) : P;
           let E = !h(m, g.Line), o = t(f, x, E);
           return E ? o : [o, r];
         }
-        function R(f, x, m) {
+        function $(f, x, m) {
           let E = f.getValue(), o = [], d = f.getParentNode();
           return d.type === "TSMappedType" ? (o.push("[", m("name")), E.constraint && o.push(" in ", m("constraint")), d.nameType && o.push(" as ", f.callParent(() => m("nameType"))), o.push("]"), o) : (E.variance && o.push(m("variance")), E.in && o.push("in "), E.out && o.push("out "), o.push(m("name")), E.bound && o.push(": ", m("bound")), E.constraint && o.push(" extends ", m("constraint")), E.default && o.push(" = ", m("default")), o);
         }
-        n.exports = { printTypeParameter: R, printTypeParameters: I, getTypeParametersGroupId: B };
+        n.exports = { printTypeParameter: $, printTypeParameters: I, getTypeParametersGroupId: B };
       } }), er = ee({ "src/language-js/print/property.js"(e, n) {
         "use strict";
         re();
@@ -9534,7 +9533,7 @@ ${P}`), h ? g.reset(P) : P;
       } }), Or = ee({ "src/language-js/print/function.js"(e, n) {
         "use strict";
         re();
-        var t = Yt(), { printDanglingComments: s, printCommentsSeparately: a } = et(), r = lt(), { getNextNonSpaceNonCommentCharacterIndex: u } = Ge(), { builders: { line: i, softline: l, group: c, indent: y, ifBreak: h, hardline: g, join: p, indentIfBreak: D }, utils: { removeLines: v, willBreak: w } } = qe(), { ArgExpansionBailout: T } = Kt(), { getFunctionParameters: F, hasLeadingOwnLineComment: A, isFlowAnnotationComment: B, isJsxNode: I, isTemplateOnItsOwnLine: P, shouldPrintComma: R, startsWithNoLookaheadToken: f, isBinaryish: x, isLineComment: m, hasComment: E, getComments: o, CommentCheckFlags: d, isCallLikeExpression: C, isCallExpression: _, getCallArguments: b, hasNakedLeftSide: N, getLeftSide: k } = Ke(), { locEnd: $ } = it(), { printFunctionParameters: M, shouldGroupFunctionParameters: q } = kr(), { printPropertyKey: J } = er(), { printFunctionTypeParameters: L } = Dt();
+        var t = Yt(), { printDanglingComments: s, printCommentsSeparately: a } = et(), r = lt(), { getNextNonSpaceNonCommentCharacterIndex: u } = Ge(), { builders: { line: i, softline: l, group: c, indent: y, ifBreak: h, hardline: g, join: p, indentIfBreak: D }, utils: { removeLines: v, willBreak: w } } = qe(), { ArgExpansionBailout: T } = Kt(), { getFunctionParameters: F, hasLeadingOwnLineComment: A, isFlowAnnotationComment: B, isJsxNode: I, isTemplateOnItsOwnLine: P, shouldPrintComma: $, startsWithNoLookaheadToken: f, isBinaryish: x, isLineComment: m, hasComment: E, getComments: o, CommentCheckFlags: d, isCallLikeExpression: C, isCallExpression: _, getCallArguments: b, hasNakedLeftSide: N, getLeftSide: k } = Ke(), { locEnd: R } = it(), { printFunctionParameters: M, shouldGroupFunctionParameters: q } = kr(), { printPropertyKey: J } = er(), { printFunctionTypeParameters: L } = Dt();
         function Y(H, Z, ne, fe) {
           let ge = H.getValue(), Ce = false;
           if ((ge.type === "FunctionDeclaration" || ge.type === "FunctionExpression") && fe && fe.expandLastArg) {
@@ -9568,7 +9567,7 @@ ${P}`), h ? g.reset(P) : P;
             Ce.push(c([M(H, ne, Z, Oe, true), pe]));
           }
           let _e = s(H, Z, true, (Oe) => {
-            let pe = u(Z.originalText, Oe, $);
+            let pe = u(Z.originalText, Oe, R);
             return pe !== false && Z.originalText.slice(pe, pe + 2) === "=>";
           });
           return _e && Ce.push(" ", _e), Ce;
@@ -9595,7 +9594,7 @@ ${P}`), h ? g.reset(P) : P;
             return c([...pe, " ", _e]);
           if (ge.body.type === "SequenceExpression")
             return c([...pe, c([" (", y([l, _e]), l, ")"])]);
-          let ie = (fe && fe.expandLastArg || H.getParentNode().type === "JSXExpressionContainer") && !E(ge), ve = fe && fe.expandLastArg && R(Z, "all"), ce = ge.body.type === "ConditionalExpression" && !f(ge.body, false);
+          let ie = (fe && fe.expandLastArg || H.getParentNode().type === "JSXExpressionContainer") && !E(ge), ve = fe && fe.expandLastArg && $(Z, "all"), ce = ge.body.type === "ConditionalExpression" && !f(ge.body, false);
           return c([...pe, c([y([i, ce ? h("", "(") : "", _e, ce ? h("", ")") : ""]), ie ? [h(ve ? "," : ""), l] : ""])]);
         }
         function le(H) {
@@ -9674,18 +9673,18 @@ ${P}`), h ? g.reset(P) : P;
         "use strict";
         re();
         var { isNonEmptyArray: t, createGroupIdMapper: s } = Ge(), { printComments: a, printDanglingComments: r } = et(), { builders: { join: u, line: i, hardline: l, softline: c, group: y, indent: h, ifBreak: g } } = qe(), { hasComment: p, CommentCheckFlags: D } = Ke(), { getTypeParametersGroupId: v } = jr(), { printMethod: w } = Or(), { printOptionalToken: T, printTypeAnnotation: F, printDefiniteToken: A } = Dt(), { printPropertyKey: B } = er(), { printAssignment: I } = Zt(), { printClassMemberDecorators: P } = zn();
-        function R(b, N, k) {
-          let $ = b.getValue(), M = [];
-          $.declare && M.push("declare "), $.abstract && M.push("abstract "), M.push("class");
-          let q = $.id && p($.id, D.Trailing) || $.typeParameters && p($.typeParameters, D.Trailing) || $.superClass && p($.superClass) || t($.extends) || t($.mixins) || t($.implements), J = [], L = [];
-          if ($.id && J.push(" ", k("id")), J.push(k("typeParameters")), $.superClass) {
+        function $(b, N, k) {
+          let R = b.getValue(), M = [];
+          R.declare && M.push("declare "), R.abstract && M.push("abstract "), M.push("class");
+          let q = R.id && p(R.id, D.Trailing) || R.typeParameters && p(R.typeParameters, D.Trailing) || R.superClass && p(R.superClass) || t(R.extends) || t(R.mixins) || t(R.implements), J = [], L = [];
+          if (R.id && J.push(" ", k("id")), J.push(k("typeParameters")), R.superClass) {
             let Y = [d(b, N, k), k("superTypeParameters")], V = b.call((O) => ["extends ", a(O, Y, N)], "superClass");
             q ? L.push(i, y(V)) : L.push(" ", V);
           } else
             L.push(o(b, N, k, "extends"));
           if (L.push(o(b, N, k, "mixins"), o(b, N, k, "implements")), q) {
             let Y;
-            E($) ? Y = [...J, h(L)] : Y = h([...J, L]), M.push(y(Y, { id: f($) }));
+            E(R) ? Y = [...J, h(L)] : Y = h([...J, L]), M.push(y(Y, { id: f(R) }));
           } else
             M.push(...J, ...L);
           return M.push(" ", k("body")), M;
@@ -9700,29 +9699,29 @@ ${P}`), h ? g.reset(P) : P;
         function E(b) {
           return b.typeParameters && !p(b.typeParameters, D.Trailing | D.Line) && !m(b);
         }
-        function o(b, N, k, $) {
+        function o(b, N, k, R) {
           let M = b.getValue();
-          if (!t(M[$]))
+          if (!t(M[R]))
             return "";
           let q = r(b, N, true, (J) => {
             let { marker: L } = J;
-            return L === $;
+            return L === R;
           });
-          return [E(M) ? g(" ", i, { groupId: v(M.typeParameters) }) : i, q, q && l, $, y(h([i, u([",", i], b.map(k, $))]))];
+          return [E(M) ? g(" ", i, { groupId: v(M.typeParameters) }) : i, q, q && l, R, y(h([i, u([",", i], b.map(k, R))]))];
         }
         function d(b, N, k) {
-          let $ = k("superClass");
-          return b.getParentNode().type === "AssignmentExpression" ? y(g(["(", h([c, $]), c, ")"], $)) : $;
+          let R = k("superClass");
+          return b.getParentNode().type === "AssignmentExpression" ? y(g(["(", h([c, R]), c, ")"], R)) : R;
         }
         function C(b, N, k) {
-          let $ = b.getValue(), M = [];
-          return t($.decorators) && M.push(P(b, N, k)), $.accessibility && M.push($.accessibility + " "), $.readonly && M.push("readonly "), $.declare && M.push("declare "), $.static && M.push("static "), ($.type === "TSAbstractMethodDefinition" || $.abstract) && M.push("abstract "), $.override && M.push("override "), M.push(w(b, N, k)), M;
+          let R = b.getValue(), M = [];
+          return t(R.decorators) && M.push(P(b, N, k)), R.accessibility && M.push(R.accessibility + " "), R.readonly && M.push("readonly "), R.declare && M.push("declare "), R.static && M.push("static "), (R.type === "TSAbstractMethodDefinition" || R.abstract) && M.push("abstract "), R.override && M.push("override "), M.push(w(b, N, k)), M;
         }
         function _(b, N, k) {
-          let $ = b.getValue(), M = [], q = N.semi ? ";" : "";
-          return t($.decorators) && M.push(P(b, N, k)), $.accessibility && M.push($.accessibility + " "), $.declare && M.push("declare "), $.static && M.push("static "), ($.type === "TSAbstractPropertyDefinition" || $.abstract) && M.push("abstract "), $.override && M.push("override "), $.readonly && M.push("readonly "), $.variance && M.push(k("variance")), $.type === "ClassAccessorProperty" && M.push("accessor "), M.push(B(b, N, k), T(b), A(b), F(b, N, k)), [I(b, N, k, M, " =", "value"), q];
+          let R = b.getValue(), M = [], q = N.semi ? ";" : "";
+          return t(R.decorators) && M.push(P(b, N, k)), R.accessibility && M.push(R.accessibility + " "), R.declare && M.push("declare "), R.static && M.push("static "), (R.type === "TSAbstractPropertyDefinition" || R.type === "TSAbstractAccessorProperty" || R.abstract) && M.push("abstract "), R.override && M.push("override "), R.readonly && M.push("readonly "), R.variance && M.push(k("variance")), (R.type === "ClassAccessorProperty" || R.type === "AccessorProperty" || R.type === "TSAbstractAccessorProperty") && M.push("accessor "), M.push(B(b, N, k), T(b), A(b), F(b, N, k)), [I(b, N, k, M, " =", "value"), q];
         }
-        n.exports = { printClass: R, printClassMethod: C, printClassProperty: _, printHardlineAfterHeritage: x };
+        n.exports = { printClass: $, printClassMethod: C, printClassProperty: _, printHardlineAfterHeritage: x };
       } }), uo = ee({ "src/language-js/print/interface.js"(e, n) {
         "use strict";
         re();
@@ -9741,40 +9740,40 @@ ${P}`), h ? g.reset(P) : P;
         re();
         var { isNonEmptyArray: t } = Ge(), { builders: { softline: s, group: a, indent: r, join: u, line: i, ifBreak: l, hardline: c } } = qe(), { printDanglingComments: y } = et(), { hasComment: h, CommentCheckFlags: g, shouldPrintComma: p, needsHardlineAfterDanglingComment: D, isStringLiteral: v, rawText: w } = Ke(), { locStart: T, hasSameLoc: F } = it(), { hasDecoratorsBeforeExport: A, printDecoratorsBeforeExport: B } = zn();
         function I(_, b, N) {
-          let k = _.getValue(), $ = b.semi ? ";" : "", M = [], { importKind: q } = k;
-          return M.push("import"), q && q !== "value" && M.push(" ", q), M.push(m(_, b, N), x(_, b, N), o(_, b, N), $), M;
+          let k = _.getValue(), R = b.semi ? ";" : "", M = [], { importKind: q } = k;
+          return M.push("import"), q && q !== "value" && M.push(" ", q), M.push(m(_, b, N), x(_, b, N), o(_, b, N), R), M;
         }
         function P(_, b, N) {
-          let k = _.getValue(), $ = [];
-          A(k) && $.push(B(_, b, N));
+          let k = _.getValue(), R = [];
+          A(k) && R.push(B(_, b, N));
           let { type: M, exportKind: q, declaration: J } = k;
-          return $.push("export"), (k.default || M === "ExportDefaultDeclaration") && $.push(" default"), h(k, g.Dangling) && ($.push(" ", y(_, b, true)), D(k) && $.push(c)), J ? $.push(" ", N("declaration")) : $.push(q === "type" ? " type" : "", m(_, b, N), x(_, b, N), o(_, b, N)), f(k, b) && $.push(";"), $;
+          return R.push("export"), (k.default || M === "ExportDefaultDeclaration") && R.push(" default"), h(k, g.Dangling) && (R.push(" ", y(_, b, true)), D(k) && R.push(c)), J ? R.push(" ", N("declaration")) : R.push(q === "type" ? " type" : "", m(_, b, N), x(_, b, N), o(_, b, N)), f(k, b) && R.push(";"), R;
         }
-        function R(_, b, N) {
-          let k = _.getValue(), $ = b.semi ? ";" : "", M = [], { exportKind: q, exported: J } = k;
-          return M.push("export"), q === "type" && M.push(" type"), M.push(" *"), J && M.push(" as ", N("exported")), M.push(x(_, b, N), o(_, b, N), $), M;
+        function $(_, b, N) {
+          let k = _.getValue(), R = b.semi ? ";" : "", M = [], { exportKind: q, exported: J } = k;
+          return M.push("export"), q === "type" && M.push(" type"), M.push(" *"), J && M.push(" as ", N("exported")), M.push(x(_, b, N), o(_, b, N), R), M;
         }
         function f(_, b) {
           if (!b.semi)
             return false;
-          let { type: N, declaration: k } = _, $ = _.default || N === "ExportDefaultDeclaration";
+          let { type: N, declaration: k } = _, R = _.default || N === "ExportDefaultDeclaration";
           if (!k)
             return true;
           let { type: M } = k;
-          return !!($ && M !== "ClassDeclaration" && M !== "FunctionDeclaration" && M !== "TSInterfaceDeclaration" && M !== "DeclareClass" && M !== "DeclareFunction" && M !== "TSDeclareFunction" && M !== "EnumDeclaration");
+          return !!(R && M !== "ClassDeclaration" && M !== "FunctionDeclaration" && M !== "TSInterfaceDeclaration" && M !== "DeclareClass" && M !== "DeclareFunction" && M !== "TSDeclareFunction" && M !== "EnumDeclaration");
         }
         function x(_, b, N) {
           let k = _.getValue();
           if (!k.source)
             return "";
-          let $ = [];
-          return E(k, b) || $.push(" from"), $.push(" ", N("source")), $;
+          let R = [];
+          return E(k, b) || R.push(" from"), R.push(" ", N("source")), R;
         }
         function m(_, b, N) {
           let k = _.getValue();
           if (E(k, b))
             return "";
-          let $ = [" "];
+          let R = [" "];
           if (t(k.specifiers)) {
             let M = [], q = [];
             _.each(() => {
@@ -9785,24 +9784,24 @@ ${P}`), h ? g.reset(P) : P;
                 q.push(N());
               else
                 throw new Error(`Unknown specifier type ${JSON.stringify(J)}`);
-            }, "specifiers"), $.push(u(", ", M)), q.length > 0 && (M.length > 0 && $.push(", "), q.length > 1 || M.length > 0 || k.specifiers.some((L) => h(L)) ? $.push(a(["{", r([b.bracketSpacing ? i : s, u([",", i], q)]), l(p(b) ? "," : ""), b.bracketSpacing ? i : s, "}"])) : $.push(["{", b.bracketSpacing ? " " : "", ...q, b.bracketSpacing ? " " : "", "}"]));
+            }, "specifiers"), R.push(u(", ", M)), q.length > 0 && (M.length > 0 && R.push(", "), q.length > 1 || M.length > 0 || k.specifiers.some((L) => h(L)) ? R.push(a(["{", r([b.bracketSpacing ? i : s, u([",", i], q)]), l(p(b) ? "," : ""), b.bracketSpacing ? i : s, "}"])) : R.push(["{", b.bracketSpacing ? " " : "", ...q, b.bracketSpacing ? " " : "", "}"]));
           } else
-            $.push("{}");
-          return $;
+            R.push("{}");
+          return R;
         }
         function E(_, b) {
-          let { type: N, importKind: k, source: $, specifiers: M } = _;
-          return N !== "ImportDeclaration" || t(M) || k === "type" ? false : !/{\s*}/.test(b.originalText.slice(T(_), T($)));
+          let { type: N, importKind: k, source: R, specifiers: M } = _;
+          return N !== "ImportDeclaration" || t(M) || k === "type" ? false : !/{\s*}/.test(b.originalText.slice(T(_), T(R)));
         }
         function o(_, b, N) {
           let k = _.getNode();
           return t(k.assertions) ? [" assert {", b.bracketSpacing ? " " : "", u(", ", _.map(N, "assertions")), b.bracketSpacing ? " " : "", "}"] : "";
         }
         function d(_, b, N) {
-          let k = _.getNode(), { type: $ } = k, M = [], q = $ === "ImportSpecifier" ? k.importKind : k.exportKind;
+          let k = _.getNode(), { type: R } = k, M = [], q = R === "ImportSpecifier" ? k.importKind : k.exportKind;
           q && q !== "value" && M.push(q, " ");
-          let J = $.startsWith("Import"), L = J ? "imported" : "local", Y = J ? "local" : "exported", V = k[L], O = k[Y], K = "", se = "";
-          return $ === "ExportNamespaceSpecifier" || $ === "ImportNamespaceSpecifier" ? K = "*" : V && (K = N(L)), O && !C(k) && (se = N(Y)), M.push(K, K && se ? " as " : "", se), M;
+          let J = R.startsWith("Import"), L = J ? "imported" : "local", Y = J ? "local" : "exported", V = k[L], O = k[Y], K = "", se = "";
+          return R === "ExportNamespaceSpecifier" || R === "ImportNamespaceSpecifier" ? K = "*" : V && (K = N(L)), O && !C(k) && (se = N(Y)), M.push(K, K && se ? " as " : "", se), M;
         }
         function C(_) {
           if (_.type !== "ImportSpecifier" && _.type !== "ExportSpecifier")
@@ -9819,17 +9818,17 @@ ${P}`), h ? g.reset(P) : P;
               return false;
           }
         }
-        n.exports = { printImportDeclaration: I, printExportDeclaration: P, printExportAllDeclaration: R, printModuleSpecifier: d };
+        n.exports = { printImportDeclaration: I, printExportDeclaration: P, printExportAllDeclaration: $, printModuleSpecifier: d };
       } }), Xn = ee({ "src/language-js/print/object.js"(e, n) {
         "use strict";
         re();
-        var { printDanglingComments: t } = et(), { builders: { line: s, softline: a, group: r, indent: u, ifBreak: i, hardline: l } } = qe(), { getLast: c, hasNewlineInRange: y, hasNewline: h, isNonEmptyArray: g } = Ge(), { shouldPrintComma: p, hasComment: D, getComments: v, CommentCheckFlags: w, isNextLineEmpty: T } = Ke(), { locStart: F, locEnd: A } = it(), { printOptionalToken: B, printTypeAnnotation: I } = Dt(), { shouldHugFunctionParameters: P } = kr(), { shouldHugType: R } = Lr(), { printHardlineAfterHeritage: f } = tr();
+        var { printDanglingComments: t } = et(), { builders: { line: s, softline: a, group: r, indent: u, ifBreak: i, hardline: l } } = qe(), { getLast: c, hasNewlineInRange: y, hasNewline: h, isNonEmptyArray: g } = Ge(), { shouldPrintComma: p, hasComment: D, getComments: v, CommentCheckFlags: w, isNextLineEmpty: T } = Ke(), { locStart: F, locEnd: A } = it(), { printOptionalToken: B, printTypeAnnotation: I } = Dt(), { shouldHugFunctionParameters: P } = kr(), { shouldHugType: $ } = Lr(), { printHardlineAfterHeritage: f } = tr();
         function x(m, E, o) {
           let d = E.semi ? ";" : "", C = m.getValue(), _;
           C.type === "TSTypeLiteral" ? _ = "members" : C.type === "TSInterfaceBody" ? _ = "body" : _ = "properties";
           let b = C.type === "ObjectTypeAnnotation", N = [_];
           b && N.push("indexers", "callProperties", "internalSlots");
-          let k = N.map((W) => C[W][0]).sort((W, X) => F(W) - F(X))[0], $ = m.getParentNode(0), M = b && $ && ($.type === "InterfaceDeclaration" || $.type === "DeclareInterface" || $.type === "DeclareClass") && m.getName() === "body", q = C.type === "TSInterfaceBody" || M || C.type === "ObjectPattern" && $.type !== "FunctionDeclaration" && $.type !== "FunctionExpression" && $.type !== "ArrowFunctionExpression" && $.type !== "ObjectMethod" && $.type !== "ClassMethod" && $.type !== "ClassPrivateMethod" && $.type !== "AssignmentPattern" && $.type !== "CatchClause" && C.properties.some((W) => W.value && (W.value.type === "ObjectPattern" || W.value.type === "ArrayPattern")) || C.type !== "ObjectPattern" && k && y(E.originalText, F(C), F(k)), J = M ? ";" : C.type === "TSInterfaceBody" || C.type === "TSTypeLiteral" ? i(d, ";") : ",", L = C.type === "RecordExpression" ? "#{" : C.exact ? "{|" : "{", Y = C.exact ? "|}" : "}", V = [];
+          let k = N.map((W) => C[W][0]).sort((W, X) => F(W) - F(X))[0], R = m.getParentNode(0), M = b && R && (R.type === "InterfaceDeclaration" || R.type === "DeclareInterface" || R.type === "DeclareClass") && m.getName() === "body", q = C.type === "TSInterfaceBody" || M || C.type === "ObjectPattern" && R.type !== "FunctionDeclaration" && R.type !== "FunctionExpression" && R.type !== "ArrowFunctionExpression" && R.type !== "ObjectMethod" && R.type !== "ClassMethod" && R.type !== "ClassPrivateMethod" && R.type !== "AssignmentPattern" && R.type !== "CatchClause" && C.properties.some((W) => W.value && (W.value.type === "ObjectPattern" || W.value.type === "ArrayPattern")) || C.type !== "ObjectPattern" && k && y(E.originalText, F(C), F(k)), J = M ? ";" : C.type === "TSInterfaceBody" || C.type === "TSTypeLiteral" ? i(d, ";") : ",", L = C.type === "RecordExpression" ? "#{" : C.exact ? "{|" : "{", Y = C.exact ? "|}" : "}", V = [];
           for (let W of N)
             m.each((X) => {
               let oe = X.getValue();
@@ -9855,14 +9854,14 @@ ${P}`), h ? g.reset(P) : P;
               return [L, Y, I(m, E, o)];
             le = r([L, t(m, E), a, Y, B(m), I(m, E, o)]);
           } else
-            le = [M && g(C.properties) ? f($) : "", L, u([E.bracketSpacing ? s : a, ...K]), i(Q && (J !== "," || p(E)) ? J : ""), E.bracketSpacing ? s : a, Y, B(m), I(m, E, o)];
-          return m.match((W) => W.type === "ObjectPattern" && !W.decorators, (W, X, oe) => P(W) && (X === "params" || X === "parameters" || X === "this" || X === "rest") && oe === 0) || m.match(R, (W, X) => X === "typeAnnotation", (W, X) => X === "typeAnnotation", (W, X, oe) => P(W) && (X === "params" || X === "parameters" || X === "this" || X === "rest") && oe === 0) || !q && m.match((W) => W.type === "ObjectPattern", (W) => W.type === "AssignmentExpression" || W.type === "VariableDeclarator") ? le : r(le, { shouldBreak: q });
+            le = [M && g(C.properties) ? f(R) : "", L, u([E.bracketSpacing ? s : a, ...K]), i(Q && (J !== "," || p(E)) ? J : ""), E.bracketSpacing ? s : a, Y, B(m), I(m, E, o)];
+          return m.match((W) => W.type === "ObjectPattern" && !W.decorators, (W, X, oe) => P(W) && (X === "params" || X === "parameters" || X === "this" || X === "rest") && oe === 0) || m.match($, (W, X) => X === "typeAnnotation", (W, X) => X === "typeAnnotation", (W, X, oe) => P(W) && (X === "params" || X === "parameters" || X === "this" || X === "rest") && oe === 0) || !q && m.match((W) => W.type === "ObjectPattern", (W) => W.type === "AssignmentExpression" || W.type === "VariableDeclarator") ? le : r(le, { shouldBreak: q });
         }
         n.exports = { printObject: x };
       } }), Vm = ee({ "src/language-js/print/flow.js"(e, n) {
         "use strict";
         re();
-        var t = Yt(), { printDanglingComments: s } = et(), { printString: a, printNumber: r } = Ge(), { builders: { hardline: u, softline: i, group: l, indent: c } } = qe(), { getParentExportDeclaration: y, isFunctionNotation: h, isGetterOrSetter: g, rawText: p, shouldPrintComma: D } = Ke(), { locStart: v, locEnd: w } = it(), { replaceTextEndOfLine: T } = Xt(), { printClass: F } = tr(), { printOpaqueType: A, printTypeAlias: B, printIntersectionType: I, printUnionType: P, printFunctionType: R, printTupleType: f, printIndexedAccessType: x } = Lr(), { printInterface: m } = uo(), { printTypeParameter: E, printTypeParameters: o } = jr(), { printExportDeclaration: d, printExportAllDeclaration: C } = so(), { printArrayItems: _ } = Qt(), { printObject: b } = Xn(), { printPropertyKey: N } = er(), { printOptionalToken: k, printTypeAnnotation: $, printRestSpread: M } = Dt();
+        var t = Yt(), { printDanglingComments: s } = et(), { printString: a, printNumber: r } = Ge(), { builders: { hardline: u, softline: i, group: l, indent: c } } = qe(), { getParentExportDeclaration: y, isFunctionNotation: h, isGetterOrSetter: g, rawText: p, shouldPrintComma: D } = Ke(), { locStart: v, locEnd: w } = it(), { replaceTextEndOfLine: T } = Xt(), { printClass: F } = tr(), { printOpaqueType: A, printTypeAlias: B, printIntersectionType: I, printUnionType: P, printFunctionType: $, printTupleType: f, printIndexedAccessType: x } = Lr(), { printInterface: m } = uo(), { printTypeParameter: E, printTypeParameters: o } = jr(), { printExportDeclaration: d, printExportAllDeclaration: C } = so(), { printArrayItems: _ } = Qt(), { printObject: b } = Xn(), { printPropertyKey: N } = er(), { printOptionalToken: k, printTypeAnnotation: R, printRestSpread: M } = Dt();
         function q(L, Y, V) {
           let O = L.getValue(), K = Y.semi ? ";" : "", se = [];
           switch (O.type) {
@@ -9895,7 +9894,7 @@ ${P}`), h ? g.reset(P) : P;
             case "UnionTypeAnnotation":
               return P(L, Y, V);
             case "FunctionTypeAnnotation":
-              return R(L, Y, V);
+              return $(L, Y, V);
             case "TupleTypeAnnotation":
               return f(L, Y, V);
             case "GenericTypeAnnotation":
@@ -9997,7 +9996,7 @@ ${P}`), h ? g.reset(P) : P;
             case "BigIntLiteralTypeAnnotation":
               return O.extra ? r(O.extra.raw) : r(O.raw);
             case "TypeCastExpression":
-              return ["(", V("expression"), $(L, Y, V), ")"];
+              return ["(", V("expression"), R(L, Y, V), ")"];
             case "TypeParameterDeclaration":
             case "TypeParameterInstantiation": {
               let Q = o(L, Y, V, "params");
@@ -10100,37 +10099,37 @@ ${P}`), h ? g.reset(P) : P;
           }
           return E === x ? false : m[I.get(m.type)] === E;
         }
-        function R(f, x, m) {
-          let E = f.getValue(), o = E.type === "ConditionalExpression", d = o ? "consequent" : "trueType", C = o ? "alternate" : "falseType", _ = o ? ["test"] : ["checkType", "extendsType"], b = E[d], N = E[C], k = [], $ = false, M = f.getParentNode(), q = M.type === E.type && _.some((ae) => M[ae] === E), J = M.type === E.type && !q, L, Y, V = 0;
+        function $(f, x, m) {
+          let E = f.getValue(), o = E.type === "ConditionalExpression", d = o ? "consequent" : "trueType", C = o ? "alternate" : "falseType", _ = o ? ["test"] : ["checkType", "extendsType"], b = E[d], N = E[C], k = [], R = false, M = f.getParentNode(), q = M.type === E.type && _.some((ae) => M[ae] === E), J = M.type === E.type && !q, L, Y, V = 0;
           do
             Y = L || E, L = f.getParentNode(V), V++;
           while (L && L.type === E.type && _.every((ae) => L[ae] !== Y));
           let O = L || M, K = Y;
           if (o && (s(E[_[0]]) || s(b) || s(N) || A(K))) {
-            $ = true, J = true;
+            R = true, J = true;
             let ae = (z) => [w("("), D([g, z]), g, w(")")], Ae = (z) => z.type === "NullLiteral" || z.type === "Literal" && z.value === null || z.type === "Identifier" && z.name === "undefined";
             k.push(" ? ", Ae(b) ? m(d) : ae(m(d)), " : ", N.type === E.type || Ae(N) ? m(C) : ae(m(C)));
           } else {
             let ae = [h, "? ", b.type === E.type ? w("", "(") : "", v(2, m(d)), b.type === E.type ? w("", ")") : "", h, ": ", N.type === E.type ? m(C) : v(2, m(C))];
             k.push(M.type !== E.type || M[C] === E || q ? ae : x.useTabs ? T(D(ae)) : v(Math.max(0, x.tabWidth - 2), ae));
           }
-          let Q = [..._.map((ae) => a(E[ae])), a(b), a(N)].flat().some((ae) => y(ae) && t(x.originalText, l(ae), c(ae))), le = (ae) => M === O ? p(ae, { shouldBreak: Q }) : Q ? [ae, F] : ae, W = !$ && (u(M) || M.type === "NGPipeExpression" && M.left === E) && !M.computed, X = P(f), oe = le([B(f, x, m), J ? k : D(k), o && W && !X ? g : ""]);
+          let Q = [..._.map((ae) => a(E[ae])), a(b), a(N)].flat().some((ae) => y(ae) && t(x.originalText, l(ae), c(ae))), le = (ae) => M === O ? p(ae, { shouldBreak: Q }) : Q ? [ae, F] : ae, W = !R && (u(M) || M.type === "NGPipeExpression" && M.left === E) && !M.computed, X = P(f), oe = le([B(f, x, m), J ? k : D(k), o && W && !X ? g : ""]);
           return q || X ? p([D([g, oe]), g]) : oe;
         }
-        n.exports = { printTernary: R };
+        n.exports = { printTernary: $ };
       } }), ao = ee({ "src/language-js/print/statement.js"(e, n) {
         "use strict";
         re();
         var { builders: { hardline: t } } = qe(), s = Ot(), { getLeftSidePathName: a, hasNakedLeftSide: r, isJsxNode: u, isTheOnlyJsxElementInMarkdown: i, hasComment: l, CommentCheckFlags: c, isNextLineEmpty: y } = Ke(), { shouldPrintParamsWithoutParens: h } = Or();
-        function g(B, I, P, R) {
-          let f = B.getValue(), x = [], m = f.type === "ClassBody", E = p(f[R]);
+        function g(B, I, P, $) {
+          let f = B.getValue(), x = [], m = f.type === "ClassBody", E = p(f[$]);
           return B.each((o, d, C) => {
             let _ = o.getValue();
             if (_.type === "EmptyStatement")
               return;
             let b = P();
             !I.semi && !m && !i(I, o) && D(o, I) ? l(_, c.Leading) ? x.push(P([], { needsSemi: true })) : x.push(";", b) : x.push(b), !I.semi && m && F(_) && A(_, C[d + 1]) && x.push(";"), _ !== E && (x.push(t), y(_, I) && x.push(t));
-          }, R), x;
+          }, $), x;
         }
         function p(B) {
           for (let I = B.length - 1; I >= 0; I--) {
@@ -10140,7 +10139,7 @@ ${P}`), h ? g.reset(P) : P;
           }
         }
         function D(B, I) {
-          return B.getNode().type !== "ExpressionStatement" ? false : B.call((R) => v(R, I), "expression");
+          return B.getNode().type !== "ExpressionStatement" ? false : B.call(($) => v($, I), "expression");
         }
         function v(B, I) {
           let P = B.getValue();
@@ -10159,8 +10158,8 @@ ${P}`), h ? g.reset(P) : P;
               break;
             }
             case "UnaryExpression": {
-              let { prefix: R, operator: f } = P;
-              if (R && (f === "+" || f === "-"))
+              let { prefix: $, operator: f } = P;
+              if ($ && (f === "+" || f === "-"))
                 return true;
               break;
             }
@@ -10178,7 +10177,7 @@ ${P}`), h ? g.reset(P) : P;
               if (u(P))
                 return true;
           }
-          return s(B, I) ? true : r(P) ? B.call((R) => v(R, I), ...a(B, P)) : false;
+          return s(B, I) ? true : r(P) ? B.call(($) => v($, I), ...a(B, P)) : false;
         }
         function w(B, I, P) {
           return g(B, I, P, "body");
@@ -10188,17 +10187,17 @@ ${P}`), h ? g.reset(P) : P;
         }
         var F = (B) => {
           let { type: I } = B;
-          return I === "ClassProperty" || I === "PropertyDefinition" || I === "ClassPrivateProperty" || I === "ClassAccessorProperty";
+          return I === "ClassProperty" || I === "PropertyDefinition" || I === "ClassPrivateProperty" || I === "ClassAccessorProperty" || I === "AccessorProperty" || I === "TSAbstractPropertyDefinition" || I === "TSAbstractAccessorProperty";
         };
         function A(B, I) {
-          let P = B.key && B.key.name;
-          if ((P === "static" || P === "get" || P === "set") && !B.value && !B.typeAnnotation)
+          let { name: P } = B.key;
+          if ((P === "static" || P === "get" || P === "set" || P === "accessor") && !B.value && !B.typeAnnotation)
             return true;
           if (!I || I.static || I.accessibility)
             return false;
           if (!I.computed) {
-            let R = I.key && I.key.name;
-            if (R === "in" || R === "instanceof")
+            let $ = I.key && I.key.name;
+            if ($ === "in" || $ === "instanceof")
               return true;
           }
           if (F(I) && I.variance && !I.static && !I.declare)
@@ -10248,8 +10247,8 @@ ${P}`), h ? g.reset(P) : P;
           if (!T && !F && !A)
             return "";
           let B = [];
-          if (T && p.each((I, P, R) => {
-            B.push(v()), (P < R.length - 1 || F || A) && (B.push(a), l(I.getValue(), D) && B.push(a));
+          if (T && p.each((I, P, $) => {
+            B.push(v()), (P < $.length - 1 || F || A) && (B.push(a), l(I.getValue(), D) && B.push(a));
           }, "directives"), F && B.push(y(p, D, v)), A && B.push(t(p, D, true)), w.type === "Program") {
             let I = p.getParentNode();
             (!I || I.type !== "ModuleExpression") && B.push(a);
@@ -10260,7 +10259,7 @@ ${P}`), h ? g.reset(P) : P;
       } }), Hm = ee({ "src/language-js/print/typescript.js"(e, n) {
         "use strict";
         re();
-        var { printDanglingComments: t } = et(), { hasNewlineInRange: s } = Ge(), { builders: { join: a, line: r, hardline: u, softline: i, group: l, indent: c, conditionalGroup: y, ifBreak: h } } = qe(), { isLiteral: g, getTypeScriptMappedTypeModifier: p, shouldPrintComma: D, isCallExpression: v, isMemberExpression: w } = Ke(), T = Wm(), { locStart: F, locEnd: A } = it(), { printOptionalToken: B, printTypeScriptModifiers: I } = Dt(), { printTernary: P } = io(), { printFunctionParameters: R, shouldGroupFunctionParameters: f } = kr(), { printTemplateLiteral: x } = jt(), { printArrayItems: m } = Qt(), { printObject: E } = Xn(), { printClassProperty: o, printClassMethod: d } = tr(), { printTypeParameter: C, printTypeParameters: _ } = jr(), { printPropertyKey: b } = er(), { printFunction: N, printMethodInternal: k } = Or(), { printInterface: $ } = uo(), { printBlock: M } = oo(), { printTypeAlias: q, printIntersectionType: J, printUnionType: L, printFunctionType: Y, printTupleType: V, printIndexedAccessType: O, printJSDocType: K } = Lr();
+        var { printDanglingComments: t } = et(), { hasNewlineInRange: s } = Ge(), { builders: { join: a, line: r, hardline: u, softline: i, group: l, indent: c, conditionalGroup: y, ifBreak: h } } = qe(), { isLiteral: g, getTypeScriptMappedTypeModifier: p, shouldPrintComma: D, isCallExpression: v, isMemberExpression: w } = Ke(), T = Wm(), { locStart: F, locEnd: A } = it(), { printOptionalToken: B, printTypeScriptModifiers: I } = Dt(), { printTernary: P } = io(), { printFunctionParameters: $, shouldGroupFunctionParameters: f } = kr(), { printTemplateLiteral: x } = jt(), { printArrayItems: m } = Qt(), { printObject: E } = Xn(), { printClassProperty: o, printClassMethod: d } = tr(), { printTypeParameter: C, printTypeParameters: _ } = jr(), { printPropertyKey: b } = er(), { printFunction: N, printMethodInternal: k } = Or(), { printInterface: R } = uo(), { printBlock: M } = oo(), { printTypeAlias: q, printIntersectionType: J, printUnionType: L, printFunctionType: Y, printTupleType: V, printIndexedAccessType: O, printJSDocType: K } = Lr();
         function se(Q, le, W) {
           let X = Q.getValue();
           if (!X.type.startsWith("TS"))
@@ -10291,6 +10290,7 @@ ${P}`), h ? g.reset(P) : P;
             case "TSAbstractMethodDefinition":
             case "TSDeclareMethod":
               return d(Q, le, W);
+            case "TSAbstractAccessorProperty":
             case "TSAbstractPropertyDefinition":
               return o(Q, le, W);
             case "TSInterfaceHeritage":
@@ -10305,7 +10305,7 @@ ${P}`), h ? g.reset(P) : P;
             case "TSOptionalType":
               return [W("typeAnnotation"), "?"];
             case "TSInterfaceDeclaration":
-              return $(Q, le, W);
+              return R(Q, le, W);
             case "TSClassImplements":
               return [W("expression"), W("typeParameters")];
             case "TSTypeParameterDeclaration":
@@ -10345,7 +10345,7 @@ ${P}`), h ? g.reset(P) : P;
             case "TSConstructSignatureDeclaration":
             case "TSCallSignatureDeclaration":
             case "TSConstructorType": {
-              if (X.type === "TSConstructorType" && X.abstract && ae.push("abstract "), X.type !== "TSCallSignatureDeclaration" && ae.push("new "), ae.push(l(R(Q, W, le, false, true))), X.returnType || X.typeAnnotation) {
+              if (X.type === "TSConstructorType" && X.abstract && ae.push("abstract "), X.type !== "TSCallSignatureDeclaration" && ae.push("new "), ae.push(l($(Q, W, le, false, true))), X.returnType || X.typeAnnotation) {
                 let Ae = X.type === "TSConstructorType";
                 ae.push(Ae ? " => " : ": ", W("returnType"), W("typeAnnotation"));
               }
@@ -10360,7 +10360,7 @@ ${P}`), h ? g.reset(P) : P;
             case "TSMethodSignature": {
               let Ae = X.kind && X.kind !== "method" ? `${X.kind} ` : "";
               ae.push(X.accessibility ? [X.accessibility, " "] : "", Ae, X.export ? "export " : "", X.static ? "static " : "", X.readonly ? "readonly " : "", X.abstract ? "abstract " : "", X.declare ? "declare " : "", X.computed ? "[" : "", W("key"), X.computed ? "]" : "", B(Q));
-              let z = R(Q, W, le, false, true), H = X.returnType ? "returnType" : "typeAnnotation", Z = X[H], ne = Z ? W(H) : "", fe = f(X, ne);
+              let z = $(Q, W, le, false, true), H = X.returnType ? "returnType" : "typeAnnotation", Z = X[H], ne = Z ? W(H) : "", fe = f(X, ne);
               return ae.push(fe ? l(z) : z), Z && ae.push(": ", l(ne)), l(ae);
             }
             case "TSNamespaceExportDeclaration":
@@ -10490,13 +10490,13 @@ ${P}`), h ? g.reset(P) : P;
       } }), Jm = ee({ "src/language-js/printer-estree.js"(e, n) {
         "use strict";
         re();
-        var { printDanglingComments: t } = et(), { hasNewline: s } = Ge(), { builders: { join: a, line: r, hardline: u, softline: i, group: l, indent: c }, utils: { replaceTextEndOfLine: y } } = qe(), h = Nm(), g = wm(), { insertPragma: p } = Qa(), D = Za(), v = Ot(), w = eo(), { hasFlowShorthandAnnotationComment: T, hasComment: F, CommentCheckFlags: A, isTheOnlyJsxElementInMarkdown: B, isLineComment: I, isNextLineEmpty: P, needsHardlineAfterDanglingComment: R, rawText: f, hasIgnoreComment: x, isCallExpression: m, isMemberExpression: E, markerForIfWithoutBlockAndSameLineComment: o } = Ke(), { locStart: d, locEnd: C } = it(), _ = Lt(), { printHtmlBinding: b, isVueEventBindingExpression: N } = qm(), { printAngular: k } = Mm(), { printJsx: $, hasJsxIgnoreComment: M } = Rm(), { printFlow: q } = Vm(), { printTypescript: J } = Hm(), { printOptionalToken: L, printBindExpressionCallee: Y, printTypeAnnotation: V, adjustClause: O, printRestSpread: K, printDefiniteToken: se } = Dt(), { printImportDeclaration: Q, printExportDeclaration: le, printExportAllDeclaration: W, printModuleSpecifier: X } = so(), { printTernary: oe } = io(), { printTemplateLiteral: ae } = jt(), { printArray: Ae } = Qt(), { printObject: z } = Xn(), { printClass: H, printClassMethod: Z, printClassProperty: ne } = tr(), { printProperty: fe } = er(), { printFunction: ge, printArrowFunction: Ce, printMethod: _e, printReturnStatement: Oe, printThrowStatement: pe } = Or(), { printCallExpression: ie } = no(), { printVariableDeclarator: ve, printAssignmentExpression: ce } = Zt(), { printBinaryishExpression: U } = Jn(), { printSwitchCaseConsequent: de } = ao(), { printMemberExpression: De } = ro(), { printBlock: he, printBlockBody: Be } = oo(), { printComment: Se } = Gm(), { printLiteral: ye } = Um(), { printDecorators: S } = zn();
+        var { printDanglingComments: t } = et(), { hasNewline: s } = Ge(), { builders: { join: a, line: r, hardline: u, softline: i, group: l, indent: c }, utils: { replaceTextEndOfLine: y } } = qe(), h = Nm(), g = wm(), { insertPragma: p } = Qa(), D = Za(), v = Ot(), w = eo(), { hasFlowShorthandAnnotationComment: T, hasComment: F, CommentCheckFlags: A, isTheOnlyJsxElementInMarkdown: B, isLineComment: I, isNextLineEmpty: P, needsHardlineAfterDanglingComment: $, rawText: f, hasIgnoreComment: x, isCallExpression: m, isMemberExpression: E, markerForIfWithoutBlockAndSameLineComment: o } = Ke(), { locStart: d, locEnd: C } = it(), _ = Lt(), { printHtmlBinding: b, isVueEventBindingExpression: N } = qm(), { printAngular: k } = Mm(), { printJsx: R, hasJsxIgnoreComment: M } = Rm(), { printFlow: q } = Vm(), { printTypescript: J } = Hm(), { printOptionalToken: L, printBindExpressionCallee: Y, printTypeAnnotation: V, adjustClause: O, printRestSpread: K, printDefiniteToken: se } = Dt(), { printImportDeclaration: Q, printExportDeclaration: le, printExportAllDeclaration: W, printModuleSpecifier: X } = so(), { printTernary: oe } = io(), { printTemplateLiteral: ae } = jt(), { printArray: Ae } = Qt(), { printObject: z } = Xn(), { printClass: H, printClassMethod: Z, printClassProperty: ne } = tr(), { printProperty: fe } = er(), { printFunction: ge, printArrowFunction: Ce, printMethod: _e, printReturnStatement: Oe, printThrowStatement: pe } = Or(), { printCallExpression: ie } = no(), { printVariableDeclarator: ve, printAssignmentExpression: ce } = Zt(), { printBinaryishExpression: U } = Jn(), { printSwitchCaseConsequent: de } = ao(), { printMemberExpression: De } = ro(), { printBlock: he, printBlockBody: Be } = oo(), { printComment: Se } = Gm(), { printLiteral: ye } = Um(), { printDecorators: S } = zn();
         function G(Te, Pe, Fe, Ze) {
           let xe = te(Te, Pe, Fe, Ze);
           if (!xe)
             return "";
           let Je = Te.getValue(), { type: we } = Je;
-          if (we === "ClassMethod" || we === "ClassPrivateMethod" || we === "ClassProperty" || we === "ClassAccessorProperty" || we === "PropertyDefinition" || we === "TSAbstractPropertyDefinition" || we === "ClassPrivateProperty" || we === "MethodDefinition" || we === "TSAbstractMethodDefinition" || we === "TSDeclareMethod")
+          if (we === "ClassMethod" || we === "ClassPrivateMethod" || we === "ClassProperty" || we === "ClassAccessorProperty" || we === "AccessorProperty" || we === "TSAbstractAccessorProperty" || we === "PropertyDefinition" || we === "TSAbstractPropertyDefinition" || we === "ClassPrivateProperty" || we === "MethodDefinition" || we === "TSAbstractMethodDefinition" || we === "TSDeclareMethod")
             return xe;
           let Le = [xe], Ve = S(Te, Pe, Fe), be = Je.type === "ClassExpression" && Ve;
           if (Ve && (Le = [...Ve, xe], !be))
@@ -10515,7 +10515,7 @@ ${P}`), h ? g.reset(P) : P;
             return "";
           if (typeof xe == "string")
             return xe;
-          for (let Le of [ye, b, k, $, q, J]) {
+          for (let Le of [ye, b, k, R, q, J]) {
             let Ve = Le(Te, Pe, Fe);
             if (typeof Ve < "u")
               return Ve;
@@ -10673,7 +10673,7 @@ ${P}`), h ? g.reset(P) : P;
             case "IfStatement": {
               let Le = O(xe.consequent, Fe("consequent")), Ve = l(["if (", l([c([i, Fe("test")]), i]), ")", Le]);
               if (we.push(Ve), xe.alternate) {
-                let be = F(xe.consequent, A.Trailing | A.Line) || R(xe), ke = xe.consequent.type === "BlockStatement" && !be;
+                let be = F(xe.consequent, A.Trailing | A.Line) || $(xe), ke = xe.consequent.type === "BlockStatement" && !be;
                 we.push(ke ? " " : u), F(xe, A.Dangling) && we.push(t(Te, Pe, true), be ? u : " "), we.push("else", l(O(xe.alternate, Fe("alternate"), xe.alternate.type === "IfStatement")));
               }
               return we;
@@ -10735,6 +10735,7 @@ ${P}`), h ? g.reset(P) : P;
             case "PropertyDefinition":
             case "ClassPrivateProperty":
             case "ClassAccessorProperty":
+            case "AccessorProperty":
               return ne(Te, Pe, Fe);
             case "TemplateElement":
               return y(xe.value.raw);
@@ -11016,14 +11017,14 @@ ${P}`), h ? g.reset(P) : P;
         function P(z) {
           return z.type === "value-operator" && z.value === "+";
         }
-        function R(z) {
+        function $(z) {
           return z.type === "value-operator" && z.value === "-";
         }
         function f(z) {
           return z.type === "value-operator" && z.value === "%";
         }
         function x(z) {
-          return B(z) || I(z) || P(z) || R(z) || f(z);
+          return B(z) || I(z) || P(z) || $(z) || f(z);
         }
         function m(z) {
           return z.type === "value-word" && ["==", "!="].includes(z.value);
@@ -11055,7 +11056,7 @@ ${P}`), h ? g.reset(P) : P;
           var H, Z, ne;
           return ((H = z.value) === null || H === void 0 || (Z = H.group) === null || Z === void 0 || (ne = Z.group) === null || ne === void 0 ? void 0 : ne.type) === "value-paren_group" && z.value.group.group.open !== null && z.value.group.group.close !== null;
         }
-        function $(z) {
+        function R(z) {
           var H;
           return ((H = z.raws) === null || H === void 0 ? void 0 : H.before) === "";
         }
@@ -11129,7 +11130,7 @@ ${P}`), h ? g.reset(P) : P;
           var H, Z;
           return z.type === "value-paren_group" && ((H = z.open) === null || H === void 0 ? void 0 : H.value) === "(" && ((Z = z.close) === null || Z === void 0 ? void 0 : Z.value) === ")";
         }
-        n.exports = { getAncestorCounter: s, getAncestorNode: a, getPropOfDeclNode: r, maybeToLowerCase: c, insideValueFunctionNode: y, insideICSSRuleNode: h, insideAtRuleNode: g, insideURLFunctionInImportAtRuleNode: p, isKeyframeAtRuleKeywords: l, isWideKeywords: i, isLastNode: v, isSCSSControlDirectiveNode: o, isDetachedRulesetDeclarationNode: w, isRelationalOperatorNode: E, isEqualityOperatorNode: m, isMultiplicationNode: B, isDivisionNode: I, isAdditionNode: P, isSubtractionNode: R, isModuloNode: f, isMathOperatorNode: x, isEachKeywordNode: A, isForKeywordNode: T, isURLFunctionNode: D, isIfElseKeywordNode: F, hasComposesNode: N, hasParensAroundNode: k, hasEmptyRawBefore: $, isDetachedRulesetCallNode: d, isTemplatePlaceholderNode: C, isTemplatePropNode: _, isPostcssSimpleVarNode: b, isKeyValuePairNode: M, isKeyValuePairInParenGroupNode: q, isKeyInValuePairNode: Q, isSCSSMapItemNode: J, isInlineValueCommentNode: L, isHashNode: Y, isLeftCurlyBraceNode: V, isRightCurlyBraceNode: O, isWordNode: K, isColonNode: se, isMediaAndSupportsKeywords: le, isColorAdjusterFuncNode: W, lastLineHasInlineComment: X, isAtWordPlaceholderNode: oe, isConfigurationNode: ae, isParenGroupNode: Ae };
+        n.exports = { getAncestorCounter: s, getAncestorNode: a, getPropOfDeclNode: r, maybeToLowerCase: c, insideValueFunctionNode: y, insideICSSRuleNode: h, insideAtRuleNode: g, insideURLFunctionInImportAtRuleNode: p, isKeyframeAtRuleKeywords: l, isWideKeywords: i, isLastNode: v, isSCSSControlDirectiveNode: o, isDetachedRulesetDeclarationNode: w, isRelationalOperatorNode: E, isEqualityOperatorNode: m, isMultiplicationNode: B, isDivisionNode: I, isAdditionNode: P, isSubtractionNode: $, isModuloNode: f, isMathOperatorNode: x, isEachKeywordNode: A, isForKeywordNode: T, isURLFunctionNode: D, isIfElseKeywordNode: F, hasComposesNode: N, hasParensAroundNode: k, hasEmptyRawBefore: R, isDetachedRulesetCallNode: d, isTemplatePlaceholderNode: C, isTemplatePropNode: _, isPostcssSimpleVarNode: b, isKeyValuePairNode: M, isKeyValuePairInParenGroupNode: q, isKeyInValuePairNode: Q, isSCSSMapItemNode: J, isInlineValueCommentNode: L, isHashNode: Y, isLeftCurlyBraceNode: V, isRightCurlyBraceNode: O, isWordNode: K, isColonNode: se, isMediaAndSupportsKeywords: le, isColorAdjusterFuncNode: W, lastLineHasInlineComment: X, isAtWordPlaceholderNode: oe, isConfigurationNode: ae, isParenGroupNode: Ae };
       } }), id = ee({ "src/utils/line-column-to-index.js"(e, n) {
         "use strict";
         re(), n.exports = function(t, s) {
@@ -11268,7 +11269,7 @@ ${P}`), h ? g.reset(P) : P;
       } }), fd = ee({ "src/language-css/printer-postcss.js"(e, n) {
         "use strict";
         re();
-        var t = lt(), { printNumber: s, printString: a, hasNewline: r, isFrontMatterNode: u, isNextLineEmpty: i, isNonEmptyArray: l } = Ge(), { builders: { join: c, line: y, hardline: h, softline: g, group: p, fill: D, indent: v, dedent: w, ifBreak: T, breakParent: F }, utils: { removeLines: A, getDocParts: B } } = qe(), I = rd(), P = nd(), { insertPragma: R } = ud(), { getAncestorNode: f, getPropOfDeclNode: x, maybeToLowerCase: m, insideValueFunctionNode: E, insideICSSRuleNode: o, insideAtRuleNode: d, insideURLFunctionInImportAtRuleNode: C, isKeyframeAtRuleKeywords: _, isWideKeywords: b, isLastNode: N, isSCSSControlDirectiveNode: k, isDetachedRulesetDeclarationNode: $, isRelationalOperatorNode: M, isEqualityOperatorNode: q, isMultiplicationNode: J, isDivisionNode: L, isAdditionNode: Y, isSubtractionNode: V, isMathOperatorNode: O, isEachKeywordNode: K, isForKeywordNode: se, isURLFunctionNode: Q, isIfElseKeywordNode: le, hasComposesNode: W, hasParensAroundNode: X, hasEmptyRawBefore: oe, isKeyValuePairNode: ae, isKeyInValuePairNode: Ae, isDetachedRulesetCallNode: z, isTemplatePlaceholderNode: H, isTemplatePropNode: Z, isPostcssSimpleVarNode: ne, isSCSSMapItemNode: fe, isInlineValueCommentNode: ge, isHashNode: Ce, isLeftCurlyBraceNode: _e, isRightCurlyBraceNode: Oe, isWordNode: pe, isColonNode: ie, isMediaAndSupportsKeywords: ve, isColorAdjusterFuncNode: ce, lastLineHasInlineComment: U, isAtWordPlaceholderNode: de, isConfigurationNode: De, isParenGroupNode: he } = sd(), { locStart: Be, locEnd: Se } = ad(), ye = od(), S = ld(), G = pd();
+        var t = lt(), { printNumber: s, printString: a, hasNewline: r, isFrontMatterNode: u, isNextLineEmpty: i, isNonEmptyArray: l } = Ge(), { builders: { join: c, line: y, hardline: h, softline: g, group: p, fill: D, indent: v, dedent: w, ifBreak: T, breakParent: F }, utils: { removeLines: A, getDocParts: B } } = qe(), I = rd(), P = nd(), { insertPragma: $ } = ud(), { getAncestorNode: f, getPropOfDeclNode: x, maybeToLowerCase: m, insideValueFunctionNode: E, insideICSSRuleNode: o, insideAtRuleNode: d, insideURLFunctionInImportAtRuleNode: C, isKeyframeAtRuleKeywords: _, isWideKeywords: b, isLastNode: N, isSCSSControlDirectiveNode: k, isDetachedRulesetDeclarationNode: R, isRelationalOperatorNode: M, isEqualityOperatorNode: q, isMultiplicationNode: J, isDivisionNode: L, isAdditionNode: Y, isSubtractionNode: V, isMathOperatorNode: O, isEachKeywordNode: K, isForKeywordNode: se, isURLFunctionNode: Q, isIfElseKeywordNode: le, hasComposesNode: W, hasParensAroundNode: X, hasEmptyRawBefore: oe, isKeyValuePairNode: ae, isKeyInValuePairNode: Ae, isDetachedRulesetCallNode: z, isTemplatePlaceholderNode: H, isTemplatePropNode: Z, isPostcssSimpleVarNode: ne, isSCSSMapItemNode: fe, isInlineValueCommentNode: ge, isHashNode: Ce, isLeftCurlyBraceNode: _e, isRightCurlyBraceNode: Oe, isWordNode: pe, isColonNode: ie, isMediaAndSupportsKeywords: ve, isColorAdjusterFuncNode: ce, lastLineHasInlineComment: U, isAtWordPlaceholderNode: de, isConfigurationNode: De, isParenGroupNode: he } = sd(), { locStart: Be, locEnd: Se } = ad(), ye = od(), S = ld(), G = pd();
         function te(be) {
           return be.trailingComma === "es5" || be.trailingComma === "all";
         }
@@ -11290,7 +11291,7 @@ ${P}`), h ? g.reset(P) : P;
               return He ? Ue.trimEnd() : Ue;
             }
             case "css-rule":
-              return [Me("selector"), ue.important ? " !important" : "", ue.nodes ? [ue.selector && ue.selector.type === "selector-unknown" && U(ue.selector.value) ? y : " ", "{", ue.nodes.length > 0 ? v([h, Re(be, ke, Me)]) : "", h, "}", $(ue) ? ";" : ""] : ";"];
+              return [Me("selector"), ue.important ? " !important" : "", ue.nodes ? [ue.selector && ue.selector.type === "selector-unknown" && U(ue.selector.value) ? y : " ", "{", ue.nodes.length > 0 ? v([h, Re(be, ke, Me)]) : "", h, "}", R(ue) ? ";" : ""] : ";"];
             case "css-decl": {
               let He = be.getParentNode(), { between: Ue } = ue.raws, Xe = Ue.trim(), at = Xe === ":", nt = W(ue) ? A(Me("value")) : Me("value");
               return !at && U(Xe) && (nt = v([h, w(nt)])), [ue.raws.before.replace(/[\s;]/g, ""), o(be) ? ue.prop : m(ue.prop), Xe.startsWith("//") ? " " : "", Xe, ue.extend ? "" : " ", ye(ke) && ue.extend && ue.selector ? ["extend(", Me("selector"), ")"] : "", nt, ue.raws.important ? ue.raws.important.replace(/\s*!\s*important/i, " !important") : ue.important ? " !important" : "", ue.raws.scssDefault ? ue.raws.scssDefault.replace(/\s*!default/i, " !default") : ue.scssDefault ? " !default" : "", ue.raws.scssGlobal ? ue.raws.scssGlobal.replace(/\s*!global/i, " !global") : ue.scssGlobal ? " !global" : "", ue.nodes ? [" {", v([g, Re(be, ke, Me)]), g, "}"] : Z(ue) && !He.raws.semicolon && ke.originalText[Se(ue) - 1] !== ";" ? "" : ke.__isHTMLStyleAttribute && N(be, ue) ? T(";") : ";"];
@@ -11528,7 +11529,7 @@ ${P}`), h ? g.reset(P) : P;
         function Ve(be) {
           return s(be).replace(/\.0(?=$|e)/, "");
         }
-        n.exports = { print: Ee, embed: P, insertPragma: R, massageAstNode: I };
+        n.exports = { print: Ee, embed: P, insertPragma: $, massageAstNode: I };
       } }), Dd = ee({ "src/language-css/options.js"(e, n) {
         "use strict";
         re();
@@ -11611,8 +11612,8 @@ ${P}`), h ? g.reset(P) : P;
           return y(I, B);
         }
         function D(A, B) {
-          var I, P, R, f;
-          let x = A.getValue(), m = (I = A.getParentNode(0)) !== null && I !== void 0 ? I : {}, E = (P = (R = (f = m.children) !== null && f !== void 0 ? f : m.body) !== null && R !== void 0 ? R : m.parts) !== null && P !== void 0 ? P : [], o = E.indexOf(x);
+          var I, P, $, f;
+          let x = A.getValue(), m = (I = A.getParentNode(0)) !== null && I !== void 0 ? I : {}, E = (P = ($ = (f = m.children) !== null && f !== void 0 ? f : m.body) !== null && $ !== void 0 ? $ : m.parts) !== null && P !== void 0 ? P : [], o = E.indexOf(x);
           return o !== -1 && E[o + B];
         }
         function v(A) {
@@ -11633,7 +11634,7 @@ ${P}`), h ? g.reset(P) : P;
       } }), Sd = ee({ "src/language-handlebars/printer-glimmer.js"(e, n) {
         "use strict";
         re();
-        var { builders: { dedent: t, fill: s, group: a, hardline: r, ifBreak: u, indent: i, join: l, line: c, softline: y }, utils: { getDocParts: h, replaceTextEndOfLine: g } } = qe(), { getPreferredQuote: p, isNonEmptyArray: D } = Ge(), { locStart: v, locEnd: w } = Cd(), T = Ed(), { getNextNode: F, getPreviousNode: A, hasPrettierIgnore: B, isLastNodeOfSiblings: I, isNextNodeOfSomeType: P, isNodeOfSomeType: R, isParentOfSomeType: f, isPreviousNodeOfSomeType: x, isVoid: m, isWhitespaceNode: E } = Ad(), o = 2;
+        var { builders: { dedent: t, fill: s, group: a, hardline: r, ifBreak: u, indent: i, join: l, line: c, softline: y }, utils: { getDocParts: h, replaceTextEndOfLine: g } } = qe(), { getPreferredQuote: p, isNonEmptyArray: D } = Ge(), { locStart: v, locEnd: w } = Cd(), T = Ed(), { getNextNode: F, getPreviousNode: A, hasPrettierIgnore: B, isLastNodeOfSiblings: I, isNextNodeOfSomeType: P, isNodeOfSomeType: $, isParentOfSomeType: f, isPreviousNodeOfSomeType: x, isVoid: m, isWhitespaceNode: E } = Ad(), o = 2;
         function d(U, de, De) {
           let he = U.getValue();
           if (!he)
@@ -11660,7 +11661,7 @@ ${P}`), h ? g.reset(P) : P;
             case "ElementModifierStatement":
               return a(["{{", pe(U, De), "}}"]);
             case "MustacheStatement":
-              return a([k(he), pe(U, De), $(he)]);
+              return a([k(he), pe(U, De), R(he)]);
             case "SubExpression":
               return a(["(", Oe(U, De), y, ")"]);
             case "AttrNode": {
@@ -11771,7 +11772,7 @@ ${P}`), h ? g.reset(P) : P;
           let de = U.escaped === false ? "{{{" : "{{", De = U.strip && U.strip.open ? "~" : "";
           return [de, De];
         }
-        function $(U) {
+        function R(U) {
           let de = U.escaped === false ? "}}}" : "}}";
           return [U.strip && U.strip.close ? "~" : "", de];
         }
@@ -11780,7 +11781,7 @@ ${P}`), h ? g.reset(P) : P;
           return [de, De, "#"];
         }
         function q(U) {
-          let de = $(U);
+          let de = R(U);
           return [U.openStrip.close ? "~" : "", de];
         }
         function J(U) {
@@ -11788,7 +11789,7 @@ ${P}`), h ? g.reset(P) : P;
           return [de, De, "/"];
         }
         function L(U) {
-          let de = $(U);
+          let de = R(U);
           return [U.closeStrip.close ? "~" : "", de];
         }
         function Y(U) {
@@ -11796,7 +11797,7 @@ ${P}`), h ? g.reset(P) : P;
           return [de, De];
         }
         function V(U) {
-          let de = $(U);
+          let de = R(U);
           return [U.inverseStrip.close ? "~" : "", de];
         }
         function O(U, de) {
@@ -11819,13 +11820,13 @@ ${P}`), h ? g.reset(P) : P;
           return De.htmlWhitespaceSensitivity === "ignore" ? [le(he) ? y : r, J(he), de("path"), L(he)] : [J(he), de("path"), L(he)];
         }
         function le(U) {
-          return R(U, ["BlockStatement"]) && U.program.body.every((de) => E(de));
+          return $(U, ["BlockStatement"]) && U.program.body.every((de) => E(de));
         }
         function W(U) {
-          return X(U) && U.inverse.body.length === 1 && R(U.inverse.body[0], ["BlockStatement"]) && U.inverse.body[0].path.parts[0] === U.path.parts[0];
+          return X(U) && U.inverse.body.length === 1 && $(U.inverse.body[0], ["BlockStatement"]) && U.inverse.body[0].path.parts[0] === U.path.parts[0];
         }
         function X(U) {
-          return R(U, ["BlockStatement"]) && U.inverse;
+          return $(U, ["BlockStatement"]) && U.inverse;
         }
         function oe(U, de, De) {
           let he = U.getValue();
@@ -11875,9 +11876,9 @@ ${P}`), h ? g.reset(P) : P;
         }
         function _e(U) {
           let de = 0, De = U.getParentNode(de);
-          for (; De && R(De, ["SubExpression"]); )
+          for (; De && $(De, ["SubExpression"]); )
             de++, De = U.getParentNode(de);
-          return !!(De && R(U.getParentNode(de + 1), ["ConcatStatement"]) && R(U.getParentNode(de + 2), ["AttrNode"]));
+          return !!(De && $(U.getParentNode(de + 1), ["ConcatStatement"]) && $(U.getParentNode(de + 2), ["AttrNode"]));
         }
         function Oe(U, de) {
           let De = ie(U, de), he = ve(U, de);
@@ -11941,7 +11942,7 @@ ${P}`), h ? g.reset(P) : P;
         "use strict";
         re();
         var { builders: { join: t, hardline: s, line: a, softline: r, group: u, indent: i, ifBreak: l } } = qe(), { isNextLineEmpty: c, isNonEmptyArray: y } = Ge(), { insertPragma: h } = Bd(), { locStart: g, locEnd: p } = Nd();
-        function D(P, R, f) {
+        function D(P, $, f) {
           let x = P.getValue();
           if (!x)
             return "";
@@ -11951,19 +11952,19 @@ ${P}`), h ? g.reset(P) : P;
             case "Document": {
               let m = [];
               return P.each((E, o, d) => {
-                m.push(f()), o !== d.length - 1 && (m.push(s), c(R.originalText, E.getValue(), p) && m.push(s));
+                m.push(f()), o !== d.length - 1 && (m.push(s), c($.originalText, E.getValue(), p) && m.push(s));
               }, "definitions"), [...m, s];
             }
             case "OperationDefinition": {
-              let m = R.originalText[g(x)] !== "{", E = Boolean(x.name);
+              let m = $.originalText[g(x)] !== "{", E = Boolean(x.name);
               return [m ? x.operation : "", m && E ? [" ", f("name")] : "", m && !E && y(x.variableDefinitions) ? " " : "", y(x.variableDefinitions) ? u(["(", i([r, t([l("", ", "), r], P.map(f, "variableDefinitions"))]), r, ")"]) : "", v(P, f, x), x.selectionSet ? !m && !E ? "" : " " : "", f("selectionSet")];
             }
             case "FragmentDefinition":
               return ["fragment ", f("name"), y(x.variableDefinitions) ? u(["(", i([r, t([l("", ", "), r], P.map(f, "variableDefinitions"))]), r, ")"]) : "", " on ", f("typeCondition"), v(P, f, x), " ", f("selectionSet")];
             case "SelectionSet":
-              return ["{", i([s, t(s, w(P, R, f, "selections"))]), s, "}"];
+              return ["{", i([s, t(s, w(P, $, f, "selections"))]), s, "}"];
             case "Field":
-              return u([x.alias ? [f("alias"), ": "] : "", f("name"), x.arguments.length > 0 ? u(["(", i([r, t([l("", ", "), r], w(P, R, f, "arguments"))]), r, ")"]) : "", v(P, f, x), x.selectionSet ? " " : "", f("selectionSet")]);
+              return u([x.alias ? [f("alias"), ": "] : "", f("name"), x.arguments.length > 0 ? u(["(", i([r, t([l("", ", "), r], w(P, $, f, "arguments"))]), r, ")"]) : "", v(P, f, x), x.selectionSet ? " " : "", f("selectionSet")]);
             case "Name":
               return x.value;
             case "StringValue": {
@@ -11987,42 +11988,42 @@ ${P}`), h ? g.reset(P) : P;
             case "ListValue":
               return u(["[", i([r, t([l("", ", "), r], P.map(f, "values"))]), r, "]"]);
             case "ObjectValue":
-              return u(["{", R.bracketSpacing && x.fields.length > 0 ? " " : "", i([r, t([l("", ", "), r], P.map(f, "fields"))]), r, l("", R.bracketSpacing && x.fields.length > 0 ? " " : ""), "}"]);
+              return u(["{", $.bracketSpacing && x.fields.length > 0 ? " " : "", i([r, t([l("", ", "), r], P.map(f, "fields"))]), r, l("", $.bracketSpacing && x.fields.length > 0 ? " " : ""), "}"]);
             case "ObjectField":
             case "Argument":
               return [f("name"), ": ", f("value")];
             case "Directive":
-              return ["@", f("name"), x.arguments.length > 0 ? u(["(", i([r, t([l("", ", "), r], w(P, R, f, "arguments"))]), r, ")"]) : ""];
+              return ["@", f("name"), x.arguments.length > 0 ? u(["(", i([r, t([l("", ", "), r], w(P, $, f, "arguments"))]), r, ")"]) : ""];
             case "NamedType":
               return f("name");
             case "VariableDefinition":
               return [f("variable"), ": ", f("type"), x.defaultValue ? [" = ", f("defaultValue")] : "", v(P, f, x)];
             case "ObjectTypeExtension":
             case "ObjectTypeDefinition":
-              return [f("description"), x.description ? s : "", x.kind === "ObjectTypeExtension" ? "extend " : "", "type ", f("name"), x.interfaces.length > 0 ? [" implements ", ...A(P, R, f)] : "", v(P, f, x), x.fields.length > 0 ? [" {", i([s, t(s, w(P, R, f, "fields"))]), s, "}"] : ""];
+              return [f("description"), x.description ? s : "", x.kind === "ObjectTypeExtension" ? "extend " : "", "type ", f("name"), x.interfaces.length > 0 ? [" implements ", ...A(P, $, f)] : "", v(P, f, x), x.fields.length > 0 ? [" {", i([s, t(s, w(P, $, f, "fields"))]), s, "}"] : ""];
             case "FieldDefinition":
-              return [f("description"), x.description ? s : "", f("name"), x.arguments.length > 0 ? u(["(", i([r, t([l("", ", "), r], w(P, R, f, "arguments"))]), r, ")"]) : "", ": ", f("type"), v(P, f, x)];
+              return [f("description"), x.description ? s : "", f("name"), x.arguments.length > 0 ? u(["(", i([r, t([l("", ", "), r], w(P, $, f, "arguments"))]), r, ")"]) : "", ": ", f("type"), v(P, f, x)];
             case "DirectiveDefinition":
-              return [f("description"), x.description ? s : "", "directive ", "@", f("name"), x.arguments.length > 0 ? u(["(", i([r, t([l("", ", "), r], w(P, R, f, "arguments"))]), r, ")"]) : "", x.repeatable ? " repeatable" : "", " on ", t(" | ", P.map(f, "locations"))];
+              return [f("description"), x.description ? s : "", "directive ", "@", f("name"), x.arguments.length > 0 ? u(["(", i([r, t([l("", ", "), r], w(P, $, f, "arguments"))]), r, ")"]) : "", x.repeatable ? " repeatable" : "", " on ", t(" | ", P.map(f, "locations"))];
             case "EnumTypeExtension":
             case "EnumTypeDefinition":
-              return [f("description"), x.description ? s : "", x.kind === "EnumTypeExtension" ? "extend " : "", "enum ", f("name"), v(P, f, x), x.values.length > 0 ? [" {", i([s, t(s, w(P, R, f, "values"))]), s, "}"] : ""];
+              return [f("description"), x.description ? s : "", x.kind === "EnumTypeExtension" ? "extend " : "", "enum ", f("name"), v(P, f, x), x.values.length > 0 ? [" {", i([s, t(s, w(P, $, f, "values"))]), s, "}"] : ""];
             case "EnumValueDefinition":
               return [f("description"), x.description ? s : "", f("name"), v(P, f, x)];
             case "InputValueDefinition":
               return [f("description"), x.description ? x.description.block ? s : a : "", f("name"), ": ", f("type"), x.defaultValue ? [" = ", f("defaultValue")] : "", v(P, f, x)];
             case "InputObjectTypeExtension":
             case "InputObjectTypeDefinition":
-              return [f("description"), x.description ? s : "", x.kind === "InputObjectTypeExtension" ? "extend " : "", "input ", f("name"), v(P, f, x), x.fields.length > 0 ? [" {", i([s, t(s, w(P, R, f, "fields"))]), s, "}"] : ""];
+              return [f("description"), x.description ? s : "", x.kind === "InputObjectTypeExtension" ? "extend " : "", "input ", f("name"), v(P, f, x), x.fields.length > 0 ? [" {", i([s, t(s, w(P, $, f, "fields"))]), s, "}"] : ""];
             case "SchemaExtension":
-              return ["extend schema", v(P, f, x), ...x.operationTypes.length > 0 ? [" {", i([s, t(s, w(P, R, f, "operationTypes"))]), s, "}"] : []];
+              return ["extend schema", v(P, f, x), ...x.operationTypes.length > 0 ? [" {", i([s, t(s, w(P, $, f, "operationTypes"))]), s, "}"] : []];
             case "SchemaDefinition":
-              return [f("description"), x.description ? s : "", "schema", v(P, f, x), " {", x.operationTypes.length > 0 ? i([s, t(s, w(P, R, f, "operationTypes"))]) : "", s, "}"];
+              return [f("description"), x.description ? s : "", "schema", v(P, f, x), " {", x.operationTypes.length > 0 ? i([s, t(s, w(P, $, f, "operationTypes"))]) : "", s, "}"];
             case "OperationTypeDefinition":
               return [f("operation"), ": ", f("type")];
             case "InterfaceTypeExtension":
             case "InterfaceTypeDefinition":
-              return [f("description"), x.description ? s : "", x.kind === "InterfaceTypeExtension" ? "extend " : "", "interface ", f("name"), x.interfaces.length > 0 ? [" implements ", ...A(P, R, f)] : "", v(P, f, x), x.fields.length > 0 ? [" {", i([s, t(s, w(P, R, f, "fields"))]), s, "}"] : ""];
+              return [f("description"), x.description ? s : "", x.kind === "InterfaceTypeExtension" ? "extend " : "", "interface ", f("name"), x.interfaces.length > 0 ? [" implements ", ...A(P, $, f)] : "", v(P, f, x), x.fields.length > 0 ? [" {", i([s, t(s, w(P, $, f, "fields"))]), s, "}"] : ""];
             case "FragmentSpread":
               return ["...", f("name"), v(P, f, x)];
             case "InlineFragment":
@@ -12041,49 +12042,49 @@ ${P}`), h ? g.reset(P) : P;
               throw new Error("unknown graphql type: " + JSON.stringify(x.kind));
           }
         }
-        function v(P, R, f) {
+        function v(P, $, f) {
           if (f.directives.length === 0)
             return "";
-          let x = t(a, P.map(R, "directives"));
+          let x = t(a, P.map($, "directives"));
           return f.kind === "FragmentDefinition" || f.kind === "OperationDefinition" ? u([a, x]) : [" ", u(i([r, x]))];
         }
-        function w(P, R, f, x) {
+        function w(P, $, f, x) {
           return P.map((m, E, o) => {
             let d = f();
-            return E < o.length - 1 && c(R.originalText, m.getValue(), p) ? [d, s] : d;
+            return E < o.length - 1 && c($.originalText, m.getValue(), p) ? [d, s] : d;
           }, x);
         }
         function T(P) {
           return P.kind && P.kind !== "Comment";
         }
         function F(P) {
-          let R = P.getValue();
-          if (R.kind === "Comment")
-            return "#" + R.value.trimEnd();
-          throw new Error("Not a comment: " + JSON.stringify(R));
+          let $ = P.getValue();
+          if ($.kind === "Comment")
+            return "#" + $.value.trimEnd();
+          throw new Error("Not a comment: " + JSON.stringify($));
         }
-        function A(P, R, f) {
+        function A(P, $, f) {
           let x = P.getNode(), m = [], { interfaces: E } = x, o = P.map((d) => f(d), "interfaces");
           for (let d = 0; d < E.length; d++) {
             let C = E[d];
             m.push(o[d]);
             let _ = E[d + 1];
             if (_) {
-              let b = R.originalText.slice(C.loc.end, _.loc.start), N = b.includes("#"), k = b.replace(/#.*/g, "").trim();
+              let b = $.originalText.slice(C.loc.end, _.loc.start), N = b.includes("#"), k = b.replace(/#.*/g, "").trim();
               m.push(k === "," ? "," : " &", N ? a : " ");
             }
           }
           return m;
         }
-        function B(P, R) {
+        function B(P, $) {
           P.kind === "StringValue" && P.block && !P.value.includes(`
-`) && (R.value = R.value.trim());
+`) && ($.value = $.value.trim());
         }
         B.ignoredProperties = /* @__PURE__ */ new Set(["loc", "comments"]);
         function I(P) {
-          var R;
+          var $;
           let f = P.getValue();
-          return f == null || (R = f.comments) === null || R === void 0 ? void 0 : R.some((x) => x.value.trim() === "prettier-ignore");
+          return f == null || ($ = f.comments) === null || $ === void 0 ? void 0 : $.some((x) => x.value.trim() === "prettier-ignore");
         }
         n.exports = { print: D, massageAstNode: B, hasPrettierIgnore: I, insertPragma: h, printComment: F, canAttachComment: T };
       } }), _d = ee({ "src/language-graphql/options.js"(e, n) {
@@ -12117,7 +12118,7 @@ ${P}`), h ? g.reset(P) : P;
         re();
         var { getLast: t } = Ge(), { locStart: s, locEnd: a } = co(), { cjkPattern: r, kPattern: u, punctuationPattern: i } = Ld(), l = ["liquidNode", "inlineCode", "emphasis", "esComment", "strong", "delete", "wikiLink", "link", "linkReference", "image", "imageReference", "footnote", "footnoteReference", "sentence", "whitespace", "word", "break", "inlineMath"], c = [...l, "tableCell", "paragraph", "heading"], y = new RegExp(u), h = new RegExp(i);
         function g(F, A) {
-          let B = "non-cjk", I = "cj-letter", P = "k-letter", R = "cjk-punctuation", f = [], x = (A.proseWrap === "preserve" ? F : F.replace(new RegExp(`(${r})
+          let B = "non-cjk", I = "cj-letter", P = "k-letter", $ = "cjk-punctuation", f = [], x = (A.proseWrap === "preserve" ? F : F.replace(new RegExp(`(${r})
 (${r})`, "g"), "$1$2")).split(/([\t\n ]+)/);
           for (let [E, o] of x.entries()) {
             if (E % 2 === 1) {
@@ -12134,13 +12135,13 @@ ${P}`), h ? g.reset(P) : P;
                   _ !== "" && m({ type: "word", value: _, kind: B, hasLeadingPunctuation: h.test(_[0]), hasTrailingPunctuation: h.test(t(_)) });
                   continue;
                 }
-                m(h.test(_) ? { type: "word", value: _, kind: R, hasLeadingPunctuation: true, hasTrailingPunctuation: true } : { type: "word", value: _, kind: y.test(_) ? P : I, hasLeadingPunctuation: false, hasTrailingPunctuation: false });
+                m(h.test(_) ? { type: "word", value: _, kind: $, hasLeadingPunctuation: true, hasTrailingPunctuation: true } : { type: "word", value: _, kind: y.test(_) ? P : I, hasLeadingPunctuation: false, hasTrailingPunctuation: false });
               }
           }
           return f;
           function m(E) {
             let o = t(f);
-            o && o.type === "word" && (o.kind === B && E.kind === I && !o.hasTrailingPunctuation || o.kind === I && E.kind === B && !E.hasLeadingPunctuation ? f.push({ type: "whitespace", value: " " }) : !d(B, R) && ![o.value, E.value].some((C) => /\u3000/.test(C)) && f.push({ type: "whitespace", value: "" })), f.push(E);
+            o && o.type === "word" && (o.kind === B && E.kind === I && !o.hasTrailingPunctuation || o.kind === I && E.kind === B && !E.hasLeadingPunctuation ? f.push({ type: "whitespace", value: " " }) : !d(B, $) && ![o.value, E.value].some((C) => /\u3000/.test(C)) && f.push({ type: "whitespace", value: "" })), f.push(E);
             function d(C, _) {
               return o.kind === C && E.kind === _ || o.kind === _ && E.kind === C;
             }
@@ -12167,9 +12168,9 @@ ${P}`), h ? g.reset(P) : P;
 `) ? B.slice(0, -1) : B;
         }
         function w(F, A) {
-          return function B(I, P, R) {
-            let f = Object.assign({}, A(I, P, R));
-            return f.children && (f.children = f.children.map((x, m) => B(x, m, [f, ...R]))), f;
+          return function B(I, P, $) {
+            let f = Object.assign({}, A(I, P, $));
+            return f.children && (f.children = f.children.map((x, m) => B(x, m, [f, ...$]))), f;
           }(F, null, []);
         }
         function T(F) {
@@ -12254,9 +12255,9 @@ ${u.content}`;
           return a(T, (B) => {
             if (!B.children)
               return B;
-            let I = B.children.reduce((P, R) => {
+            let I = B.children.reduce((P, $) => {
               let f = t(P);
-              return f && F(f, R) ? P.splice(-1, 1, A(f, R)) : P.push(R), P;
+              return f && F(f, $) ? P.splice(-1, 1, A(f, $)) : P.push($), P;
             }, []);
             return Object.assign(Object.assign({}, B), {}, { children: I });
           });
@@ -12269,8 +12270,8 @@ ${u.content}`;
             let [P] = I;
             if (A.type !== "text")
               return A;
-            let { value: R } = A;
-            return P.type === "paragraph" && (B === 0 && (R = R.trimStart()), B === P.children.length - 1 && (R = R.trimEnd())), { type: "sentence", position: A.position, children: r(R, F) };
+            let { value: $ } = A;
+            return P.type === "paragraph" && (B === 0 && ($ = $.trimStart()), B === P.children.length - 1 && ($ = $.trimEnd())), { type: "sentence", position: A.position, children: r($, F) };
           });
         }
         function v(T, F) {
@@ -12278,8 +12279,8 @@ ${u.content}`;
             if (A.type === "code") {
               let P = /^\n?(?: {4,}|\t)/.test(F.originalText.slice(A.position.start.offset, A.position.end.offset));
               if (A.isIndented = P, P)
-                for (let R = 0; R < I.length; R++) {
-                  let f = I[R];
+                for (let $ = 0; $ < I.length; $++) {
+                  let f = I[$];
                   if (f.hasIndentedCodeblock)
                     break;
                   f.type === "list" && (f.hasIndentedCodeblock = true);
@@ -12289,10 +12290,10 @@ ${u.content}`;
           });
         }
         function w(T, F) {
-          return a(T, (I, P, R) => {
+          return a(T, (I, P, $) => {
             if (I.type === "list" && I.children.length > 0) {
-              for (let f = 0; f < R.length; f++) {
-                let x = R[f];
+              for (let f = 0; f < $.length; f++) {
+                let x = $[f];
                 if (x.type === "list" && !x.isAligned)
                   return I.isAligned = false, I;
               }
@@ -12306,7 +12307,7 @@ ${u.content}`;
           function B(I) {
             if (!I.ordered)
               return true;
-            let [P, R] = I.children;
+            let [P, $] = I.children;
             if (s(P, F.originalText).leadingSpaces.length > 1)
               return true;
             let x = A(P);
@@ -12314,8 +12315,8 @@ ${u.content}`;
               return false;
             if (I.children.length === 1)
               return x % F.tabWidth === 0;
-            let m = A(R);
-            return x !== m ? false : x % F.tabWidth === 0 ? true : s(R, F.originalText).leadingSpaces.length > 1;
+            let m = A($);
+            return x !== m ? false : x % F.tabWidth === 0 ? true : s($, F.originalText).leadingSpaces.length > 1;
           }
         }
         n.exports = i;
@@ -12331,7 +12332,7 @@ ${u.content}`;
       } }), Md = ee({ "src/language-markdown/printer-markdown.js"(e, n) {
         "use strict";
         re();
-        var { getLast: t, getMinNotPresentContinuousCount: s, getMaxContinuousCount: a, getStringWidth: r, isNonEmptyArray: u } = Ge(), { builders: { breakParent: i, join: l, line: c, literalline: y, markAsRoot: h, hardline: g, softline: p, ifBreak: D, fill: v, align: w, indent: T, group: F, hardlineWithoutBreakParent: A }, utils: { normalizeDoc: B, replaceTextEndOfLine: I }, printer: { printDocToString: P } } = qe(), R = jd(), { insertPragma: f } = po(), { locStart: x, locEnd: m } = co(), E = Od(), o = qd(), { getFencedCodeBlockValue: d, hasGitDiffFriendlyOrderedList: C, splitText: _, punctuationPattern: b, INLINE_NODE_TYPES: N, INLINE_NODE_WRAPPER_TYPES: k, isAutolink: $ } = Yn(), M = /* @__PURE__ */ new Set(["importExport"]), q = ["heading", "tableCell", "link", "wikiLink"], J = /* @__PURE__ */ new Set(["listItem", "definition", "footnoteDefinition"]);
+        var { getLast: t, getMinNotPresentContinuousCount: s, getMaxContinuousCount: a, getStringWidth: r, isNonEmptyArray: u } = Ge(), { builders: { breakParent: i, join: l, line: c, literalline: y, markAsRoot: h, hardline: g, softline: p, ifBreak: D, fill: v, align: w, indent: T, group: F, hardlineWithoutBreakParent: A }, utils: { normalizeDoc: B, replaceTextEndOfLine: I }, printer: { printDocToString: P } } = qe(), $ = jd(), { insertPragma: f } = po(), { locStart: x, locEnd: m } = co(), E = Od(), o = qd(), { getFencedCodeBlockValue: d, hasGitDiffFriendlyOrderedList: C, splitText: _, punctuationPattern: b, INLINE_NODE_TYPES: N, INLINE_NODE_WRAPPER_TYPES: k, isAutolink: R } = Yn(), M = /* @__PURE__ */ new Set(["importExport"]), q = ["heading", "tableCell", "link", "wikiLink"], J = /* @__PURE__ */ new Set(["listItem", "definition", "footnoteDefinition"]);
         function L(pe, ie, ve) {
           let ce = pe.getValue();
           if (fe(pe))
@@ -12346,7 +12347,7 @@ ${u.content}`;
             case "sentence":
               return oe(pe, ie, ve);
             case "word": {
-              let U = ce.value.replace(/\*/g, "\\$&").replace(new RegExp([`(^|${b})(_+)`, `(_+)(${b}|$)`].join("|"), "g"), (he, Be, Se, ye, S) => (Se ? `${Be}${Se}` : `${ye}${S}`).replace(/_/g, "\\_")), de = (he, Be, Se) => he.type === "sentence" && Se === 0, De = (he, Be, Se) => $(he.children[Se - 1]);
+              let U = ce.value.replace(/\*/g, "\\$&").replace(new RegExp([`(^|${b})(_+)`, `(_+)(${b}|$)`].join("|"), "g"), (he, Be, Se, ye, S) => (Se ? `${Be}${Se}` : `${ye}${S}`).replace(/_/g, "\\_")), de = (he, Be, Se) => he.type === "sentence" && Se === 0, De = (he, Be, Se) => R(he.children[Se - 1]);
               return U !== ce.value && (pe.match(void 0, de, De) || pe.match(void 0, de, (he, Be, Se) => he.type === "emphasis" && Se === 0, De)) && (U = U.replace(/^(\\?[*_])+/, (he) => he.replace(/\\/g, ""))), U;
             }
             case "whitespace": {
@@ -12355,7 +12356,7 @@ ${u.content}`;
             }
             case "emphasis": {
               let U;
-              if ($(ce.children[0]))
+              if (R(ce.children[0]))
                 U = ie.originalText[ce.position.start.offset];
               else {
                 let de = pe.getParentNode(), De = de.children.indexOf(ce), he = de.children[De - 1], Be = de.children[De + 1];
@@ -12378,8 +12379,8 @@ ${u.content}`;
             case "link":
               switch (ie.originalText[ce.position.start.offset]) {
                 case "<": {
-                  let U = "mailto:", de = ce.url.startsWith(U) && ie.originalText.slice(ce.position.start.offset + 1, ce.position.start.offset + 1 + U.length) !== U ? ce.url.slice(U.length) : ce.url;
-                  return ["<", de, ">"];
+                  let U = "mailto:";
+                  return ["<", ce.url.startsWith(U) && ie.originalText.slice(ce.position.start.offset + 1, ce.position.start.offset + 1 + U.length) !== U ? ce.url.slice(U.length) : ce.url, ">"];
                 }
                 case "[":
                   return ["[", oe(pe, ie, ve), "](", ge(ce.url, ")"), Ce(ce.title, ie), ")"];
@@ -12641,7 +12642,7 @@ ${u.content}`;
           let ve = pe.getParentNode().children[ie - 1];
           return z(ve) === "next";
         }
-        n.exports = { preprocess: E, print: L, embed: R, massageAstNode: o, hasPrettierIgnore: Oe, insertPragma: f };
+        n.exports = { preprocess: E, print: L, embed: $, massageAstNode: o, hasPrettierIgnore: Oe, insertPragma: f };
       } }), Rd = ee({ "src/language-markdown/options.js"(e, n) {
         "use strict";
         re();
@@ -12682,7 +12683,7 @@ ${u.content}`;
 `, "\f", "\r", " "]), v = (S) => S.replace(/^[\t\n\f\r ]+/, ""), w = (S) => S.replace(/[\t\n\f\r ]+$/, ""), T = (S) => v(w(S)), F = (S) => S.replace(/^[\t\f\r ]*\n/g, ""), A = (S) => F(w(S)), B = (S) => S.split(/[\t\n\f\r ]+/), I = (S) => S.match(/^[\t\n\f\r ]*/)[0], P = (S) => {
           let [, G, te, Ee] = S.match(/^([\t\n\f\r ]*)(.*?)([\t\n\f\r ]*)$/s);
           return { leadingWhitespace: G, trailingWhitespace: Ee, text: te };
-        }, R = (S) => /[\t\n\f\r ]/.test(S);
+        }, $ = (S) => /[\t\n\f\r ]/.test(S);
         function f(S, G) {
           return !!(S.type === "ieConditionalComment" && S.lastChild && !S.lastChild.isSelfClosing && !S.lastChild.endSourceSpan || S.type === "ieConditionalComment" && !S.complete || ne(S) && S.children.some((te) => te.type !== "text" && te.type !== "interpolation") || De(S, G) && !o(S) && S.type !== "interpolation");
         }
@@ -12722,7 +12723,7 @@ ${u.content}`;
         function k(S) {
           return Z(S.cssDisplay) && !o(S);
         }
-        function $(S) {
+        function R(S) {
           return s(S) || S.next && S.sourceSpan.end && S.sourceSpan.end.line + 1 < S.next.sourceSpan.start.line;
         }
         function M(S) {
@@ -12915,7 +12916,7 @@ ${u.content}`;
         function ye(S, G) {
           return de(S, G) && S.name === "script";
         }
-        n.exports = { htmlTrim: T, htmlTrimPreserveIndentation: A, hasHtmlWhitespace: R, getLeadingAndTrailingHtmlWhitespace: P, canHaveInterpolation: d, countChars: ie, countParents: fe, dedentString: pe, forceBreakChildren: q, forceBreakContent: M, forceNextEmptyLine: $, getLastDescendant: se, getNodeCssStyleDisplay: Ce, getNodeCssStyleWhiteSpace: _e, hasPrettierIgnore: x, inferScriptParser: X, isVueCustomBlock: U, isVueNonHtmlBlock: De, isVueScriptTag: ye, isVueSlotAttribute: he, isVueSfcBindingsAttribute: Be, isVueSfcBlock: de, isDanglingSpaceSensitiveNode: k, isIndentationSensitiveNode: _, isLeadingSpaceSensitiveNode: b, isPreLikeNode: ne, isScriptLikeTag: o, isTextLikeNode: E, isTrailingSpaceSensitiveNode: N, isWhitespaceSensitiveNode: C, isUnknownNamespace: p, preferHardlineAsLeadingSpaces: J, preferHardlineAsTrailingSpaces: L, shouldPreserveContent: f, unescapeQuoteEntities: ve, getTextValueParts: Se };
+        n.exports = { htmlTrim: T, htmlTrimPreserveIndentation: A, hasHtmlWhitespace: $, getLeadingAndTrailingHtmlWhitespace: P, canHaveInterpolation: d, countChars: ie, countParents: fe, dedentString: pe, forceBreakChildren: q, forceBreakContent: M, forceNextEmptyLine: R, getLastDescendant: se, getNodeCssStyleDisplay: Ce, getNodeCssStyleWhiteSpace: _e, hasPrettierIgnore: x, inferScriptParser: X, isVueCustomBlock: U, isVueNonHtmlBlock: De, isVueScriptTag: ye, isVueSlotAttribute: he, isVueSfcBindingsAttribute: Be, isVueSfcBlock: de, isDanglingSpaceSensitiveNode: k, isIndentationSensitiveNode: _, isLeadingSpaceSensitiveNode: b, isPreLikeNode: ne, isScriptLikeTag: o, isTextLikeNode: E, isTrailingSpaceSensitiveNode: N, isWhitespaceSensitiveNode: C, isUnknownNamespace: p, preferHardlineAsLeadingSpaces: J, preferHardlineAsTrailingSpaces: L, shouldPreserveContent: f, unescapeQuoteEntities: ve, getTextValueParts: Se };
       } }), Ud = ee({ "node_modules/angular-html-parser/lib/compiler/src/chars.js"(e) {
         "use strict";
         re(), Object.defineProperty(e, "__esModule", { value: true }), e.$EOF = 0, e.$BSPACE = 8, e.$TAB = 9, e.$LF = 10, e.$VTAB = 11, e.$FF = 12, e.$CR = 13, e.$SPACE = 32, e.$BANG = 33, e.$DQ = 34, e.$HASH = 35, e.$$ = 36, e.$PERCENT = 37, e.$AMPERSAND = 38, e.$SQ = 39, e.$LPAREN = 40, e.$RPAREN = 41, e.$STAR = 42, e.$PLUS = 43, e.$COMMA = 44, e.$MINUS = 45, e.$PERIOD = 46, e.$SLASH = 47, e.$COLON = 58, e.$SEMICOLON = 59, e.$LT = 60, e.$EQ = 61, e.$GT = 62, e.$QUESTION = 63, e.$0 = 48, e.$7 = 55, e.$9 = 57, e.$A = 65, e.$E = 69, e.$F = 70, e.$X = 88, e.$Z = 90, e.$LBRACKET = 91, e.$BACKSLASH = 92, e.$RBRACKET = 93, e.$CARET = 94, e.$_ = 95, e.$a = 97, e.$b = 98, e.$e = 101, e.$f = 102, e.$n = 110, e.$r = 114, e.$t = 116, e.$u = 117, e.$v = 118, e.$x = 120, e.$z = 122, e.$LBRACE = 123, e.$BAR = 124, e.$RBRACE = 125, e.$NBSP = 160, e.$PIPE = 124, e.$TILDA = 126, e.$AT = 64, e.$BT = 96;
@@ -13093,14 +13094,14 @@ ${u.content}`;
           return !!o && typeof o.then == "function";
         }
         e.isPromise = P;
-        var R = class {
+        var $ = class {
           constructor(o) {
             this.full = o;
             let d = o.split(".");
             this.major = d[0], this.minor = d[1], this.patch = d.slice(2).join(".");
           }
         };
-        e.Version = R;
+        e.Version = $;
         var f = typeof window < "u" && window, x = typeof self < "u" && typeof WorkerGlobalScope < "u" && self instanceof WorkerGlobalScope && self, m = typeof globalThis < "u" && globalThis, E = m || f || x;
         e.global = E;
       } }), Xd = ee({ "node_modules/angular-html-parser/lib/compiler/src/compile_metadata.js"(e) {
@@ -13166,8 +13167,8 @@ ${u.content}`;
         e.CompileStylesheetMetadata = v;
         var w = class {
           constructor(C) {
-            let { encapsulation: _, template: b, templateUrl: N, htmlAst: k, styles: $, styleUrls: M, externalStylesheets: q, animations: J, ngContentSelectors: L, interpolation: Y, isInline: V, preserveWhitespaces: O } = C;
-            if (this.encapsulation = _, this.template = b, this.templateUrl = N, this.htmlAst = k, this.styles = P($), this.styleUrls = P(M), this.externalStylesheets = P(q), this.animations = J ? f(J) : [], this.ngContentSelectors = L || [], Y && Y.length != 2)
+            let { encapsulation: _, template: b, templateUrl: N, htmlAst: k, styles: R, styleUrls: M, externalStylesheets: q, animations: J, ngContentSelectors: L, interpolation: Y, isInline: V, preserveWhitespaces: O } = C;
+            if (this.encapsulation = _, this.template = b, this.templateUrl = N, this.htmlAst = k, this.styles = P(R), this.styleUrls = P(M), this.externalStylesheets = P(q), this.animations = J ? f(J) : [], this.ngContentSelectors = L || [], Y && Y.length != 2)
               throw new Error("'interpolation' should have a start and an end symbol.");
             this.interpolation = Y, this.isInline = V, this.preserveWhitespaces = O;
           }
@@ -13178,7 +13179,7 @@ ${u.content}`;
         e.CompileTemplateMetadata = w;
         var T = class {
           static create(C) {
-            let { isHost: _, type: b, isComponent: N, selector: k, exportAs: $, changeDetection: M, inputs: q, outputs: J, host: L, providers: Y, viewProviders: V, queries: O, guards: K, viewQueries: se, entryComponents: Q, template: le, componentViewType: W, rendererType: X, componentFactory: oe } = C, ae = {}, Ae = {}, z = {};
+            let { isHost: _, type: b, isComponent: N, selector: k, exportAs: R, changeDetection: M, inputs: q, outputs: J, host: L, providers: Y, viewProviders: V, queries: O, guards: K, viewQueries: se, entryComponents: Q, template: le, componentViewType: W, rendererType: X, componentFactory: oe } = C, ae = {}, Ae = {}, z = {};
             L != null && Object.keys(L).forEach((ne) => {
               let fe = L[ne], ge = ne.match(s);
               ge === null ? z[ne] = fe : ge[1] != null ? Ae[ge[1]] = fe : ge[2] != null && (ae[ge[2]] = fe);
@@ -13192,11 +13193,11 @@ ${u.content}`;
             return J == null ? void 0 : J.forEach((ne) => {
               let fe = t.splitAtColon(ne, [ne, ne]);
               Z[fe[0]] = fe[1];
-            }), new T({ isHost: _, type: b, isComponent: !!N, selector: k, exportAs: $, changeDetection: M, inputs: H, outputs: Z, hostListeners: ae, hostProperties: Ae, hostAttributes: z, providers: Y, viewProviders: V, queries: O, guards: K, viewQueries: se, entryComponents: Q, template: le, componentViewType: W, rendererType: X, componentFactory: oe });
+            }), new T({ isHost: _, type: b, isComponent: !!N, selector: k, exportAs: R, changeDetection: M, inputs: H, outputs: Z, hostListeners: ae, hostProperties: Ae, hostAttributes: z, providers: Y, viewProviders: V, queries: O, guards: K, viewQueries: se, entryComponents: Q, template: le, componentViewType: W, rendererType: X, componentFactory: oe });
           }
           constructor(C) {
-            let { isHost: _, type: b, isComponent: N, selector: k, exportAs: $, changeDetection: M, inputs: q, outputs: J, hostListeners: L, hostProperties: Y, hostAttributes: V, providers: O, viewProviders: K, queries: se, guards: Q, viewQueries: le, entryComponents: W, template: X, componentViewType: oe, rendererType: ae, componentFactory: Ae } = C;
-            this.isHost = !!_, this.type = b, this.isComponent = N, this.selector = k, this.exportAs = $, this.changeDetection = M, this.inputs = q, this.outputs = J, this.hostListeners = L, this.hostProperties = Y, this.hostAttributes = V, this.providers = P(O), this.viewProviders = P(K), this.queries = P(se), this.guards = Q, this.viewQueries = P(le), this.entryComponents = P(W), this.template = X, this.componentViewType = oe, this.rendererType = ae, this.componentFactory = Ae;
+            let { isHost: _, type: b, isComponent: N, selector: k, exportAs: R, changeDetection: M, inputs: q, outputs: J, hostListeners: L, hostProperties: Y, hostAttributes: V, providers: O, viewProviders: K, queries: se, guards: Q, viewQueries: le, entryComponents: W, template: X, componentViewType: oe, rendererType: ae, componentFactory: Ae } = C;
+            this.isHost = !!_, this.type = b, this.isComponent = N, this.selector = k, this.exportAs = R, this.changeDetection = M, this.inputs = q, this.outputs = J, this.hostListeners = L, this.hostProperties = Y, this.hostAttributes = V, this.providers = P(O), this.viewProviders = P(K), this.queries = P(se), this.guards = Q, this.viewQueries = P(le), this.entryComponents = P(W), this.template = X, this.componentViewType = oe, this.rendererType = ae, this.componentFactory = Ae;
           }
           toSummary() {
             return { summaryKind: g.Directive, type: this.type, isComponent: this.isComponent, selector: this.selector, exportAs: this.exportAs, inputs: this.inputs, outputs: this.outputs, hostListeners: this.hostListeners, hostProperties: this.hostProperties, hostAttributes: this.hostAttributes, providers: this.providers, viewProviders: this.viewProviders, queries: this.queries, guards: this.guards, viewQueries: this.viewQueries, entryComponents: this.entryComponents, changeDetection: this.changeDetection, template: this.template && this.template.toSummary(), componentViewType: this.componentViewType, rendererType: this.rendererType, componentFactory: this.componentFactory };
@@ -13218,8 +13219,8 @@ ${u.content}`;
         e.CompileShallowModuleMetadata = A;
         var B = class {
           constructor(C) {
-            let { type: _, providers: b, declaredDirectives: N, exportedDirectives: k, declaredPipes: $, exportedPipes: M, entryComponents: q, bootstrapComponents: J, importedModules: L, exportedModules: Y, schemas: V, transitiveModule: O, id: K } = C;
-            this.type = _ || null, this.declaredDirectives = P(N), this.exportedDirectives = P(k), this.declaredPipes = P($), this.exportedPipes = P(M), this.providers = P(b), this.entryComponents = P(q), this.bootstrapComponents = P(J), this.importedModules = P(L), this.exportedModules = P(Y), this.schemas = P(V), this.id = K || null, this.transitiveModule = O || null;
+            let { type: _, providers: b, declaredDirectives: N, exportedDirectives: k, declaredPipes: R, exportedPipes: M, entryComponents: q, bootstrapComponents: J, importedModules: L, exportedModules: Y, schemas: V, transitiveModule: O, id: K } = C;
+            this.type = _ || null, this.declaredDirectives = P(N), this.exportedDirectives = P(k), this.declaredPipes = P(R), this.exportedPipes = P(M), this.providers = P(b), this.entryComponents = P(q), this.bootstrapComponents = P(J), this.importedModules = P(L), this.exportedModules = P(Y), this.schemas = P(V), this.id = K || null, this.transitiveModule = O || null;
           }
           toSummary() {
             let C = this.transitiveModule;
@@ -13257,13 +13258,13 @@ ${u.content}`;
         function P(C) {
           return C || [];
         }
-        var R = class {
+        var $ = class {
           constructor(C, _) {
-            let { useClass: b, useValue: N, useExisting: k, useFactory: $, deps: M, multi: q } = _;
-            this.token = C, this.useClass = b || null, this.useValue = N, this.useExisting = k, this.useFactory = $ || null, this.dependencies = M || null, this.multi = !!q;
+            let { useClass: b, useValue: N, useExisting: k, useFactory: R, deps: M, multi: q } = _;
+            this.token = C, this.useClass = b || null, this.useValue = N, this.useExisting = k, this.useFactory = R || null, this.dependencies = M || null, this.multi = !!q;
           }
         };
-        e.ProviderMeta = R;
+        e.ProviderMeta = $;
         function f(C) {
           return C.reduce((_, b) => {
             let N = Array.isArray(b) ? f(b) : b;
@@ -13382,7 +13383,7 @@ ${u.content}`;
       } }), Yd = ee({ "src/language-html/print-preprocess.js"(e, n) {
         "use strict";
         re();
-        var { ParseSourceSpan: t } = Kd(), { htmlTrim: s, getLeadingAndTrailingHtmlWhitespace: a, hasHtmlWhitespace: r, canHaveInterpolation: u, getNodeCssStyleDisplay: i, isDanglingSpaceSensitiveNode: l, isIndentationSensitiveNode: c, isLeadingSpaceSensitiveNode: y, isTrailingSpaceSensitiveNode: h, isWhitespaceSensitiveNode: g, isVueScriptTag: p } = Mt(), D = [w, T, A, I, P, x, R, f, m, B, E];
+        var { ParseSourceSpan: t } = Kd(), { htmlTrim: s, getLeadingAndTrailingHtmlWhitespace: a, hasHtmlWhitespace: r, canHaveInterpolation: u, getNodeCssStyleDisplay: i, isDanglingSpaceSensitiveNode: l, isIndentationSensitiveNode: c, isLeadingSpaceSensitiveNode: y, isTrailingSpaceSensitiveNode: h, isWhitespaceSensitiveNode: g, isVueScriptTag: p } = Mt(), D = [w, T, A, I, P, x, $, f, m, B, E];
         function v(o, d) {
           for (let C of D)
             C(o, d);
@@ -13407,8 +13408,8 @@ ${u.content}`;
                   continue;
                 let N = b.prev, k = b.firstChild;
                 C.removeChild(N), _--;
-                let $ = new t(N.sourceSpan.start, k.sourceSpan.end), M = new t($.start, b.sourceSpan.end);
-                b.condition = N.condition, b.sourceSpan = M, b.startSourceSpan = $, b.removeChild(k);
+                let R = new t(N.sourceSpan.start, k.sourceSpan.end), M = new t(R.start, b.sourceSpan.end);
+                b.condition = N.condition, b.sourceSpan = M, b.startSourceSpan = R, b.removeChild(k);
               }
           });
         }
@@ -13450,9 +13451,9 @@ ${u.content}`;
               for (let b of _.children) {
                 if (b.type !== "text")
                   continue;
-                let N = b.sourceSpan.start, k = null, $ = b.value.split(C);
-                for (let M = 0; M < $.length; M++, N = k) {
-                  let q = $[M];
+                let N = b.sourceSpan.start, k = null, R = b.value.split(C);
+                for (let M = 0; M < R.length; M++, N = k) {
+                  let q = R[M];
                   if (M % 2 === 0) {
                     k = N.moveBy(q.length), q.length > 0 && _.insertChildBefore(b, { type: "text", value: q, sourceSpan: new t(N, k) });
                     continue;
@@ -13477,13 +13478,13 @@ ${u.content}`;
                 let N = d.children[b];
                 if (N.type !== "text")
                   continue;
-                let { leadingWhitespace: k, text: $, trailingWhitespace: M } = a(N.value), q = N.prev, J = N.next;
-                $ ? (N.value = $, N.sourceSpan = new t(N.sourceSpan.start.moveBy(k.length), N.sourceSpan.end.moveBy(-M.length)), k && (q && (q.hasTrailingSpaces = true), N.hasLeadingSpaces = true), M && (N.hasTrailingSpaces = true, J && (J.hasLeadingSpaces = true))) : (d.removeChild(N), b--, (k || M) && (q && (q.hasTrailingSpaces = true), J && (J.hasLeadingSpaces = true)));
+                let { leadingWhitespace: k, text: R, trailingWhitespace: M } = a(N.value), q = N.prev, J = N.next;
+                R ? (N.value = R, N.sourceSpan = new t(N.sourceSpan.start.moveBy(k.length), N.sourceSpan.end.moveBy(-M.length)), k && (q && (q.hasTrailingSpaces = true), N.hasLeadingSpaces = true), M && (N.hasTrailingSpaces = true, J && (J.hasLeadingSpaces = true))) : (d.removeChild(N), b--, (k || M) && (q && (q.hasTrailingSpaces = true), J && (J.hasLeadingSpaces = true)));
               }
             d.isWhitespaceSensitive = C, d.isIndentationSensitive = _;
           });
         }
-        function R(o) {
+        function $(o) {
           o.walk((d) => {
             d.isSelfClosing = !d.children || d.type === "element" && (d.tagDefinition.isVoid || d.startSourceSpan === d.endSourceSpan);
           });
@@ -13555,7 +13556,7 @@ ${u.content}`;
           return [L.isSelfClosing ? "" : A(L, Y), B(L, Y)];
         }
         function A(L, Y) {
-          return L.lastChild && o(L.lastChild) ? "" : [I(L, Y), R(L, Y)];
+          return L.lastChild && o(L.lastChild) ? "" : [I(L, Y), $(L, Y)];
         }
         function B(L, Y) {
           return (L.next ? m(L.next) : E(L.parent)) ? "" : [f(L, Y), P(L, Y)];
@@ -13564,9 +13565,9 @@ ${u.content}`;
           return E(L) ? f(L.lastChild, Y) : "";
         }
         function P(L, Y) {
-          return o(L) ? R(L.parent, Y) : d(L) ? q(L.next) : "";
+          return o(L) ? $(L.parent, Y) : d(L) ? q(L.next) : "";
         }
-        function R(L, Y) {
+        function $(L, Y) {
           if (t(!L.isSelfClosing), x(L, Y))
             return "";
           switch (L.type) {
@@ -13634,9 +13635,9 @@ ${u.content}`;
         }
         function k(L, Y, V) {
           let O = L.getValue();
-          return [$(O, Y), b(L, Y, V), O.isSelfClosing ? "" : N(O)];
+          return [R(O, Y), b(L, Y, V), O.isSelfClosing ? "" : N(O)];
         }
-        function $(L, Y) {
+        function R(L, Y) {
           return L.prev && d(L.prev) ? "" : [M(L, Y), q(L)];
         }
         function M(L, Y) {
@@ -13671,19 +13672,19 @@ ${u.content}`;
               return ">";
           }
         }
-        n.exports = { printClosingTag: F, printClosingTagStart: A, printClosingTagStartMarker: R, printClosingTagEndMarker: f, printClosingTagSuffix: P, printClosingTagEnd: B, needsToBorrowLastChildClosingTagEndMarker: E, needsToBorrowParentClosingTagStartMarker: o, needsToBorrowPrevClosingTagEndMarker: m, printOpeningTag: k, printOpeningTagStart: $, printOpeningTagPrefix: M, printOpeningTagStartMarker: q, printOpeningTagEndMarker: J, needsToBorrowNextOpeningTagStartMarker: d, needsToBorrowParentOpeningTagEndMarker: _ };
+        n.exports = { printClosingTag: F, printClosingTagStart: A, printClosingTagStartMarker: $, printClosingTagEndMarker: f, printClosingTagSuffix: P, printClosingTagEnd: B, needsToBorrowLastChildClosingTagEndMarker: E, needsToBorrowParentClosingTagStartMarker: o, needsToBorrowPrevClosingTagEndMarker: m, printOpeningTag: k, printOpeningTagStart: R, printOpeningTagPrefix: M, printOpeningTagStartMarker: q, printOpeningTagEndMarker: J, needsToBorrowNextOpeningTagStartMarker: d, needsToBorrowParentOpeningTagEndMarker: _ };
       } }), Zd = ee({ "node_modules/parse-srcset/src/parse-srcset.js"(e, n) {
         re(), function(t, s) {
           typeof define == "function" && define.amd ? define([], s) : typeof n == "object" && n.exports ? n.exports = s() : t.parseSrcset = s();
         }(e, function() {
           return function(t, s) {
             var a = s && s.logger || console;
-            function r(R) {
-              return R === " " || R === "	" || R === `
-` || R === "\f" || R === "\r";
+            function r($) {
+              return $ === " " || $ === "	" || $ === `
+` || $ === "\f" || $ === "\r";
             }
-            function u(R) {
-              var f, x = R.exec(t.substring(A));
+            function u($) {
+              var f, x = $.exec(t.substring(A));
               if (x)
                 return f = x[0], A += f.length, f;
             }
@@ -13725,10 +13726,10 @@ ${u.content}`;
               }
             }
             function P() {
-              var R = false, f, x, m, E, o = {}, d, C, _, b, N;
+              var $ = false, f, x, m, E, o = {}, d, C, _, b, N;
               for (E = 0; E < v.length; E++)
-                d = v[E], C = d[d.length - 1], _ = d.substring(0, d.length - 1), b = parseInt(_, 10), N = parseFloat(_), g.test(_) && C === "w" ? ((f || x) && (R = true), b === 0 ? R = true : f = b) : p.test(_) && C === "x" ? ((f || x || m) && (R = true), N < 0 ? R = true : x = N) : g.test(_) && C === "h" ? ((m || x) && (R = true), b === 0 ? R = true : m = b) : R = true;
-              R ? a && a.error && a.error("Invalid srcset descriptor found in '" + t + "' at '" + d + "'.") : (o.url = D, f && (o.w = f), x && (o.d = x), m && (o.h = m), B.push(o));
+                d = v[E], C = d[d.length - 1], _ = d.substring(0, d.length - 1), b = parseInt(_, 10), N = parseFloat(_), g.test(_) && C === "w" ? ((f || x) && ($ = true), b === 0 ? $ = true : f = b) : p.test(_) && C === "x" ? ((f || x || m) && ($ = true), N < 0 ? $ = true : x = N) : g.test(_) && C === "h" ? ((m || x) && ($ = true), b === 0 ? $ = true : m = b) : $ = true;
+              $ ? a && a.error && a.error("Invalid srcset descriptor found in '" + t + "' at '" + d + "'.") : (o.url = D, f && (o.w = f), x && (o.d = x), m && (o.h = m), B.push(o));
             }
           };
         });
@@ -13756,12 +13757,12 @@ ${u.content}`;
             return P === -1 ? I.length : P;
           }), B = v(A);
           return a([",", r], w.map((I, P) => {
-            let R = [I], f = F[P];
+            let $ = [I], f = F[P];
             if (f) {
               let x = T - I.length + 1, m = B - A[P], E = " ".repeat(x + m);
-              R.push(s(E, " "), f + D);
+              $.push(s(E, " "), f + D);
             }
-            return R;
+            return $;
           }));
         }
         function i(l) {
@@ -13811,15 +13812,15 @@ ${u.content}`;
       } }), rg = ee({ "src/language-html/embed.js"(e, n) {
         "use strict";
         re();
-        var { builders: { breakParent: t, group: s, hardline: a, indent: r, line: u, fill: i, softline: l }, utils: { mapDoc: c, replaceTextEndOfLine: y } } = qe(), h = Kn(), { printClosingTag: g, printClosingTagSuffix: p, needsToBorrowPrevClosingTagEndMarker: D, printOpeningTagPrefix: v, printOpeningTag: w } = rr(), { printImgSrcset: T, printClassNames: F } = eg(), { printVueFor: A, printVueBindings: B, isVueEventBindingExpression: I } = tg(), { isScriptLikeTag: P, isVueNonHtmlBlock: R, inferScriptParser: f, htmlTrimPreserveIndentation: x, dedentString: m, unescapeQuoteEntities: E, isVueSlotAttribute: o, isVueSfcBindingsAttribute: d, getTextValueParts: C } = Mt(), _ = fo();
-        function b(k, $, M) {
+        var { builders: { breakParent: t, group: s, hardline: a, indent: r, line: u, fill: i, softline: l }, utils: { mapDoc: c, replaceTextEndOfLine: y } } = qe(), h = Kn(), { printClosingTag: g, printClosingTagSuffix: p, needsToBorrowPrevClosingTagEndMarker: D, printOpeningTagPrefix: v, printOpeningTag: w } = rr(), { printImgSrcset: T, printClassNames: F } = eg(), { printVueFor: A, printVueBindings: B, isVueEventBindingExpression: I } = tg(), { isScriptLikeTag: P, isVueNonHtmlBlock: $, inferScriptParser: f, htmlTrimPreserveIndentation: x, dedentString: m, unescapeQuoteEntities: E, isVueSlotAttribute: o, isVueSfcBindingsAttribute: d, getTextValueParts: C } = Mt(), _ = fo();
+        function b(k, R, M) {
           let q = (Q) => new RegExp(Q.join("|")).test(k.fullName), J = () => E(k.value), L = false, Y = (Q, le) => {
             let W = Q.type === "NGRoot" ? Q.node.type === "NGMicrosyntax" && Q.node.body.length === 1 && Q.node.body[0].type === "NGMicrosyntaxExpression" ? Q.node.body[0].expression : Q.node : Q.type === "JsExpressionRoot" ? Q.node : Q;
             W && (W.type === "ObjectExpression" || W.type === "ArrayExpression" || le.parser === "__vue_expression" && (W.type === "TemplateLiteral" || W.type === "StringLiteral")) && (L = true);
           }, V = (Q) => s(Q), O = function(Q) {
             let le = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : true;
             return s([r([l, Q]), le ? l : ""]);
-          }, K = (Q) => L ? V(Q) : O(Q), se = (Q, le) => $(Q, Object.assign({ __onHtmlBindingRoot: Y, __embeddedInHtml: true }, le));
+          }, K = (Q) => L ? V(Q) : O(Q), se = (Q, le) => R(Q, Object.assign({ __onHtmlBindingRoot: Y, __embeddedInHtml: true }, le));
           if (k.fullName === "srcset" && (k.parent.fullName === "img" || k.parent.fullName === "source"))
             return O(T(J()));
           if (k.fullName === "class" && !M.parentParser) {
@@ -13876,18 +13877,18 @@ ${u.content}`;
           }
           return null;
         }
-        function N(k, $, M, q) {
+        function N(k, R, M, q) {
           let J = k.getValue();
           switch (J.type) {
             case "element": {
               if (P(J) || J.type === "interpolation")
                 return;
-              if (!J.isSelfClosing && R(J, q)) {
+              if (!J.isSelfClosing && $(J, q)) {
                 let L = f(J, q);
                 if (!L)
                   return;
                 let Y = _(J, q), V = /^\s*$/.test(Y), O = "";
-                return V || (O = M(x(Y), { parser: L, __embeddedInHtml: true }, { stripTrailingHardline: true }), V = O === ""), [v(J, q), s(w(k, q, $)), V ? "" : a, O, V ? "" : a, g(J, q), p(J, q)];
+                return V || (O = M(x(Y), { parser: L, __embeddedInHtml: true }, { stripTrailingHardline: true }), V = O === ""), [v(J, q), s(w(k, q, R)), V ? "" : a, O, V ? "" : a, g(J, q), p(J, q)];
               }
               break;
             }
@@ -13929,7 +13930,7 @@ ${u.content}`;
         "use strict";
         re();
         var { builders: { breakParent: t, group: s, ifBreak: a, line: r, softline: u, hardline: i }, utils: { replaceTextEndOfLine: l } } = qe(), { locStart: c, locEnd: y } = Qn(), { forceBreakChildren: h, forceNextEmptyLine: g, isTextLikeNode: p, hasPrettierIgnore: D, preferHardlineAsLeadingSpaces: v } = Mt(), { printOpeningTagPrefix: w, needsToBorrowNextOpeningTagStartMarker: T, printOpeningTagStartMarker: F, needsToBorrowPrevClosingTagEndMarker: A, printClosingTagEndMarker: B, printClosingTagSuffix: I, needsToBorrowParentClosingTagStartMarker: P } = rr();
-        function R(m, E, o) {
+        function $(m, E, o) {
           let d = m.getValue();
           return D(d) ? [w(d, E), ...l(E.originalText.slice(c(d) + (d.prev && T(d.prev) ? F(d).length : 0), y(d) - (d.next && A(d.next) ? B(d, E).length : 0))), I(d, E)] : o();
         }
@@ -13941,7 +13942,7 @@ ${u.content}`;
           if (h(d))
             return [t, ...m.map((_) => {
               let b = _.getValue(), N = b.prev ? f(b.prev, b) : "";
-              return [N ? [N, g(b.prev) ? i : ""] : "", R(_, E, o)];
+              return [N ? [N, g(b.prev) ? i : ""] : "", $(_, E, o)];
             }, "children")];
           let C = d.children.map(() => Symbol(""));
           return m.map((_, b) => {
@@ -13950,31 +13951,31 @@ ${u.content}`;
               if (N.prev && p(N.prev)) {
                 let Y = f(N.prev, N);
                 if (Y)
-                  return g(N.prev) ? [i, i, R(_, E, o)] : [Y, R(_, E, o)];
+                  return g(N.prev) ? [i, i, $(_, E, o)] : [Y, $(_, E, o)];
               }
-              return R(_, E, o);
+              return $(_, E, o);
             }
-            let k = [], $ = [], M = [], q = [], J = N.prev ? f(N.prev, N) : "", L = N.next ? f(N, N.next) : "";
-            return J && (g(N.prev) ? k.push(i, i) : J === i ? k.push(i) : p(N.prev) ? $.push(J) : $.push(a("", u, { groupId: C[b - 1] }))), L && (g(N) ? p(N.next) && q.push(i, i) : L === i ? p(N.next) && q.push(i) : M.push(L)), [...k, s([...$, s([R(_, E, o), ...M], { id: C[b] })]), ...q];
+            let k = [], R = [], M = [], q = [], J = N.prev ? f(N.prev, N) : "", L = N.next ? f(N, N.next) : "";
+            return J && (g(N.prev) ? k.push(i, i) : J === i ? k.push(i) : p(N.prev) ? R.push(J) : R.push(a("", u, { groupId: C[b - 1] }))), L && (g(N) ? p(N.next) && q.push(i, i) : L === i ? p(N.next) && q.push(i) : M.push(L)), [...k, s([...R, s([$(_, E, o), ...M], { id: C[b] })]), ...q];
           }, "children");
         }
         n.exports = { printChildren: x };
       } }), ng = ee({ "src/language-html/print/element.js"(e, n) {
         "use strict";
         re();
-        var { builders: { breakParent: t, dedentToRoot: s, group: a, ifBreak: r, indentIfBreak: u, indent: i, line: l, softline: c }, utils: { replaceTextEndOfLine: y } } = qe(), h = fo(), { shouldPreserveContent: g, isScriptLikeTag: p, isVueCustomBlock: D, countParents: v, forceBreakContent: w } = Mt(), { printOpeningTagPrefix: T, printOpeningTag: F, printClosingTagSuffix: A, printClosingTag: B, needsToBorrowPrevClosingTagEndMarker: I, needsToBorrowLastChildClosingTagEndMarker: P } = rr(), { printChildren: R } = Do();
+        var { builders: { breakParent: t, dedentToRoot: s, group: a, ifBreak: r, indentIfBreak: u, indent: i, line: l, softline: c }, utils: { replaceTextEndOfLine: y } } = qe(), h = fo(), { shouldPreserveContent: g, isScriptLikeTag: p, isVueCustomBlock: D, countParents: v, forceBreakContent: w } = Mt(), { printOpeningTagPrefix: T, printOpeningTag: F, printClosingTagSuffix: A, printClosingTag: B, needsToBorrowPrevClosingTagEndMarker: I, needsToBorrowLastChildClosingTagEndMarker: P } = rr(), { printChildren: $ } = Do();
         function f(x, m, E) {
           let o = x.getValue();
           if (g(o, m))
             return [T(o, m), a(F(x, m, E)), ...y(h(o, m)), ...B(o, m), A(o, m)];
-          let d = o.children.length === 1 && o.firstChild.type === "interpolation" && o.firstChild.isLeadingSpaceSensitive && !o.firstChild.hasLeadingSpaces && o.lastChild.isTrailingSpaceSensitive && !o.lastChild.hasTrailingSpaces, C = Symbol("element-attr-group-id"), _ = ($) => a([a(F(x, m, E), { id: C }), $, B(o, m)]), b = ($) => d ? u($, { groupId: C }) : (p(o) || D(o, m)) && o.parent.type === "root" && m.parser === "vue" && !m.vueIndentScriptAndStyle ? $ : i($), N = () => d ? r(c, "", { groupId: C }) : o.firstChild.hasLeadingSpaces && o.firstChild.isLeadingSpaceSensitive ? l : o.firstChild.type === "text" && o.isWhitespaceSensitive && o.isIndentationSensitive ? s(c) : c, k = () => (o.next ? I(o.next) : P(o.parent)) ? o.lastChild.hasTrailingSpaces && o.lastChild.isTrailingSpaceSensitive ? " " : "" : d ? r(c, "", { groupId: C }) : o.lastChild.hasTrailingSpaces && o.lastChild.isTrailingSpaceSensitive ? l : (o.lastChild.type === "comment" || o.lastChild.type === "text" && o.isWhitespaceSensitive && o.isIndentationSensitive) && new RegExp(`\\n[\\t ]{${m.tabWidth * v(x, (M) => M.parent && M.parent.type !== "root")}}$`).test(o.lastChild.value) ? "" : c;
-          return o.children.length === 0 ? _(o.hasDanglingSpaces && o.isDanglingSpaceSensitive ? l : "") : _([w(o) ? t : "", b([N(), R(x, m, E)]), k()]);
+          let d = o.children.length === 1 && o.firstChild.type === "interpolation" && o.firstChild.isLeadingSpaceSensitive && !o.firstChild.hasLeadingSpaces && o.lastChild.isTrailingSpaceSensitive && !o.lastChild.hasTrailingSpaces, C = Symbol("element-attr-group-id"), _ = (R) => a([a(F(x, m, E), { id: C }), R, B(o, m)]), b = (R) => d ? u(R, { groupId: C }) : (p(o) || D(o, m)) && o.parent.type === "root" && m.parser === "vue" && !m.vueIndentScriptAndStyle ? R : i(R), N = () => d ? r(c, "", { groupId: C }) : o.firstChild.hasLeadingSpaces && o.firstChild.isLeadingSpaceSensitive ? l : o.firstChild.type === "text" && o.isWhitespaceSensitive && o.isIndentationSensitive ? s(c) : c, k = () => (o.next ? I(o.next) : P(o.parent)) ? o.lastChild.hasTrailingSpaces && o.lastChild.isTrailingSpaceSensitive ? " " : "" : d ? r(c, "", { groupId: C }) : o.lastChild.hasTrailingSpaces && o.lastChild.isTrailingSpaceSensitive ? l : (o.lastChild.type === "comment" || o.lastChild.type === "text" && o.isWhitespaceSensitive && o.isIndentationSensitive) && new RegExp(`\\n[\\t ]{${m.tabWidth * v(x, (M) => M.parent && M.parent.type !== "root")}}$`).test(o.lastChild.value) ? "" : c;
+          return o.children.length === 0 ? _(o.hasDanglingSpaces && o.isDanglingSpaceSensitive ? l : "") : _([w(o) ? t : "", b([N(), $(x, m, E)]), k()]);
         }
         n.exports = { printElement: f };
       } }), ug = ee({ "src/language-html/printer-html.js"(e, n) {
         "use strict";
         re();
-        var { builders: { fill: t, group: s, hardline: a, literalline: r }, utils: { cleanDoc: u, getDocParts: i, isConcat: l, replaceTextEndOfLine: c } } = qe(), y = Wd(), { countChars: h, unescapeQuoteEntities: g, getTextValueParts: p } = Mt(), D = Yd(), { insertPragma: v } = Qd(), { locStart: w, locEnd: T } = Qn(), F = rg(), { printClosingTagSuffix: A, printClosingTagEnd: B, printOpeningTagPrefix: I, printOpeningTagStart: P } = rr(), { printElement: R } = ng(), { printChildren: f } = Do();
+        var { builders: { fill: t, group: s, hardline: a, literalline: r }, utils: { cleanDoc: u, getDocParts: i, isConcat: l, replaceTextEndOfLine: c } } = qe(), y = Wd(), { countChars: h, unescapeQuoteEntities: g, getTextValueParts: p } = Mt(), D = Yd(), { insertPragma: v } = Qd(), { locStart: w, locEnd: T } = Qn(), F = rg(), { printClosingTagSuffix: A, printClosingTagEnd: B, printOpeningTagPrefix: I, printOpeningTagStart: P } = rr(), { printElement: $ } = ng(), { printChildren: f } = Do();
         function x(m, E, o) {
           let d = m.getValue();
           switch (d.type) {
@@ -13984,7 +13985,7 @@ ${u.content}`;
               return E.__onHtmlRoot && E.__onHtmlRoot(d), [s(f(m, E, o)), a];
             case "element":
             case "ieConditionalComment":
-              return R(m, E, o);
+              return $(m, E, o);
             case "ieConditionalStartComment":
             case "ieConditionalEndComment":
               return [P(d), B(d)];
@@ -14167,17 +14168,17 @@ ${r}`;
 `).map((N) => N.slice(C));
           if (o.proseWrap === "preserve" || f.type === "blockLiteral")
             return b(_.map((N) => N.length === 0 ? [] : [N]));
-          return b(_.map((N) => N.length === 0 ? [] : B(N)).reduce((N, k, $) => $ !== 0 && _[$ - 1].length > 0 && k.length > 0 && !/^\s/.test(k[0]) && !/^\s|\s$/.test(t(N)) ? [...N.slice(0, -1), [...t(N), ...k]] : [...N, k], []).map((N) => N.reduce((k, $) => k.length > 0 && /\s$/.test(t(k)) ? [...k.slice(0, -1), t(k) + " " + $] : [...k, $], [])).map((N) => o.proseWrap === "never" ? [N.join(" ")] : N));
+          return b(_.map((N) => N.length === 0 ? [] : B(N)).reduce((N, k, R) => R !== 0 && _[R - 1].length > 0 && k.length > 0 && !/^\s/.test(k[0]) && !/^\s|\s$/.test(t(N)) ? [...N.slice(0, -1), [...t(N), ...k]] : [...N, k], []).map((N) => N.reduce((k, R) => k.length > 0 && /\s$/.test(t(k)) ? [...k.slice(0, -1), t(k) + " " + R] : [...k, R], [])).map((N) => o.proseWrap === "never" ? [N.join(" ")] : N));
           function b(N) {
             if (f.chomping === "keep")
               return t(N).length === 0 ? N.slice(0, -1) : N;
             let k = 0;
-            for (let $ = N.length - 1; $ >= 0 && N[$].length === 0; $--)
+            for (let R = N.length - 1; R >= 0 && N[R].length === 0; R--)
               k++;
             return k === 0 ? N : k >= 2 && !E ? N.slice(0, -(k - 1)) : N.slice(0, -k);
           }
         }
-        function R(f) {
+        function $(f) {
           if (!f)
             return true;
           switch (f.type) {
@@ -14192,7 +14193,7 @@ ${r}`;
               return false;
           }
         }
-        n.exports = { getLast: t, getAncestorCount: a, isNode: r, isEmptyNode: p, isInlineNode: R, mapNode: u, defineShortcut: i, isNextLineEmpty: l, isLastDescendantNode: c, getBlockValueLineContents: P, getFlowScalarLineContents: I, getLastDescendantNode: y, hasPrettierIgnore: g, hasLeadingComments: v, hasMiddleComments: w, hasIndicatorComment: T, hasTrailingComment: F, hasEndComments: A };
+        n.exports = { getLast: t, getAncestorCount: a, isNode: r, isEmptyNode: p, isInlineNode: $, mapNode: u, defineShortcut: i, isNextLineEmpty: l, isLastDescendantNode: c, getBlockValueLineContents: P, getFlowScalarLineContents: I, getLastDescendantNode: y, hasPrettierIgnore: g, hasLeadingComments: v, hasMiddleComments: w, hasIndicatorComment: T, hasTrailingComment: F, hasEndComments: A };
       } }), fg = ee({ "src/language-yaml/print-preprocess.js"(e, n) {
         "use strict";
         re();
@@ -14242,8 +14243,8 @@ ${r}`;
         function g(D, v, w) {
           let T = D.getValue(), F = T.type === "flowMapping", A = F ? "{" : "[", B = F ? "}" : "]", I = a;
           F && T.children.length > 0 && w.bracketSpacing && (I = s);
-          let P = l(T.children), R = P && P.type === "flowMappingItem" && i(P.key) && i(P.value);
-          return [A, h(w.tabWidth, [I, p(D, v, w), w.trailingComma === "none" ? "" : t(","), c(T) ? [r, u(r, D.map(v, "endComments"))] : ""]), R ? "" : I, B];
+          let P = l(T.children), $ = P && P.type === "flowMappingItem" && i(P.key) && i(P.value);
+          return [A, h(w.tabWidth, [I, p(D, v, w), w.trailingComma === "none" ? "" : t(","), c(T) ? [r, u(r, D.map(v, "endComments"))] : ""]), $ ? "" : I, B];
         }
         function p(D, v, w) {
           let T = D.getValue();
@@ -14254,23 +14255,23 @@ ${r}`;
         "use strict";
         re();
         var { builders: { conditionalGroup: t, group: s, hardline: a, ifBreak: r, join: u, line: i } } = qe(), { hasLeadingComments: l, hasMiddleComments: c, hasTrailingComment: y, hasEndComments: h, isNode: g, isEmptyNode: p, isInlineNode: D } = Rt(), { alignWithSpaces: v } = qr();
-        function w(B, I, P, R, f) {
+        function w(B, I, P, $, f) {
           let { key: x, value: m } = B, E = p(x), o = p(m);
           if (E && o)
             return ": ";
-          let d = R("key"), C = F(B) ? " " : "";
+          let d = $("key"), C = F(B) ? " " : "";
           if (o)
             return B.type === "flowMappingItem" && I.type === "flowMapping" ? d : B.type === "mappingItem" && T(x.content, f) && !y(x.content) && (!I.tag || I.tag.value !== "tag:yaml.org,2002:set") ? [d, C, ":"] : ["? ", v(2, d)];
-          let _ = R("value");
+          let _ = $("value");
           if (E)
             return [": ", v(2, _)];
           if (l(m) || !D(x.content))
-            return ["? ", v(2, d), a, u("", P.map(R, "value", "leadingComments").map((q) => [q, a])), ": ", v(2, _)];
+            return ["? ", v(2, d), a, u("", P.map($, "value", "leadingComments").map((q) => [q, a])), ": ", v(2, _)];
           if (A(x.content) && !l(x.content) && !c(x.content) && !y(x.content) && !h(x) && !l(m.content) && !c(m.content) && !h(m) && T(m.content, f))
             return [d, C, ": ", _];
-          let b = Symbol("mappingKey"), N = s([r("? "), s(v(2, d), { id: b })]), k = [a, ": ", v(2, _)], $ = [C, ":"];
-          l(m.content) || h(m) && m.content && !g(m.content, ["mapping", "sequence"]) || I.type === "mapping" && y(x.content) && D(m.content) || g(m.content, ["mapping", "sequence"]) && m.content.tag === null && m.content.anchor === null ? $.push(a) : m.content && $.push(i), $.push(_);
-          let M = v(f.tabWidth, $);
+          let b = Symbol("mappingKey"), N = s([r("? "), s(v(2, d), { id: b })]), k = [a, ": ", v(2, _)], R = [C, ":"];
+          l(m.content) || h(m) && m.content && !g(m.content, ["mapping", "sequence"]) || I.type === "mapping" && y(x.content) && D(m.content) || g(m.content, ["mapping", "sequence"]) && m.content.tag === null && m.content.anchor === null ? R.push(a) : m.content && R.push(i), R.push(_);
+          let M = v(f.tabWidth, R);
           return T(x.content, f) && !l(x.content) && !c(x.content) && !h(x) ? t([[d, M]]) : t([[N, r(k, M, { groupId: b })]]);
         }
         function T(B, I) {
@@ -14323,19 +14324,19 @@ ${r}`;
         re();
         var { builders: { dedent: t, dedentToRoot: s, fill: a, hardline: r, join: u, line: i, literalline: l, markAsRoot: c }, utils: { getDocParts: y } } = qe(), { getAncestorCount: h, getBlockValueLineContents: g, hasIndicatorComment: p, isLastDescendantNode: D, isNode: v } = Rt(), { alignWithSpaces: w } = qr();
         function T(F, A, B) {
-          let I = F.getValue(), P = h(F, (E) => v(E, ["sequence", "mapping"])), R = D(F), f = [I.type === "blockFolded" ? ">" : "|"];
+          let I = F.getValue(), P = h(F, (E) => v(E, ["sequence", "mapping"])), $ = D(F), f = [I.type === "blockFolded" ? ">" : "|"];
           I.indent !== null && f.push(I.indent.toString()), I.chomping !== "clip" && f.push(I.chomping === "keep" ? "+" : "-"), p(I) && f.push(" ", A("indicatorComment"));
-          let x = g(I, { parentIndent: P, isLastDescendant: R, options: B }), m = [];
+          let x = g(I, { parentIndent: P, isLastDescendant: $, options: B }), m = [];
           for (let [E, o] of x.entries())
-            E === 0 && m.push(r), m.push(a(y(u(i, o)))), E !== x.length - 1 ? m.push(o.length === 0 ? r : c(l)) : I.chomping === "keep" && R && m.push(s(o.length === 0 ? r : l));
+            E === 0 && m.push(r), m.push(a(y(u(i, o)))), E !== x.length - 1 ? m.push(o.length === 0 ? r : c(l)) : I.chomping === "keep" && $ && m.push(s(o.length === 0 ? r : l));
           return I.indent === null ? f.push(t(w(B.tabWidth, m))) : f.push(s(w(I.indent - 1 + P, m))), f;
         }
         n.exports = T;
       } }), gg = ee({ "src/language-yaml/printer-yaml.js"(e, n) {
         "use strict";
         re();
-        var { builders: { breakParent: t, fill: s, group: a, hardline: r, join: u, line: i, lineSuffix: l, literalline: c }, utils: { getDocParts: y, replaceTextEndOfLine: h } } = qe(), { isPreviousLineEmpty: g } = Ge(), { insertPragma: p, isPragma: D } = lg(), { locStart: v } = cg(), w = pg(), { getFlowScalarLineContents: T, getLastDescendantNode: F, hasLeadingComments: A, hasMiddleComments: B, hasTrailingComment: I, hasEndComments: P, hasPrettierIgnore: R, isLastDescendantNode: f, isNode: x, isInlineNode: m } = Rt(), E = fg(), { alignWithSpaces: o, printNextEmptyLine: d, shouldPrintEndComments: C } = qr(), { printFlowMapping: _, printFlowSequence: b } = Dg(), N = mg(), k = dg();
-        function $(O, K, se) {
+        var { builders: { breakParent: t, fill: s, group: a, hardline: r, join: u, line: i, lineSuffix: l, literalline: c }, utils: { getDocParts: y, replaceTextEndOfLine: h } } = qe(), { isPreviousLineEmpty: g } = Ge(), { insertPragma: p, isPragma: D } = lg(), { locStart: v } = cg(), w = pg(), { getFlowScalarLineContents: T, getLastDescendantNode: F, hasLeadingComments: A, hasMiddleComments: B, hasTrailingComment: I, hasEndComments: P, hasPrettierIgnore: $, isLastDescendantNode: f, isNode: x, isInlineNode: m } = Rt(), E = fg(), { alignWithSpaces: o, printNextEmptyLine: d, shouldPrintEndComments: C } = qr(), { printFlowMapping: _, printFlowSequence: b } = Dg(), N = mg(), k = dg();
+        function R(O, K, se) {
           let Q = O.getValue(), le = [];
           Q.type !== "mappingValue" && A(Q) && le.push([u(r, O.map(se, "leadingComments")), r]);
           let { tag: W, anchor: X } = Q;
@@ -14343,7 +14344,7 @@ ${r}`;
           let oe = "";
           x(Q, ["mapping", "sequence", "comment", "directive", "mappingItem", "sequenceItem"]) && !f(O) && (oe = d(O, K.originalText)), (W || X) && (x(Q, ["sequence", "mapping"]) && !B(Q) ? le.push(r) : le.push(" ")), B(Q) && le.push([Q.middleComments.length === 1 ? "" : r, u(r, O.map(se, "middleComments")), r]);
           let ae = O.getParentNode();
-          return R(O) ? le.push(h(K.originalText.slice(Q.position.start.offset, Q.position.end.offset).trimEnd(), c)) : le.push(a(M(Q, ae, O, K, se))), I(Q) && !x(Q, ["document", "documentHead"]) && le.push(l([Q.type === "mappingValue" && !Q.content ? "" : " ", ae.type === "mappingKey" && O.getParentNode(2).type === "mapping" && m(Q) ? "" : t, se("trailingComment")])), C(Q) && le.push(o(Q.type === "sequenceItem" ? 2 : 0, [r, u(r, O.map((Ae) => [g(K.originalText, Ae.getValue(), v) ? r : "", se()], "endComments"))])), le.push(oe), le;
+          return $(O) ? le.push(h(K.originalText.slice(Q.position.start.offset, Q.position.end.offset).trimEnd(), c)) : le.push(a(M(Q, ae, O, K, se))), I(Q) && !x(Q, ["document", "documentHead"]) && le.push(l([Q.type === "mappingValue" && !Q.content ? "" : " ", ae.type === "mappingKey" && O.getParentNode(2).type === "mapping" && m(Q) ? "" : t, se("trailingComment")])), C(Q) && le.push(o(Q.type === "sequenceItem" ? 2 : 0, [r, u(r, O.map((Ae) => [g(K.originalText, Ae.getValue(), v) ? r : "", se()], "endComments"))])), le.push(oe), le;
         }
         function M(O, K, se, Q, le) {
           switch (O.type) {
@@ -14446,7 +14447,7 @@ ${r}`;
                 break;
             }
         }
-        n.exports = { preprocess: E, embed: w, print: $, massageAstNode: V, insertPragma: p };
+        n.exports = { preprocess: E, embed: w, print: R, massageAstNode: V, insertPragma: p };
       } }), yg = ee({ "src/language-yaml/options.js"(e, n) {
         "use strict";
         re();
