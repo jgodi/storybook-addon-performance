@@ -83,7 +83,7 @@
   },
   "@netflix-internal/release": {
     "packageManager": "npm",
-    "b": "esm-support",
+    "primaryBranch": "master",
     "test": false,
     "standardVersion": false,
     "releases": [
