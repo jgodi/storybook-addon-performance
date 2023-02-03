@@ -1,3 +1,5 @@
+## This is just a published fork of the main library, publishing to do some testing
+
 <h1 align="center">storybook-addon-performance 🚀</h1>
 <div align="center">
 
@@ -206,15 +208,7 @@ onlyServer.parameters = {
 };
 ```
 
-## A Note on Performance Metrics 💡
-
-In order to get the most accurate performance metrics possible, you should use a [production build of Storybook](https://storybook.js.org/docs/react/sharing/publish-storybook#build-storybook-as-a-static-web-application). For more background, see the React [optimizing performance documentation](https://reactjs.org/docs/optimizing-performance.html#use-the-production-build).
-
-While this add-on does work with a dev build, you'll see more variability in results.
-
 ## Local addon development
-
-In the storybook-addon-performance folder (`packages/storybook-addon-performance`)
 
 ```bash
 # Start the typescript watcher and a local storybook:
@@ -235,7 +229,6 @@ Made with ❤️ by your friends at [Atlassian](https://www.atlassian.com/)
 - Alex Reardon [@alexandereardon](https://twitter.com/alexandereardon)
 - Andrew Campbell [@andrewcampb_ll](https://twitter.com/andrewcampb_ll)
 - Daniel Del Core [@danieldelcore](https://twitter.com/danieldelcore)
-- Alex Hinds [@DarkPurple141](https://twitter.com/al_hinds)
 
 <br/>
 
